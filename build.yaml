@@ -20,3 +20,4 @@
 include:
   - board: nice_nano_v2
     shield: shockboard nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_DISPLAY=y
