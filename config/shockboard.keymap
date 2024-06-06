@@ -71,6 +71,7 @@
         EQUAL_COMBO {
             bindings = <&kp EQUAL>;
             key-positions = <30 31>;
+            layers = <0>;
         };
 
         CAPS_COMBO {
