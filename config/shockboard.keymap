@@ -102,11 +102,11 @@
             //                     | GUI | SPC | LWR |   | RSE | SHFT | ALT |
 
             bindings = <
-&kp TILDE   &kp N1          &kp N2           &kp N3          &kp N4              &kp N5           &kp N6         &kp N7              &kp N8          &kp N9           &kp N0             &key_repeat
-&kp TAB     &kp Q           &kp W            &kp E           &kp R               &kp T            &kp Y          &kp U               &kp I           &kp O            &kp P              &kp BACKSLASH
-&kp ESCAPE  &mt LEFT_GUI A  &mt S RIGHT_ALT  &mt LEFT_ALT D  &mt LEFT_CONTROL F  &kp G            &kp H          &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt RIGHT_ALT L  &mt LEFT_GUI SEMI  &kp SINGLE_QUOTE
-            &kp Z           &kp X            &kp C           &kp V               &kp B            &kp N          &kp M               &kp COMMA       &kp DOT          &kp FSLH
-                                             &mo 2           &lt 1 SPACE         &caps_tap_dance  &kp BACKSPACE  &lt 3 ENTER         &kp DELETE
+&kp TILDE   &kp N1          &kp N2  &kp N3          &kp N4              &kp N5           &kp N6         &kp N7              &kp N8          &kp N9   &kp N0             &key_repeat
+&kp TAB     &kp Q           &kp W   &kp E           &kp R               &kp T            &kp Y          &kp U               &kp I           &kp O    &kp P              &kp BACKSLASH
+&kp ESCAPE  &mt LEFT_GUI A  &kp S   &mt LEFT_ALT D  &mt LEFT_CONTROL F  &kp G            &kp H          &mt LEFT_CONTROL J  &mt LEFT_ALT K  &kp L    &mt LEFT_GUI SEMI  &kp SINGLE_QUOTE
+            &kp Z           &kp X   &kp C           &kp V               &kp B            &kp N          &kp M               &kp COMMA       &kp DOT  &kp FSLH
+                                    &mo 2           &lt 1 SPACE         &caps_tap_dance  &kp BACKSPACE  &lt 3 ENTER         &kp DELETE
             >;
         };
 
@@ -156,11 +156,11 @@
 
         function_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4  &bootloader  &none             &none           &none               &none  &soft_off
-&none       &none         &ext_power EP_TOG  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none         &none        &none             &kp C_REWIND    &kp C_FAST_FORWARD  &none  &none
-&none       &none         &kp C_MUTE         &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none         &none        &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT          &none  &none
-            &none         &none              &none                 &none                 &none         &none        &none             &none           &none               &none
-                                             &none                 &trans                &none         &none        &trans            &none
+&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4  &bootloader  &none             &none           &none               &none  &soft_off
+&none              &none         &none         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none         &none        &none             &kp C_REWIND    &kp C_FAST_FORWARD  &none  &none
+&ext_power EP_OFF  &none         &kp C_MUTE    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none         &none        &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT          &none  &ext_power EP_ON
+                   &none         &none         &none                 &none                 &none         &none        &none             &none           &none               &none
+                                               &none                 &trans                &none         &none        &trans            &none
             >;
         };
     };
