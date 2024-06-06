@@ -15,12 +15,6 @@
     combos {
         compatible = "zmk,combos";
 
-        CAPS_COMBO {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <48 49>;
-            layers = <0>;
-        };
-
         LEFT_PAREN_COMBO {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <28 16>;
@@ -87,6 +81,8 @@
             label = "CAPS_TAP_DANCE";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <500>;
         };
     };
 
