@@ -84,11 +84,44 @@
     behaviors {
         caps_tap_dance: caps_tap_dance {
             compatible = "zmk,behavior-tap-dance";
-            label = "CAPS_TAP_DANCE";
+            label = "Double tap shift for caps lock";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
 
             tapping-term-ms = <500>;
+        };
+
+        pht_left: pht_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Positional holdt tap left";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45>;
+        };
+
+        pht_right: pht_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Positional hold tap right";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40>;
+        };
+
+        mo_tog: mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Momentary layer on hold, toggle on tap";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -104,11 +137,11 @@
             //                     | GUI | SPC | LWR |   | RSE | SHFT | ALT |
 
             bindings = <
-&kp TILDE   &kp N1          &kp N2  &kp N3          &kp N4              &kp N5          &kp N6                     &kp N7              &kp N8          &kp N9   &kp N0             &key_repeat
-&kp TAB     &kp Q           &kp W   &kp E           &kp R               &kp T           &kp Y                      &kp U               &kp I           &kp O    &kp P              &kp BACKSLASH
-&kp ESCAPE  &mt LEFT_GUI A  &kp S   &mt LEFT_ALT D  &mt LEFT_CONTROL F  &kp G           &kp H                      &mt LEFT_CONTROL J  &mt LEFT_ALT K  &kp L    &mt LEFT_GUI SEMI  &kp SINGLE_QUOTE
-            &kp Z           &kp X   &kp C           &kp V               &kp B           &kp N                      &kp M               &kp COMMA       &kp DOT  &kp FSLH
-                                    &mo 2           &lt 1 SPACE         &kp LEFT_SHIFT  &mt RIGHT_SHIFT BACKSPACE  &lt 3 ENTER         &kp DELETE
+&kp TILDE   &kp N1                &kp N2  &kp N3                &kp N4                    &kp N5          &kp N6                     &kp N7                     &kp N8                 &kp N9   &kp N0                    &key_repeat
+&kp TAB     &kp Q                 &kp W   &kp E                 &kp R                     &kp T           &kp Y                      &kp U                      &kp I                  &kp O    &kp P                     &kp BACKSLASH
+&kp ESCAPE  &pht_left LEFT_GUI A  &kp S   &pht_left LEFT_ALT D  &pht_left LEFT_CONTROL F  &kp G           &kp H                      &pht_right LEFT_CONTROL J  &pht_right LEFT_ALT K  &kp L    &pht_right LEFT_GUI SEMI  &kp SINGLE_QUOTE
+            &kp Z                 &kp X   &kp C                 &kp V                     &kp B           &kp N                      &kp M                      &kp COMMA              &kp DOT  &kp FSLH
+                                          &mo_tog 2 2           &lt 1 SPACE               &kp LEFT_SHIFT  &mt RIGHT_SHIFT BACKSPACE  &lt 3 ENTER                &kp DELETE
             >;
         };
 
