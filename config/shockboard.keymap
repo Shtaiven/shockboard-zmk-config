@@ -52,25 +52,25 @@
 
         PLUS_COMBO {
             bindings = <&kp PLUS>;
-            key-positions = <34 35>;
+            key-positions = <33 32>;
             layers = <0>;
         };
 
         MINUS_COMBO {
             bindings = <&kp MINUS>;
-            key-positions = <25 24>;
+            key-positions = <26 27>;
             layers = <0>;
         };
 
         UNDERSCORE_COMBO {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <29 28>;
+            key-positions = <28 27>;
             layers = <0>;
         };
 
         EQUAL_COMBO {
             bindings = <&kp EQUAL>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
             layers = <0>;
         };
 
