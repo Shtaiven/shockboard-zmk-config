@@ -113,12 +113,6 @@
             layers = <0>;
         };
 
-        CAPS_COMBO {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <50 47>;
-            layers = <0>;
-        };
-
         TILDE_COMBO {
             bindings = <&kp TILDE>;
             key-positions = <15 16>;
@@ -209,11 +203,11 @@
 
         default_layer {
             bindings = <
-&none        &kp N1                &kp N2  &kp N3                &kp N4                    &kp N5     &kp N6           &kp N7                     &kp N8                 &kp N9   &kp N0                    &none
-&none        &kp Q                 &kp W   &kp E                 &kp R                     &kp T      &kp Y            &kp U                      &kp I                  &kp O    &kp P                     &none
-&key_repeat  &pht_left LEFT_GUI A  &kp S   &pht_left LEFT_ALT D  &pht_left LEFT_CONTROL F  &kp G      &kp H            &pht_right LEFT_CONTROL J  &pht_right LEFT_ALT K  &kp L    &pht_right LEFT_GUI SEMI  &kp SINGLE_QUOTE
-             &kp Z                 &kp X   &kp C                 &kp V                     &kp B      &kp N            &kp M                      &kp COMMA              &kp DOT  &kp FSLH
-                                           &lt 3 ESC             &mt LEFT_SHIFT SPACE      &lt 1 TAB  &lt 2 BACKSPACE  &mt RIGHT_SHIFT ENTER      &lt 4 DELETE
+&none         &kp N1                &kp N2  &kp N3                &kp N4                    &kp N5     &kp N6           &kp N7                     &kp N8                 &kp N9   &kp N0                    &none
+&none         &kp Q                 &kp W   &kp E                 &kp R                     &kp T      &kp Y            &kp U                      &kp I                  &kp O    &kp P                     &none
+&kp CAPSLOCK  &pht_left LEFT_GUI A  &kp S   &pht_left LEFT_ALT D  &pht_left LEFT_CONTROL F  &kp G      &kp H            &pht_right LEFT_CONTROL J  &pht_right LEFT_ALT K  &kp L    &pht_right LEFT_GUI SEMI  &kp SINGLE_QUOTE
+              &kp Z                 &kp X   &kp C                 &kp V                     &kp B      &kp N            &kp M                      &kp COMMA              &kp DOT  &kp FSLH
+                                            &lt 3 ESC             &mt LEFT_SHIFT SPACE      &lt 1 TAB  &lt 2 BACKSPACE  &mt RIGHT_SHIFT ENTER      &lt 4 DELETE
             >;
         };
 
