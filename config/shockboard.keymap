@@ -227,7 +227,7 @@
 &none       &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &none           &none             &none         &none   &none         &none
 &kp KP_DOT  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_NUMLOCK  &kp LEFT_CONTROL  &kp LEFT_ALT  &none   &kp LEFT_GUI  &none
             &kp COMMA        &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_MINUS     &none           &none             &none         &none   &none
-                                              &kp BACKSPACE    &trans           &kp ENTER        &trans          &trans            &trans
+                                              &trans           &trans           &trans           &trans          &trans            &trans
             >;
         };
 
