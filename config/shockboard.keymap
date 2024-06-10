@@ -8,6 +8,7 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 #define PHT_TAPPING_TERM_MS 280
+#define MT_LT_TAPPING_TERM 200
 #define QUICK_TAP_MS 175
 
 #include <behaviors/mouse_keys.dtsi>
@@ -20,17 +21,19 @@
 // Layer-tap config
 
 &lt {
-    flavor = "balanced";
-    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
+    tapping-term-ms = <MT_LT_TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_MS>;
+    retro-tap;
 };
 
 // Mod-tap config
 
 &mt {
-    flavor = "balanced";
-    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
+    tapping-term-ms = <MT_LT_TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_MS>;
+    retro-tap;
 };
 
 // Mouse move config
