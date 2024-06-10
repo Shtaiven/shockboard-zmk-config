@@ -151,7 +151,7 @@
 
         CAPS_COMBO {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <26 33>;
+            key-positions = <24 35>;
             layers = <0>;
         };
     };
