@@ -240,21 +240,21 @@
 
         mouse_layer {
             bindings = <
-&to 4  &none         &none         &none          &none             &none   &none           &none           &none           &none            &none            &to 0
-&to 2  &none         &none         &none          &none             &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to 1
-&none  &kp LEFT_GUI  &none         &kp LEFT_ALT   &kp LEFT_CONTROL  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &kp RIGHT_SHIFT
-       &none         &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE    &none   &none           &none           &none           &none            &none
-                                   &trans         &trans            &trans  &mkp MCLK       &mkp LCLK       &mkp RCLK
+&to 4  &none         &none           &none          &none             &none   &none           &none           &none           &none            &none            &to 0
+&to 2  &none         &none           &none          &none             &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to 1
+&none  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT   &kp LEFT_CONTROL  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
+       &none         &kp C_AC_CUT    &kp C_AC_COPY  &kp C_AC_PASTE    &none   &none           &mkp MB4        &mkp MB5        &none            &none
+                                     &trans         &trans            &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
 
         function_layer {
             bindings = <
-&to 0  &none  &kp F10  &kp F11  &kp F12         &none  &none  &none             &none         &none  &none         &to 3
-&to 2  &none  &kp F7   &kp F8   &kp F9          &none  &none  &none             &none         &none  &none         &to 1
-&none  &none  &kp F4   &kp F5   &kp F6          &none  &none  &kp LEFT_CONTROL  &kp LEFT_ALT  &none  &kp LEFT_GUI  &none
-       &none  &kp F1   &kp F2   &kp F3          &none  &none  &none             &none         &none  &none
-                       &none    &kp LEFT_SHIFT  &none  &none  &none             &none
+&to 0  &none  &kp F10  &kp F11  &kp F12  &none  &none  &none             &none         &none            &none         &to 3
+&to 2  &none  &kp F7   &kp F8   &kp F9   &none  &none  &none             &none         &none            &none         &to 1
+&none  &none  &kp F4   &kp F5   &kp F6   &none  &none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp RIGHT_SHIFT  &kp LEFT_GUI  &none
+       &none  &kp F1   &kp F2   &kp F3   &none  &none  &none             &none         &none            &none
+                       &none    &none    &none  &none  &none             &none
             >;
         };
 
