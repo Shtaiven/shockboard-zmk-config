@@ -1,14 +1,13 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * Copyright (c) 2024 Steven Eisinger
  *
  * SPDX-License-Identifier: MIT
- * Modified for shockboard by Steven Eisinger
  */
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 #define PHT_TAPPING_TERM_MS 280
-#define MT_LT_TAPPING_TERM 200
+#define MT_TAPPING_TERM 200
 #define QUICK_TAP_MS 175
 
 #include <behaviors/mouse_keys.dtsi>
@@ -21,16 +20,17 @@
 // Layer-tap config
 
 &lt {
-    flavor = "hold-preferred";
-    tapping-term-ms = <MT_LT_TAPPING_TERM>;
+    flavor = "balanced";
+    tapping-term-ms = <PHT_TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
+    require-prior-idle-ms = <150>;
 };
 
 // Mod-tap config
 
 &mt {
     flavor = "balanced";
-    tapping-term-ms = <MT_LT_TAPPING_TERM>;
+    tapping-term-ms = <MT_TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
