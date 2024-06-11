@@ -24,7 +24,6 @@
     flavor = "hold-preferred";
     tapping-term-ms = <MT_LT_TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    retro-tap;
 };
 
 // Mod-tap config
@@ -33,7 +32,6 @@
     flavor = "hold-preferred";
     tapping-term-ms = <MT_LT_TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    retro-tap;
 };
 
 // Mouse move config
