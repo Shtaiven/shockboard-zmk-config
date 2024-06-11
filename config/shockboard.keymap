@@ -29,7 +29,7 @@
 // Mod-tap config
 
 &mt {
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <MT_LT_TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
