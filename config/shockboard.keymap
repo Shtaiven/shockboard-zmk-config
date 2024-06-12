@@ -74,7 +74,7 @@
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <28 16>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
         };
 
@@ -82,7 +82,7 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <27 15>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
         };
 
@@ -90,7 +90,7 @@
             bindings = <&kp LEFT_BRACE>;
             key-positions = <26 14>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
         };
 
@@ -98,7 +98,7 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <19 31>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
         };
 
@@ -106,7 +106,7 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <20 32>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
         };
 
@@ -114,7 +114,7 @@
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <21 33>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
         };
 
@@ -123,7 +123,7 @@
             bindings = <&kp PLUS>;
             key-positions = <33 32>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -131,7 +131,7 @@
             bindings = <&kp MINUS>;
             key-positions = <27 28>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -139,7 +139,7 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <27 26>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -147,7 +147,7 @@
             bindings = <&kp EQUAL>;
             key-positions = <31 32>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -155,7 +155,7 @@
             bindings = <&kp TILDE>;
             key-positions = <15 16>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -163,7 +163,7 @@
             bindings = <&kp GRAVE>;
             key-positions = <15 14>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -171,7 +171,7 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <19 20>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -179,7 +179,7 @@
             bindings = <&kp PIPE>;
             key-positions = <20 21>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
         };
 
@@ -187,7 +187,7 @@
             bindings = <&kp F11>;
             key-positions = <3 4>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <1 2>;
         };
 
@@ -195,7 +195,7 @@
             bindings = <&kp F12>;
             key-positions = <8 7>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <1 2>;
         };
 
@@ -204,7 +204,7 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <24 35>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-idle-timeout-ms = <COMBO_IDLE_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
         };
     };
