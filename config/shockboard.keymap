@@ -3,8 +3,8 @@
  *
  * SPDX-License-Identifier: MIT
  */
-// Required to be defined before mouse keys import
 
+// Required to be defined before mouse keys import
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
@@ -15,39 +15,29 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
+
 //---------------------------------------------------------------------------------------------------------------------
 // Global defines
 
-#define PHT_TAPPING_TERM_MS 280  // Positional hold tap tapping term (ms)
-#define PHT_IDLE_MS         150  // Positional hold tap require idle time (ms)
-#define MT_TAPPING_TERM_MS  200  // Mod tap tapping term (ms)
-#define QUICK_TAP_MS        175  // Quick tap timing (ms)
-#define TD_TAPPING_TERM_MS  500  // Tap dance tapping term (ms)
-#define COMBO_TERM_FAST_MS   18  // Fast combo term for horizontal combos (ms)
-#define COMBO_TERM_SLOW_MS   30  // Slow combo term for vertical combos (ms)
-#define COMBO_IDLE_FAST_MS  150  // Fast require prior idle time for horizontal combos (ms)
-#define COMBO_IDLE_SLOW_MS   50  // Slow require prior idle time for vertical combos (ms)
+#define PHT_TAPPING_TERM_MS     280  // Positional hold tap tapping term (ms)
+#define PHT_IDLE_MS             150  // Positional hold tap require idle time (ms)
+#define LT_TAPPING_TERM_MS      200  // Layer tap tapping term (ms)
+#define MOD_TOG_TAPPING_TERM_MS 200  // Mod tap tapping term (ms)
+#define QUICK_TAP_MS            175  // Quick tap timing (ms)
+#define COMBO_TERM_FAST_MS       18  // Fast combo term for horizontal combos (ms)
+#define COMBO_TERM_SLOW_MS       30  // Slow combo term for vertical combos (ms)
+#define COMBO_IDLE_FAST_MS      150  // Fast require prior idle time for horizontal combos (ms)
+#define COMBO_IDLE_SLOW_MS       50  // Slow require prior idle time for vertical combos (ms)
+
 
 //---------------------------------------------------------------------------------------------------------------------
 // Defaults reconfiguration
-// Layer-tap config
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <PHT_TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    require-prior-idle-ms = <PHT_IDLE_MS>;
-};
-
-// Mod-tap config
-
-&mt {
-    flavor = "balanced";
-    tapping-term-ms = <MT_TAPPING_TERM_MS>;
+    tapping-term-ms = <LT_TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
-
-// Mouse move config
 
 &mmv {
     acceleration-exponent = <1>;
@@ -55,13 +45,12 @@
     delay-ms = <0>;
 };
 
-// Mouse scroll config
-
 &msc {
     acceleration-exponent = <1>;
     time-to-max-speed-ms = <40>;
     delay-ms = <0>;
 };
+
 
 //---------------------------------------------------------------------------------------------------------------------
 
@@ -70,7 +59,6 @@
         compatible = "zmk,combos";
 
         // Vertical combos
-
         combo_left_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <28 16>;
@@ -120,7 +108,6 @@
         };
 
         // Horizontal combos
-
         combo_plus {
             bindings = <&kp PLUS>;
             key-positions = <33 32>;
@@ -202,7 +189,6 @@
         };
 
         // Split combos
-
         combo_caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <27 32>;
@@ -212,17 +198,10 @@
         };
     };
 
-    //---------------------------------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------------------------------
 
     behaviors {
-        caps_tap_dance: caps_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
-
-            tapping-term-ms = <TD_TAPPING_TERM_MS>;
-        };
-
         pht_left: pht_left {
             compatible = "zmk,behavior-hold-tap";  // Positional hold tap left
             bindings = <&kp>, <&kp>;
@@ -249,16 +228,17 @@
             hold-trigger-on-release;
         };
 
-        mo_tog: mo_tog {
+        mo_tog: mo_tog {  // Momentary layer on hold, toggle on tap
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <MT_TAPPING_TERM_MS>;
+            tapping-term-ms = <MOD_TOG_TAPPING_TERM_MS>;
         };
     };
 
-    //---------------------------------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------------------------------
 
     keymap {
         compatible = "zmk,keymap";
@@ -324,7 +304,8 @@
         };
     };
 
-    //---------------------------------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------------------------------
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
