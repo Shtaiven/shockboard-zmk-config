@@ -110,7 +110,7 @@
         // Horizontal combos
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <33 32>;
+            key-positions = <21 20>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
@@ -118,7 +118,7 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <27 28>;
+            key-positions = <15 16>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
@@ -126,7 +126,7 @@
 
         combo_underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <27 26>;
+            key-positions = <15 14>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
@@ -134,7 +134,7 @@
 
         combo_equal {
             bindings = <&kp EQUAL>;
-            key-positions = <31 32>;
+            key-positions = <20 19>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
@@ -142,7 +142,7 @@
 
         combo_tilde {
             bindings = <&kp TILDE>;
-            key-positions = <15 16>;
+            key-positions = <38 39>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
@@ -150,7 +150,7 @@
 
         combo_grave {
             bindings = <&kp GRAVE>;
-            key-positions = <15 14>;
+            key-positions = <38 37>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
@@ -158,7 +158,7 @@
 
         combo_backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <19 20>;
+            key-positions = <42 43>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
@@ -166,7 +166,7 @@
 
         combo_pipe {
             bindings = <&kp PIPE>;
-            key-positions = <20 21>;
+            key-positions = <43 44>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <0>;
