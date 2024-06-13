@@ -31,6 +31,18 @@
 
 
 //---------------------------------------------------------------------------------------------------------------------
+// Layer definitions
+
+#define L_DEFAULT 0
+#define L_NAV     1
+#define L_NUM     2
+#define L_MOUSE   3
+#define L_FUN     4
+#define L_SETTING 5
+#define L_GAMING  6
+
+
+//---------------------------------------------------------------------------------------------------------------------
 // Defaults reconfiguration
 
 &lt {
@@ -191,7 +203,7 @@
         // Split combos
         combo_caps {
             bindings = <&kp CAPSLOCK>;
-            key-positions = <27 32>;
+            key-positions = <28 31>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
