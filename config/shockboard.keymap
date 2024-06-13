@@ -245,41 +245,41 @@
 
         default_layer {
             bindings = <
-&to 4       &kp N1                &kp N2                &kp N3                  &kp N4                    &kp N5     &kp N6           &kp N7                     &kp N8                    &kp N9                 &kp N0                    &to 3
-&to 2       &kp Q                 &kp W                 &kp E                   &kp R                     &kp T      &kp Y            &kp U                      &kp I                     &kp O                  &kp P                     &to 1
-&kp ESCAPE  &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_SHIFT D  &pht_left LEFT_CONTROL F  &kp G      &kp H            &pht_right LEFT_CONTROL J  &pht_right RIGHT_SHIFT K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
-            &kp Z                 &kp X                 &kp C                   &kp V                     &kp B      &kp N            &kp M                      &kp COMMA                 &kp DOT                &kp FSLH
-                                                        &lt 3 LS(TAB)           &kp SPACE                 &lt 1 TAB  &lt 2 BACKSPACE  &kp ENTER                  &lt 4 DELETE
+&to 4       &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5     &kp N6           &kp N7                    &kp N8                     &kp N9                 &kp N0                    &to 3
+&to 2       &kp Q                 &kp W                 &kp E                     &kp R                   &kp T      &kp Y            &kp U                     &kp I                      &kp O                  &kp P                     &to 1
+&kp ESCAPE  &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G      &kp H            &pht_right RIGHT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
+            &kp Z                 &kp X                 &kp C                     &kp V                   &kp B      &kp N            &kp M                     &kp COMMA                  &kp DOT                &kp FSLH
+                                                        &lt 3 LS(TAB)             &kp SPACE               &lt 1 TAB  &lt 2 BACKSPACE  &kp ENTER                 &lt 4 DELETE
             >;
         };
 
         nav_layer {
             bindings = <
-&to 4  &kp F1        &kp F2        &kp F3          &kp F4            &kp F5  &kp F6    &kp F7         &kp F8    &kp F9       &kp F10          &to 3
-&to 2  &none         &none         &none           &none             &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to 0
-&none  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
-       &none         &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &none   &none     &none          &none     &none        &none
-                                   &trans          &trans            &trans  &trans    &trans         &trans
+&to 4  &kp F1        &kp F2        &kp F3            &kp F4          &kp F5  &kp F6    &kp F7         &kp F8    &kp F9       &kp F10          &to 3
+&to 2  &none         &none         &none             &none           &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to 0
+&none  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
+       &none         &kp C_AC_CUT  &kp C_AC_COPY     &kp C_AC_PASTE  &none   &none     &none          &none     &none        &none
+                                   &trans            &trans          &trans  &trans    &trans         &trans
             >;
         };
 
         num_layer {
             bindings = <
-&to 4  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6          &kp F7            &kp F8           &kp F9        &kp F10       &to 3
-&to 0  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &none           &none             &none            &none         &none         &to 1
-&to 6  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_NUMLOCK  &kp LEFT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_GUI  &kp LEFT_ALT  &none
-       &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_MINUS     &none           &none             &none            &none         &none
-                                              &trans           &trans           &trans           &trans          &trans            &trans
+&to 4  &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6          &kp F7           &kp F8            &kp F9        &kp F10       &to 3
+&to 0  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &none           &none            &none             &none         &none         &to 1
+&to 6  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_NUMLOCK  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none
+       &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_MINUS     &none           &none            &none             &none         &none
+                                         &trans           &trans           &trans           &trans          &trans           &trans
             >;
         };
 
         mouse_layer {
             bindings = <
-&to 4  &none         &none         &none           &none             &none   &none           &none           &none           &none            &none            &to 0
-&to 2  &none         &none         &none           &none             &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to 1
-&none  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
-       &none         &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &none   &none           &mkp MB4        &mkp MB5        &none            &none
-                                   &trans          &trans            &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
+&to 4  &none         &none         &none             &none           &none   &none           &none           &none           &none            &none            &to 0
+&to 2  &none         &none         &none             &none           &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to 1
+&none  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
+       &none         &kp C_AC_CUT  &kp C_AC_COPY     &kp C_AC_PASTE  &none   &none           &mkp MB4        &mkp MB5        &none            &none
+                                   &trans            &trans          &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
 
@@ -287,7 +287,7 @@
             bindings = <
 &to 0  &none  &kp F10  &kp F11  &kp F12  &none  &none  &none             &none            &none         &none         &to 3
 &to 2  &none  &kp F7   &kp F8   &kp F9   &none  &none  &none             &none            &none         &none         &to 1
-&to 6  &none  &kp F4   &kp F5   &kp F6   &none  &none  &kp LEFT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_GUI  &kp LEFT_ALT  &none
+&to 6  &none  &kp F4   &kp F5   &kp F6   &none  &none  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none
        &none  &kp F1   &kp F2   &kp F3   &none  &none  &none             &none            &none         &none
                        &none    &none    &none  &none  &none             &none
             >;
@@ -309,7 +309,7 @@
 &to 2       &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none  &none           &kp UP_ARROW    &none            &none  &to 1
 &kp ESCAPE  &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &to 0
             &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none  &none           &none           &none            &none
-                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo 2  &kp ENTER       &mo 4
+                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &none  &kp ENTER       &none
             >;
         };
     };
