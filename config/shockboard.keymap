@@ -202,7 +202,7 @@
 
         // Split combos
         combo_caps {
-            bindings = <&kp &caps_word>;
+            bindings = <&caps_word>;
             key-positions = <27 32>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
