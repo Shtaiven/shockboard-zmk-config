@@ -253,10 +253,10 @@
             tapping-term-ms = <MOD_TOG_TAPPING_TERM_MS>;
         };
 
-        lh: lh {  // Layer on hold
+        to_hold: to_hold {  // Layer on hold
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&to>, <&none>;
+            bindings = <&to>, <&kp>;
         };
     };
 
@@ -268,11 +268,11 @@
 
         default_layer {
             bindings = <
-&lh FUN     &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5       &kp N6             &kp N7                    &kp N8                     &kp N9                 &kp N0                    &lh MOUSE
-&lh NUM     &kp Q                 &kp W                 &kp E                     &kp R                   &kp T        &kp Y              &kp U                     &kp I                      &kp O                  &kp P                     &lh NAV
-&kp ESCAPE  &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G        &kp H              &pht_right RIGHT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
-            &kp Z                 &kp X                 &kp C                     &kp V                   &kp B        &kp N              &kp M                     &kp COMMA                  &kp DOT                &kp FSLH
-                                                        &lt MOUSE LS(TAB)         &kp SPACE               &lt NAV TAB  &lt NUM BACKSPACE  &kp ENTER                 &lt FUN DELETE
+&to_hold FUN 0  &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5       &kp N6             &kp N7                    &kp N8                     &kp N9                 &kp N0                    &to_hold MOUSE 0
+&to_hold NUM 0  &kp Q                 &kp W                 &kp E                     &kp R                   &kp T        &kp Y              &kp U                     &kp I                      &kp O                  &kp P                     &to_hold NAV 0
+&kp ESCAPE      &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G        &kp H              &pht_right RIGHT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
+                &kp Z                 &kp X                 &kp C                     &kp V                   &kp B        &kp N              &kp M                     &kp COMMA                  &kp DOT                &kp FSLH
+                                                            &lt MOUSE LS(TAB)         &kp SPACE               &lt NAV TAB  &lt NUM BACKSPACE  &kp ENTER                 &lt FUN DELETE
             >;
         };
 
