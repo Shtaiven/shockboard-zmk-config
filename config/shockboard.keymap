@@ -255,7 +255,7 @@
 
         lh: lh {  // Layer on hold
             compatible = "zmk,bahavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             bindings = <&to>, <&none>;
         };
     };
