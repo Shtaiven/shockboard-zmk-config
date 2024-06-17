@@ -7,7 +7,7 @@ draw_config:
   key_rx: 6.0
   key_ry: 6.0
   dark_mode: true
-  n_columns: 12
+  n_columns: 1
   separate_combo_diagrams: false
   combo_diagrams_scale: 2
   inner_pad_w: 2.0
