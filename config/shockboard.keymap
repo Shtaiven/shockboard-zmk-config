@@ -215,7 +215,7 @@
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <0>;
-        }
+        };
     };
 
 
@@ -255,9 +255,9 @@
 
         lh: lh {  // Layer on hold
             compatible = "zmk,bahavior-hold-tap";
-            #binding-cells = <2>
-            bindings = <&to> <&none>
-        }
+            #binding-cells = <2>;
+            bindings = <&to>, <&none>;
+        };
     };
 
 
