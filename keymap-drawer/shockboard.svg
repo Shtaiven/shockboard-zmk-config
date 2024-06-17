@@ -1,4 +1,4 @@
-<svg width="10546" height="460" viewBox="0 0 10546 460" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="879" height="2886" viewBox="0 0 879 2886" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style>/* inherit to force styles through use tags */
 svg path {
     fill: inherit;
@@ -420,7 +420,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(909, 0)" class="layer-nav">
+<g transform="translate(30, 404)" class="layer-nav">
 <text x="0" y="28" class="label">nav:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(44, 44) rotate(8.0)" class="key keypos-0">
@@ -647,7 +647,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(1788, 0)" class="layer-num">
+<g transform="translate(30, 809)" class="layer-num">
 <text x="0" y="28" class="label">num:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(44, 44) rotate(8.0)" class="key keypos-0">
@@ -901,7 +901,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(2667, 0)" class="layer-mouse">
+<g transform="translate(30, 1213)" class="layer-mouse">
 <text x="0" y="28" class="label">mouse:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(44, 44) rotate(8.0)" class="key keypos-0">
@@ -1132,7 +1132,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(3545, 0)" class="layer-fun">
+<g transform="translate(30, 1617)" class="layer-fun">
 <text x="0" y="28" class="label">fun:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(44, 44) rotate(8.0)" class="key keypos-0">
@@ -1327,7 +1327,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(4424, 0)" class="layer-setting">
+<g transform="translate(30, 2021)" class="layer-setting">
 <text x="0" y="28" class="label">setting:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(44, 44) rotate(8.0)" class="key keypos-0">
@@ -1529,7 +1529,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 </g>
 </g>
-<g transform="translate(5303, 0)" class="layer-game">
+<g transform="translate(30, 2426)" class="layer-game">
 <text x="0" y="28" class="label">game:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(44, 44) rotate(8.0)" class="key keypos-0">
