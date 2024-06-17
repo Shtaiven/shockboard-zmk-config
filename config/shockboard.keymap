@@ -254,7 +254,7 @@
         };
 
         lh: lh {  // Layer on hold
-            compatible = "zmk,bahavior-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <1>;
             bindings = <&to>, <&none>;
         };
