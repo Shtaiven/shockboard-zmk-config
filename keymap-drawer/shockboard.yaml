@@ -1,0 +1,427 @@
+layers:
+  default:
+  - {t: '0', h: fun}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: '0', h: mouse}
+  - {t: '0', h: num}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '0', h: nav}
+  - ESCAPE
+  - {t: A, h: LEFT ALT}
+  - {t: S, h: LEFT GUI}
+  - {t: D, h: LEFT CONTROL}
+  - {t: F, h: LEFT SHIFT}
+  - G
+  - H
+  - {t: J, h: RIGHT SHIFT}
+  - {t: K, h: LEFT CONTROL}
+  - {t: L, h: LEFT GUI}
+  - {t: ;, h: LEFT ALT}
+  - ''''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: Sft+ TAB, h: mouse}
+  - SPACE
+  - {t: TAB, h: nav}
+  - {t: BACKSPACE, h: num}
+  - ENTER
+  - {t: DELETE, h: fun}
+  nav:
+  - {t: fun, h: toggle}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {t: mouse, h: toggle}
+  - {t: num, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - PAGE DOWN
+  - UP
+  - PAGE UP
+  - PRINTSCREEN
+  - {t: default, h: toggle}
+  - ''
+  - LEFT ALT
+  - LEFT GUI
+  - LEFT CONTROL
+  - LEFT SHIFT
+  - ''
+  - HOME
+  - LEFT
+  - DOWN
+  - RIGHT
+  - END
+  - INSERT
+  - ''
+  - AC CUT
+  - AC COPY
+  - AC PASTE
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  num:
+  - {t: fun, h: toggle}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - {t: mouse, h: toggle}
+  - {t: default, h: toggle}
+  - KP DIVIDE
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP MULTIPLY
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: nav, h: toggle}
+  - {t: game, h: toggle}
+  - KP 0
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP PLUS
+  - KP NUMLOCK
+  - RIGHT SHIFT
+  - LEFT CONTROL
+  - LEFT GUI
+  - LEFT ALT
+  - ''
+  - KP DOT
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP MINUS
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  mouse:
+  - {t: fun, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: default, h: toggle}
+  - {t: num, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&msc SCRL_DOWN'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_UP'
+  - ''
+  - {t: nav, h: toggle}
+  - ''
+  - LEFT ALT
+  - LEFT GUI
+  - LEFT CONTROL
+  - LEFT SHIFT
+  - ''
+  - '&msc SCRL_LEFT'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - '&msc SCRL_RIGHT'
+  - ''
+  - ''
+  - AC CUT
+  - AC COPY
+  - AC PASTE
+  - ''
+  - ''
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - ''
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp RCLK'
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  fun:
+  - {t: default, h: toggle}
+  - ''
+  - F10
+  - F11
+  - F12
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: mouse, h: toggle}
+  - {t: num, h: toggle}
+  - ''
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: nav, h: toggle}
+  - {t: game, h: toggle}
+  - ''
+  - F4
+  - F5
+  - F6
+  - ''
+  - ''
+  - RIGHT SHIFT
+  - LEFT CONTROL
+  - LEFT GUI
+  - LEFT ALT
+  - ''
+  - ''
+  - F1
+  - F2
+  - F3
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  setting:
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - '&bootloader'
+  - OUT TOG
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BRIGHTNESS DEC
+  - BRIGHTNESS INC
+  - ''
+  - ''
+  - REWIND
+  - FAST FORWARD
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - ''
+  - MUTE
+  - VOLUME DOWN
+  - VOLUME UP
+  - {t: game, h: toggle}
+  - ''
+  - PREVIOUS
+  - NEXT
+  - PLAY PAUSE
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - {type: held}
+  - ''
+  - ''
+  game:
+  - {t: fun, h: toggle}
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: mouse, h: toggle}
+  - {t: num, h: toggle}
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - ''
+  - ''
+  - UP ARROW
+  - ''
+  - ''
+  - {t: nav, h: toggle}
+  - ESCAPE
+  - CAPSLOCK
+  - A
+  - S
+  - D
+  - F
+  - ''
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - ''
+  - {t: default, h: toggle}
+  - LEFT SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LEFT CONTROL
+  - SPACE
+  - LEFT ALT
+  - ''
+  - ENTER
+  - ''
+combos:
+- p: [28, 16]
+  k: (
+  l: [default]
+- p: [27, 15]
+  k: '['
+  l: [default]
+- p: [26, 14]
+  k: '{'
+  l: [default]
+- p: [19, 31]
+  k: )
+  l: [default]
+- p: [20, 32]
+  k: ']'
+  l: [default]
+- p: [21, 33]
+  k: '}'
+  l: [default]
+- p: [21, 20]
+  k: +
+  l: [default]
+- p: [15, 16]
+  k: '-'
+  l: [default]
+- p: [15, 14]
+  k: _
+  l: [default]
+- p: [20, 19]
+  k: '='
+  l: [default]
+- p: [38, 37]
+  k: '~'
+  l: [default]
+- p: [38, 39]
+  k: '`'
+  l: [default]
+- p: [42, 43]
+  k: \
+  l: [default]
+- p: [43, 44]
+  k: '|'
+  l: [default]
+- p: [3, 4]
+  k: F11
+  l: [nav, num]
+- p: [8, 7]
+  k: F12
+  l: [nav, num]
+- p: [27, 32]
+  k: '&caps_word'
+  l: [default]
+- p: [24, 35]
+  k: CAPSLOCK
+  l: [default]
