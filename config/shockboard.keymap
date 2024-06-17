@@ -257,6 +257,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&to>, <&kp>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
         };
     };
 
