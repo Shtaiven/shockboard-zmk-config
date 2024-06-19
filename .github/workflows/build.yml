@@ -5,11 +5,9 @@ on:
   push:
     paths:
       - "build.yaml"
-      - "config/*.keymap"
-      - "config/*.dtsi"
-      - "config/*.conf"
-      - "config/west.yml"
+      - "config/**"
       - "boards/**"
+      - "zephyr/**"
 
 jobs:
   build:
