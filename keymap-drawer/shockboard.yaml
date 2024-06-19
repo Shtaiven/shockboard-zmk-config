@@ -24,7 +24,7 @@ layers:
     - O
     - P
     - {t: '0', h: nav}
-  - - ESCAPE
+  - - {t: LEFT SHIFT, h: sticky}
     - {t: A, h: LEFT ALT}
     - {t: S, h: LEFT GUI}
     - {t: D, h: LEFT CONTROL}
@@ -46,7 +46,7 @@ layers:
     - ','
     - .
     - /
-    - {t: Sft+ TAB, h: mouse}
+    - {t: ESCAPE, h: mouse}
     - SPACE
   - - {t: TAB, h: nav}
     - {t: BACKSPACE, h: num}
