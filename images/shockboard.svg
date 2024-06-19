@@ -226,10 +226,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(28, 155) rotate(8.0)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">LEFT</tspan><tspan x="0" dy="1.2em">SHIFT</tspan>
-</text>
-<text x="0" y="24" class="key hold">sticky</text>
+<text x="0" y="0" class="key tap">ESCAPE</text>
 </g>
 <g transform="translate(83, 163) rotate(8.0)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -325,7 +322,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(181, 271) rotate(-37.0)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">ESCAPE</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
 <text x="0" y="24" class="key hold">mouse</text>
 </g>
 <g transform="translate(265, 282) rotate(8.0)" class="key keypos-47">
@@ -339,12 +336,16 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(468, 310) rotate(-28.0)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
+<text x="0" y="0" class="key tap">ENTER</text>
 <text x="0" y="24" class="key hold">num</text>
 </g>
 <g transform="translate(551, 282) rotate(-8.0)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">ENTER</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">LEFT</tspan><tspan x="0" dy="1.2em">SHIFT</tspan>
+</text>
+<text x="0" y="24" class="key hold">sticky</text>
+<text x="0" y="-24" class="key shifted"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
 </g>
 <g transform="translate(634, 271) rotate(37.0)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -411,13 +412,7 @@ path.combo { stroke: #7f7f7f; }
 <path d="M408,139 l-189,0" class="combo"/>
 <path d="M408,139 l189,0" class="combo"/>
 <rect rx="6" ry="6" x="394" y="126" width="28" height="26" class="combo"/>
-<text x="408" y="139" class="combo tap"><tspan style="font-size: 70%">&amp;caps_word</tspan></text>
-</g>
-<g class="combo combopos-15">
-<path d="M408,155 l-361,0" class="combo"/>
-<path d="M408,155 l361,0" class="combo"/>
-<rect rx="6" ry="6" x="394" y="142" width="28" height="26" class="combo"/>
-<text x="408" y="155" class="combo tap"><tspan style="font-size: 88%">CAPSLOCK</tspan></text>
+<text x="408" y="139" class="combo tap"><tspan style="font-size: 88%">CAPSLOCK</tspan></text>
 </g>
 </g>
 </g>
