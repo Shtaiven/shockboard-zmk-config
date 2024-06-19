@@ -46,10 +46,10 @@ layers:
     - ','
     - .
     - /
-    - {t: BACKSPACE, h: mouse}
+    - {t: TAB, h: mouse}
     - SPACE
-  - - {t: TAB, h: nav}
-    - {t: ENTER, h: num}
+  - - {t: ENTER, h: nav}
+    - {t: BACKSPACE, h: num}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
     - {t: DELETE, h: fun}
   nav:
