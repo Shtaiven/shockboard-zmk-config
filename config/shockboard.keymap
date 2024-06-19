@@ -265,7 +265,7 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
             mods = <(MOD_LSFT)>;
-        }
+        };
     };
 
 
