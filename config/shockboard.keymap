@@ -24,6 +24,7 @@
 #define LT_TAPPING_TERM_MS      200  // Layer tap tapping term (ms)
 #define MOD_TOG_TAPPING_TERM_MS 200  // Mod tap tapping term (ms)
 #define QUICK_TAP_MS            175  // Quick tap timing (ms)
+#define SK_RELEASE_AFTER_MS     900  // Release sticky key after (ms)
 #define COMBO_TERM_FAST_MS       18  // Fast combo term for horizontal combos (ms)
 #define COMBO_TERM_SLOW_MS       30  // Slow combo term for vertical combos (ms)
 #define COMBO_IDLE_FAST_MS      150  // Fast require prior idle time for horizontal combos (ms)
@@ -51,6 +52,11 @@
     flavor = "balanced";
     tapping-term-ms = <LT_TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+&sk {
+    release-after-ms = <SK_RELEASE_AFTER_MS>;
+    quick-release;
 };
 
 &mmv {
@@ -273,9 +279,9 @@
             bindings = <
 &to_hold FUN NONE  &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5       &kp N6             &kp N7                    &kp N8                     &kp N9                 &kp N0                    &to_hold MOUSE NONE
 &to_hold NUM NONE  &kp Q                 &kp W                 &kp E                     &kp R                   &kp T        &kp Y              &kp U                     &kp I                      &kp O                  &kp P                     &to_hold NAV NONE
-&kp ESCAPE         &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G        &kp H              &pht_right RIGHT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
+&sk LEFT_SHIFT     &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G        &kp H              &pht_right RIGHT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
                    &kp Z                 &kp X                 &kp C                     &kp V                   &kp B        &kp N              &kp M                     &kp COMMA                  &kp DOT                &kp FSLH
-                                                               &lt MOUSE LS(TAB)         &kp SPACE               &lt NAV TAB  &lt NUM BACKSPACE  &kp ENTER                 &lt FUN DELETE
+                                                               &lt MOUSE ESCAPE          &kp SPACE               &lt NAV TAB  &lt NUM BACKSPACE  &kp ENTER                 &lt FUN DELETE
             >;
         };
 
