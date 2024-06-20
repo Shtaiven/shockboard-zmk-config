@@ -26,14 +26,14 @@ layers:
     - {t: '0', h: nav}
   - - ESCAPE
     - {t: A, h: LEFT ALT}
-    - {t: S, h: LEFT GUI}
-    - {t: D, h: LEFT CONTROL}
-    - {t: F, h: LEFT SHIFT}
+    - {t: S, h: LEFT SHIFT}
+    - {t: D, h: LEFT GUI}
+    - {t: F, h: LEFT CONTROL}
     - G
     - H
-    - {t: J, h: RIGHT SHIFT}
-    - {t: K, h: LEFT CONTROL}
-    - {t: L, h: LEFT GUI}
+    - {t: J, h: LEFT CONTROL}
+    - {t: K, h: LEFT GUI}
+    - {t: L, h: LEFT SHIFT}
     - {t: ;, h: LEFT ALT}
     - ''''
   - - Z
@@ -77,11 +77,11 @@ layers:
     - PAGE UP
     - PRINTSCREEN
     - {t: default, h: toggle}
-  - ['', LEFT ALT, LEFT GUI, LEFT CONTROL, LEFT SHIFT, '', HOME, LEFT, DOWN, RIGHT, END, INSERT]
-  - - ''
-    - AC CUT
-    - AC COPY
-    - AC PASTE
+  - ['', LEFT ALT, LEFT SHIFT, LEFT GUI, LEFT CONTROL, '', HOME, LEFT, DOWN, RIGHT, END, INSERT]
+  - - Ctl+ Z
+    - Ctl+ X
+    - Ctl+ C
+    - Ctl+ V
     - ''
     - ''
     - ''
@@ -126,9 +126,9 @@ layers:
     - KP 6
     - KP PLUS
     - KP NUMLOCK
-    - RIGHT SHIFT
     - LEFT CONTROL
     - LEFT GUI
+    - LEFT SHIFT
     - LEFT ALT
     - ''
   - - KP DOT
@@ -172,11 +172,11 @@ layers:
     - '&msc SCRL_UP'
     - ''
     - {t: nav, h: toggle}
-  - ['', LEFT ALT, LEFT GUI, LEFT CONTROL, LEFT SHIFT, '', '&msc SCRL_LEFT', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '&msc SCRL_RIGHT', '']
-  - - ''
-    - AC CUT
-    - AC COPY
-    - AC PASTE
+  - ['', LEFT ALT, LEFT SHIFT, LEFT GUI, LEFT CONTROL, '', '&msc SCRL_LEFT', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '&msc SCRL_RIGHT', '']
+  - - Ctl+ Z
+    - Ctl+ X
+    - Ctl+ C
+    - Ctl+ V
     - ''
     - ''
     - '&mkp MB4'
@@ -214,18 +214,7 @@ layers:
     - ''
     - ''
     - {t: nav, h: toggle}
-  - - {t: game, h: toggle}
-    - ''
-    - F4
-    - F5
-    - F6
-    - ''
-    - ''
-    - RIGHT SHIFT
-    - LEFT CONTROL
-    - LEFT GUI
-    - LEFT ALT
-    - ''
+  - ['', '', F4, F5, F6, '', '', LEFT CONTROL, LEFT GUI, LEFT SHIFT, LEFT ALT, '']
   - ['', F1, F2, F3, '', '', '', '', '', '', '', '']
   - - ''
     - ''
