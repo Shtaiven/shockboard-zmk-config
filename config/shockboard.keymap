@@ -276,50 +276,50 @@
 
         default_layer {
             bindings = <
-&to_hold FUN NONE  &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5         &kp N6             &kp N7                    &kp N8                     &kp N9                 &kp N0                    &to_hold MOUSE NONE
-&to_hold NUM NONE  &kp Q                 &kp W                 &kp E                     &kp R                   &kp T          &kp Y              &kp U                     &kp I                      &kp O                  &kp P                     &to_hold NAV NONE
-&kp ESCAPE         &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G          &kp H              &pht_right RIGHT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
-                   &kp Z                 &kp X                 &kp C                     &kp V                   &kp B          &kp N              &kp M                     &kp COMMA                  &kp DOT                &kp FSLH
-                                                               &lt MOUSE TAB             &kp SPACE               &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft               &lt FUN DELETE
+&to_hold FUN NONE  &kp N1                &kp N2                  &kp N3                &kp N4                    &kp N5         &kp N6             &kp N7                     &kp N8                 &kp N9                   &kp N0                    &to_hold MOUSE NONE
+&to_hold NUM NONE  &kp Q                 &kp W                   &kp E                 &kp R                     &kp T          &kp Y              &kp U                      &kp I                  &kp O                    &kp P                     &to_hold NAV NONE
+&kp ESCAPE         &pht_left LEFT_ALT A  &pht_left LEFT_SHIFT S  &pht_left LEFT_GUI D  &pht_left LEFT_CONTROL F  &kp G          &kp H              &pht_right LEFT_CONTROL J  &pht_right LEFT_GUI K  &pht_right LEFT_SHIFT L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
+                   &kp Z                 &kp X                   &kp C                 &kp V                     &kp B          &kp N              &kp M                      &kp COMMA              &kp DOT                  &kp SLASH
+                                                                 &lt MOUSE TAB         &kp SPACE                 &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft                &lt FUN DELETE
             >;
         };
 
         nav_layer {
             bindings = <
-&to FUN  &kp F1        &kp F2        &kp F3            &kp F4          &kp F5  &kp F6    &kp F7         &kp F8    &kp F9       &kp F10          &to MOUSE
-&to NUM  &none         &none         &none             &none           &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to DEFAULT
-&none    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
-         &none         &kp C_AC_CUT  &kp C_AC_COPY     &kp C_AC_PASTE  &none   &none     &none          &none     &none        &none
-                                     &trans            &trans          &trans  &trans    &trans         &trans
+&to FUN  &kp F1        &kp F2          &kp F3         &kp F4            &kp F5  &kp F6    &kp F7         &kp F8    &kp F9       &kp F10          &to MOUSE
+&to NUM  &none         &none           &none          &none             &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to DEFAULT
+&none    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI   &kp LEFT_CONTROL  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
+         &kp LC(Z)     &kp LC(X)       &kp LC(C)      &kp LC(V)         &none   &none     &none          &none     &none        &none
+                                       &trans         &trans            &trans  &trans    &trans         &trans
             >;
         };
 
         num_layer {
             bindings = <
-&to FUN      &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6          &kp F7           &kp F8            &kp F9        &kp F10       &to MOUSE
-&to DEFAULT  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &none           &none            &none             &none         &none         &to NAV
-&to GAME     &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_NUMLOCK  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none
-             &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_MINUS     &none           &none            &none             &none         &none
-                                               &trans           &trans           &trans           &trans          &trans           &trans
+&to FUN      &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6          &kp F7            &kp F8        &kp F9          &kp F10       &to MOUSE
+&to DEFAULT  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &none           &none             &none         &none           &none         &to NAV
+&to GAME     &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_NUMLOCK  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT  &none
+             &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_MINUS     &none           &none             &none         &none           &none
+                                               &trans           &trans           &trans           &trans          &trans            &trans
             >;
         };
 
         mouse_layer {
             bindings = <
-&to FUN  &none         &none         &none             &none           &none   &none           &none           &none           &none            &none            &to DEFAULT
-&to NUM  &none         &none         &none             &none           &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to NAV
-&none    &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
-         &none         &kp C_AC_CUT  &kp C_AC_COPY     &kp C_AC_PASTE  &none   &none           &mkp MB4        &mkp MB5        &none            &none
-                                     &trans            &trans          &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
+&to FUN  &none         &none           &none          &none             &none   &none           &none           &none           &none            &none            &to DEFAULT
+&to NUM  &none         &none           &none          &none             &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to NAV
+&none    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI   &kp LEFT_CONTROL  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
+         &kp LC(Z)     &kp LC(X)       &kp LC(C)      &kp LC(V)         &none   &none           &mkp MB4        &mkp MB5        &none            &none
+                                       &trans         &trans            &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
 
         fun_layer {
             bindings = <
-&to DEFAULT  &none  &kp F10  &kp F11  &kp F12  &none  &none  &none             &none            &none         &none         &to MOUSE
-&to NUM      &none  &kp F7   &kp F8   &kp F9   &none  &none  &none             &none            &none         &none         &to NAV
-&to GAME     &none  &kp F4   &kp F5   &kp F6   &none  &none  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none
-             &none  &kp F1   &kp F2   &kp F3   &none  &none  &none             &none            &none         &none
+&to DEFAULT  &none  &kp F10  &kp F11  &kp F12  &none  &none  &none             &none         &none           &none         &to MOUSE
+&to NUM      &none  &kp F7   &kp F8   &kp F9   &none  &none  &none             &none         &none           &none         &to NAV
+&none        &none  &kp F4   &kp F5   &kp F6   &none  &none  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT  &none
+             &none  &kp F1   &kp F2   &kp F3   &none  &none  &none             &none         &none           &none
                              &none    &none    &none  &none  &none             &none
             >;
         };
