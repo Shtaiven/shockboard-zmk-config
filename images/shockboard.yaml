@@ -221,7 +221,7 @@ layers:
     - ''
     - {type: held}
   setting:
-  - - BT DISC
+  - - BT CLEAR
     - {t: BT, h: '0'}
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
@@ -234,7 +234,7 @@ layers:
     - ''
     - ''
   - ['', '', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', REWIND, FAST FORWARD, '', '', '']
-  - - BT CLR
+  - - BT DISC
     - ''
     - MUTE
     - VOLUME DOWN
