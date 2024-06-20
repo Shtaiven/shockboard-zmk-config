@@ -77,7 +77,18 @@ layers:
     - PAGE UP
     - PRINTSCREEN
     - {t: default, h: toggle}
-  - ['', LEFT ALT, LEFT SHIFT, LEFT GUI, LEFT CONTROL, '', HOME, LEFT, DOWN, RIGHT, END, INSERT]
+  - - {t: RIGHT ALT, h: sticky}
+    - LEFT ALT
+    - LEFT SHIFT
+    - LEFT GUI
+    - LEFT CONTROL
+    - ''
+    - HOME
+    - LEFT
+    - DOWN
+    - RIGHT
+    - END
+    - INSERT
   - - Ctl+ Z
     - Ctl+ X
     - Ctl+ C
@@ -130,7 +141,7 @@ layers:
     - LEFT GUI
     - LEFT SHIFT
     - LEFT ALT
-    - ''
+    - {t: RIGHT ALT, h: sticky}
   - - KP DOT
     - KP 1
     - KP 2
@@ -172,7 +183,18 @@ layers:
     - '&msc SCRL_UP'
     - ''
     - {t: nav, h: toggle}
-  - ['', LEFT ALT, LEFT SHIFT, LEFT GUI, LEFT CONTROL, '', '&msc SCRL_LEFT', '&mmv MOVE_LEFT', '&mmv MOVE_DOWN', '&mmv MOVE_RIGHT', '&msc SCRL_RIGHT', '']
+  - - {t: RIGHT ALT, h: sticky}
+    - LEFT ALT
+    - LEFT SHIFT
+    - LEFT GUI
+    - LEFT CONTROL
+    - ''
+    - '&msc SCRL_LEFT'
+    - '&mmv MOVE_LEFT'
+    - '&mmv MOVE_DOWN'
+    - '&mmv MOVE_RIGHT'
+    - '&msc SCRL_RIGHT'
+    - ''
   - - Ctl+ Z
     - Ctl+ X
     - Ctl+ C
@@ -214,7 +236,18 @@ layers:
     - ''
     - ''
     - {t: nav, h: toggle}
-  - ['', '', F4, F5, F6, '', '', LEFT CONTROL, LEFT GUI, LEFT SHIFT, LEFT ALT, '']
+  - - ''
+    - ''
+    - F4
+    - F5
+    - F6
+    - ''
+    - ''
+    - LEFT CONTROL
+    - LEFT GUI
+    - LEFT SHIFT
+    - LEFT ALT
+    - {t: RIGHT ALT, h: sticky}
   - ['', F1, F2, F3, '', '', '', '', '', '', '', '']
   - - ''
     - ''
