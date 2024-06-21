@@ -254,7 +254,7 @@ layers:
     - ''
     - {type: held}
   setting:
-  - - BT CLEAR
+  - - BT CLR
     - {t: BT, h: '0'}
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
