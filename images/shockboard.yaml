@@ -130,7 +130,7 @@ layers:
     - ''
     - ''
     - {t: nav, h: toggle}
-  - - {t: game, h: toggle}
+  - - ''
     - KP 0
     - KP 4
     - KP 5
