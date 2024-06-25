@@ -298,7 +298,7 @@
             bindings = <
 &to FUN      &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6          &kp F7            &kp F8        &kp F9          &kp F10       &to MOUSE
 &to DEFAULT  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &none           &none             &none         &none           &none         &to NAV
-&to GAME     &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_NUMLOCK  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT  &sk RIGHT_ALT
+&none        &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_NUMLOCK  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LEFT_ALT  &sk RIGHT_ALT
              &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_MINUS     &none           &none             &none         &none           &none
                                                &trans           &trans           &trans           &trans          &trans            &trans
             >;
