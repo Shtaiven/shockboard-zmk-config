@@ -26,14 +26,14 @@ layers:
     - {t: '0', h: nav}
   - - ESCAPE
     - {t: A, h: LEFT ALT}
-    - {t: S, h: LEFT SHIFT}
-    - {t: D, h: LEFT GUI}
-    - {t: F, h: LEFT CONTROL}
+    - {t: S, h: LEFT GUI}
+    - {t: D, h: LEFT CONTROL}
+    - {t: F, h: LEFT SHIFT}
     - G
     - H
-    - {t: J, h: LEFT CONTROL}
-    - {t: K, h: LEFT GUI}
-    - {t: L, h: LEFT SHIFT}
+    - {t: J, h: LEFT SHIFT}
+    - {t: K, h: LEFT CONTROL}
+    - {t: L, h: LEFT GUI}
     - {t: ;, h: LEFT ALT}
     - ''''
   - - Z
@@ -79,9 +79,9 @@ layers:
     - {t: default, h: toggle}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT ALT
-    - LEFT SHIFT
     - LEFT GUI
     - LEFT CONTROL
+    - LEFT SHIFT
     - ''
     - HOME
     - LEFT
@@ -137,9 +137,9 @@ layers:
     - KP 6
     - KP PLUS
     - KP NUMLOCK
+    - LEFT SHIFT
     - LEFT CONTROL
     - LEFT GUI
-    - LEFT SHIFT
     - LEFT ALT
     - {t: RIGHT ALT, h: sticky}
   - - KP DOT
@@ -185,9 +185,9 @@ layers:
     - {t: nav, h: toggle}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT ALT
-    - LEFT SHIFT
     - LEFT GUI
     - LEFT CONTROL
+    - LEFT SHIFT
     - ''
     - '&msc SCRL_LEFT'
     - '&mmv MOVE_LEFT'
@@ -243,9 +243,9 @@ layers:
     - F6
     - ''
     - ''
+    - LEFT SHIFT
     - LEFT CONTROL
     - LEFT GUI
-    - LEFT SHIFT
     - LEFT ALT
     - {t: RIGHT ALT, h: sticky}
   - ['', F1, F2, F3, '', '', '', '', '', '', '', '']
