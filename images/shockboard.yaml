@@ -123,30 +123,30 @@ layers:
     - KP 7
     - KP 8
     - KP 9
-    - KP MULTIPLY
+    - KP MINUS
     - ''
     - ''
     - ''
     - ''
     - ''
     - {t: nav, h: toggle}
-  - - ''
-    - KP 0
+  - - KP NUMLOCK
+    - KP MULTIPLY
     - KP 4
     - KP 5
     - KP 6
     - KP PLUS
-    - KP NUMLOCK
+    - ''
     - LEFT SHIFT
     - LEFT CONTROL
     - LEFT GUI
     - LEFT ALT
     - {t: RIGHT ALT, h: sticky}
-  - - KP DOT
+  - - KP 0
     - KP 1
     - KP 2
     - KP 3
-    - KP MINUS
+    - KP DOT
     - ''
     - ''
     - ''
