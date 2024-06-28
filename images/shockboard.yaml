@@ -214,6 +214,18 @@ layers:
   fun:
   - - {t: default, h: toggle}
     - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: mouse, h: toggle}
+  - - {t: num, h: toggle}
+    - F9
     - F10
     - F11
     - F12
@@ -223,24 +235,12 @@ layers:
     - ''
     - ''
     - ''
-    - {t: mouse, h: toggle}
-  - - {t: num, h: toggle}
-    - ''
-    - F7
-    - F8
-    - F9
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
     - {t: nav, h: toggle}
   - - ''
-    - ''
-    - F4
     - F5
     - F6
+    - F7
+    - F8
     - ''
     - ''
     - LEFT SHIFT
@@ -248,7 +248,7 @@ layers:
     - LEFT GUI
     - LEFT ALT
     - {t: RIGHT ALT, h: sticky}
-  - ['', F1, F2, F3, '', '', '', '', '', '', '', '']
+  - [F1, F2, F3, F4, '', '', '', '', '', '', '', '']
   - - ''
     - ''
     - ''
