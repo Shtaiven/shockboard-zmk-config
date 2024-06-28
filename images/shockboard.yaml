@@ -266,8 +266,19 @@ layers:
     - ''
     - ''
     - ''
-  - ['', '', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', REWIND, FAST FORWARD, '', '', '']
-  - - BT DISC
+  - - ''
+    - {t: BT DISC, h: '0'}
+    - {t: BT DISC, h: '1'}
+    - {t: BT DISC, h: '2'}
+    - {t: BT DISC, h: '3'}
+    - {t: BT DISC, h: '4'}
+    - ''
+    - REWIND
+    - ''
+    - FAST FORWARD
+    - ''
+    - ''
+  - - ''
     - ''
     - MUTE
     - VOLUME DOWN
@@ -275,11 +286,11 @@ layers:
     - {t: game, h: toggle}
     - ''
     - PREVIOUS
-    - NEXT
     - PLAY PAUSE
+    - NEXT
     - ''
     - ''
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', '', '', '', '', '', '']
   - - {type: held}
     - {type: held}
     - ''
