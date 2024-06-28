@@ -316,11 +316,11 @@
 
         fun_layer {
             bindings = <
-&to DEFAULT  &none  &kp F10  &kp F11  &kp F12  &none  &none  &none           &none             &none         &none         &to MOUSE
-&to NUM      &none  &kp F7   &kp F8   &kp F9   &none  &none  &none           &none             &none         &none         &to NAV
-&none        &none  &kp F4   &kp F5   &kp F6   &none  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &sk RIGHT_ALT
-             &none  &kp F1   &kp F2   &kp F3   &none  &none  &none           &none             &none         &none
-                             &none    &none    &none  &none  &none           &none
+&to DEFAULT  &none   &none    &none    &none    &none  &none  &none           &none             &none         &none         &to MOUSE
+&to NUM      &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none           &none             &none         &none         &to NAV
+&none        &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &sk RIGHT_ALT
+             &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none           &none             &none         &none
+                              &none    &none    &none  &none  &none           &none
             >;
         };
 
