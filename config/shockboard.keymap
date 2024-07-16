@@ -20,10 +20,10 @@
 // Global defines
 
 #define PHT_TAPPING_TERM_MS     280  // Positional hold tap tapping term (ms)
-#define PHT_IDLE_MS             150  // Positional hold tap require idle time (ms)
+#define PHT_IDLE_MS             200  // Positional hold tap require idle time (ms)
 #define LT_TAPPING_TERM_MS      200  // Layer tap tapping term (ms)
 #define MOD_TOG_TAPPING_TERM_MS 200  // Mod tap tapping term (ms)
-#define QUICK_TAP_MS            175  // Quick tap timing (ms)
+#define QUICK_TAP_MS            225  // Quick tap timing (ms)
 #define SK_RELEASE_AFTER_MS     900  // Release sticky key after (ms)
 #define COMBO_TERM_FAST_MS       18  // Fast combo term for horizontal combos (ms)
 #define COMBO_TERM_SLOW_MS       30  // Slow combo term for vertical combos (ms)
