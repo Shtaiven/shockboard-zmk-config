@@ -49,7 +49,7 @@
 // Defaults reconfiguration
 
 &lt {
-    flavor = "balanced";
+    flavor = "hold-preferred";
     tapping-term-ms = <LT_TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
 };
