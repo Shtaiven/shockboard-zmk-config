@@ -246,6 +246,30 @@
             hold-trigger-on-release;
         };
 
+        plt_left: plt_left {
+            compatible = "zmk,behavior-hold-tap";  // Positional layer tap left
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <PHT_IDLE_MS>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 41 42 43 44 45 49 50 51>;
+            hold-trigger-on-release;
+        };
+
+        plt_right: plt_right {
+            compatible = "zmk,behavior-hold-tap";  // Positional layer tap right
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <PHT_IDLE_MS>;
+            hold-trigger-key-positions =<0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 46 47 48>;
+            hold-trigger-on-release;
+        };
+
         mo_tog: mo_tog {  // Momentary layer on hold, toggle on tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -276,11 +300,11 @@
 
         default_layer {
             bindings = <
-&kp MINUS   &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5         &kp N6             &kp N7                   &kp N8                     &kp N9                 &kp N0                    &kp EQUAL
-&kp GRAVE   &kp Q                 &kp W                 &kp E                     &kp R                   &kp T          &kp Y              &kp U                    &kp I                      &kp O                  &kp P                     &kp BACKSLASH
-&kp ESCAPE  &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G          &kp H              &pht_right LEFT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
-            &kp Z                 &kp X                 &kp C                     &kp V                   &kp B          &kp N              &kp M                    &kp COMMA                  &kp DOT                &kp SLASH
-                                                        &lt MOUSE TAB             &kp SPACE               &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft              &lt FUN DELETE
+&kp MINUS   &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5               &kp N6                    &kp N7                   &kp N8                     &kp N9                 &kp N0                    &kp EQUAL
+&kp GRAVE   &kp Q                 &kp W                 &kp E                     &kp R                   &kp T                &kp Y                     &kp U                    &kp I                      &kp O                  &kp P                     &kp BACKSLASH
+&kp ESCAPE  &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G                &kp H                     &pht_right LEFT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
+            &kp Z                 &kp X                 &kp C                     &kp V                   &kp B                &kp N                     &kp M                    &kp COMMA                  &kp DOT                &kp SLASH
+                                                        &plt_left MOUSE TAB       &kp SPACE               &plt_left NAV ENTER  &plt_right NUM BACKSPACE  &smart_shft              &plt_right FUN DELETE
             >;
         };
 
