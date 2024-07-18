@@ -50,9 +50,10 @@
 // Defaults reconfiguration
 
 &lt {
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <LT_TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
+    hold-while-undecided;
 };
 
 &sk {
@@ -255,13 +256,6 @@
             tapping-term-ms = <PHT_TAPPING_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <PHT_IDLE_MS>;
-        };
-
-        mo_tog: mo_tog {  // Momentary layer on hold, toggle on tap
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&mo>, <&tog>;
-            tapping-term-ms = <MOD_TOG_TAPPING_TERM_MS>;
         };
 
         to_hold: to_hold {  // Layer on hold
