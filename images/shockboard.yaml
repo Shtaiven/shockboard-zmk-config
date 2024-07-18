@@ -25,11 +25,42 @@ layers:
     - .
     - /
     - {t: TAB, h: mouse}
-    - SPACE
+    - {t: SPACE, h: lower}
   - - {t: ENTER, h: nav}
     - {t: BACKSPACE, h: num}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
     - {t: DELETE, h: fun}
+  lower:
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - [F12, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11]
+  - - {t: RIGHT ALT, h: sticky}
+    - {t: '1', h: LEFT ALT}
+    - {t: '2', h: LEFT GUI}
+    - {t: '3', h: LEFT CONTROL}
+    - {t: '4', h: LEFT SHIFT}
+    - '5'
+    - '6'
+    - {t: '7', h: LEFT SHIFT}
+    - {t: '8', h: LEFT CONTROL}
+    - {t: '9', h: LEFT GUI}
+    - {t: '0', h: LEFT ALT}
+    - {t: RIGHT ALT, h: sticky}
+  - - Ctl+ Z
+    - Ctl+ X
+    - Ctl+ C
+    - Ctl+ V
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: ▽, type: trans}
+    - {type: held}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   nav:
   - - {t: fun, h: toggle}
     - F1
