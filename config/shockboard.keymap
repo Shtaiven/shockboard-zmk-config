@@ -37,12 +37,13 @@
 // Layer definitions
 
 #define DEFAULT 0
-#define NAV     1
-#define NUM     2
-#define MOUSE   3
-#define FUN     4
-#define SETTING 5
-#define GAME    6
+#define LOWER   1
+#define NAV     2
+#define NUM     3
+#define MOUSE   4
+#define FUN     5
+#define SETTING 6
+#define GAME    7
 
 
 //---------------------------------------------------------------------------------------------------------------------
@@ -222,8 +223,8 @@
 //---------------------------------------------------------------------------------------------------------------------
 
     behaviors {
-        pht_left: pht_left {
-            compatible = "zmk,behavior-hold-tap";  // Positional hold tap left
+        pht_left: pht_left {  // Positional hold tap left
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             flavor = "balanced";
@@ -234,8 +235,8 @@
             hold-trigger-on-release;
         };
 
-        pht_right: pht_right {
-            compatible = "zmk,behavior-hold-tap";  // Positional hold tap right
+        pht_right: pht_right {  // Positional hold tap right
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             flavor = "balanced";
@@ -244,6 +245,16 @@
             require-prior-idle-ms = <PHT_IDLE_MS>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 46 47 48 49 50 51>;
             hold-trigger-on-release;
+        };
+
+        lt_space: lt_space {  // Layer tap for space
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <PHT_TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <PHT_IDLE_MS>;
         };
 
         mo_tog: mo_tog {  // Momentary layer on hold, toggle on tap
@@ -260,7 +271,7 @@
             tapping-term-ms = <LT_TAPPING_TERM_MS>;
         };
 
-        smart_shft: smart_shift {
+        smart_shft: smart_shift {  // Sticky shift on tap, caps word on double tap, shift on hold
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
@@ -280,10 +291,22 @@
 &kp GRAVE   &kp Q                 &kp W                 &kp E                     &kp R                   &kp T          &kp Y              &kp U                    &kp I                      &kp O                  &kp P                     &kp BACKSLASH
 &kp ESCAPE  &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G          &kp H              &pht_right LEFT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
             &kp Z                 &kp X                 &kp C                     &kp V                   &kp B          &kp N              &kp M                    &kp COMMA                  &kp DOT                &kp SLASH
-                                                        &lt MOUSE TAB             &kp SPACE               &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft              &lt FUN DELETE
+                                                        &lt MOUSE TAB             &lt_space LOWER SPACE   &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft              &lt FUN DELETE
             >;
         };
 
+        lower_layer {
+            bindings = <
+&none          &none                  &none                  &none                      &none                    &none   &none   &none                     &none                       &none                   &none                   &none
+&kp F12        &kp F1                 &kp F2                 &kp F3                     &kp F4                   &kp F5  &kp F6  &kp F7                    &kp F8                      &kp F9                  &kp F10                 &kp F11
+&sk RIGHT_ALT  &pht_left LEFT_ALT N1  &pht_left LEFT_GUI N2  &pht_left LEFT_CONTROL N3  &pht_left LEFT_SHIFT N4  &kp N5  &kp N6  &pht_right LEFT_SHIFT N7  &pht_right LEFT_CONTROL N8  &pht_right LEFT_GUI N9  &pht_right LEFT_ALT N0  &sk RIGHT_ALT
+               &kp LC(Z)              &kp LC(X)              &kp LC(C)                  &kp LC(V)                &none   &none   &none                     &none                       &none                   &none
+                                                             &trans                     &trans                   &trans  &trans  &trans                    &trans
+            >;
+        };
+
+        // TODO: make layer switching in the upper left and right corner better
+        // TODO: remove function keys from top layer if lower layer serves it's purpose well
         nav_layer {
             bindings = <
 &to FUN        &kp F1        &kp F2        &kp F3            &kp F4          &kp F5  &kp F6    &kp F7         &kp F8    &kp F9       &kp F10          &to MOUSE
