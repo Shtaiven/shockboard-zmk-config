@@ -291,19 +291,18 @@
 
         lower_layer {
             bindings = <
-&none          &none                  &none                  &none                      &none                    &none   &none   &none                     &none                       &none                   &none                   &none
-&kp F12        &kp F1                 &kp F2                 &kp F3                     &kp F4                   &kp F5  &kp F6  &kp F7                    &kp F8                      &kp F9                  &kp F10                 &kp F11
-&sk RIGHT_ALT  &pht_left LEFT_ALT N1  &pht_left LEFT_GUI N2  &pht_left LEFT_CONTROL N3  &pht_left LEFT_SHIFT N4  &kp N5  &kp N6  &pht_right LEFT_SHIFT N7  &pht_right LEFT_CONTROL N8  &pht_right LEFT_GUI N9  &pht_right LEFT_ALT N0  &sk RIGHT_ALT
-               &kp LC(Z)              &kp LC(X)              &kp LC(C)                  &kp LC(V)                &none   &none   &none                     &none                       &none                   &none
-                                                             &trans                     &trans                   &trans  &trans  &trans                    &trans
+&none      &none                  &none                  &none                      &none                    &none   &none   &none                     &none                       &none                   &none                   &none
+&kp F12    &kp F1                 &kp F2                 &kp F3                     &kp F4                   &kp F5  &kp F6  &kp F7                    &kp F8                      &kp F9                  &kp F10                 &kp F11
+&kp MINUS  &pht_left LEFT_ALT N1  &pht_left LEFT_GUI N2  &pht_left LEFT_CONTROL N3  &pht_left LEFT_SHIFT N4  &kp N5  &kp N6  &pht_right LEFT_SHIFT N7  &pht_right LEFT_CONTROL N8  &pht_right LEFT_GUI N9  &pht_right LEFT_ALT N0  &kp EQUAL
+           &kp LC(Z)              &kp LC(X)              &kp LC(C)                  &kp LC(V)                &none   &none   &kp GRAVE                 &kp LEFT_BRACKET            &kp RIGHT_BRACKET       &kp BACKSLASH
+                                                         &trans                     &trans                   &trans  &trans  &trans                    &trans
             >;
         };
 
         // TODO: make layer switching in the upper left and right corner better
-        // TODO: remove function keys from top layer if lower layer serves it's purpose well
         nav_layer {
             bindings = <
-&to FUN        &kp F1        &kp F2        &kp F3            &kp F4          &kp F5  &kp F6    &kp F7         &kp F8    &kp F9       &kp F10          &to MOUSE
+&to FUN        &none         &none         &none             &none           &none   &none     &none          &none     &none        &none            &to MOUSE
 &to NUM        &none         &none         &none             &none           &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to DEFAULT
 &sk RIGHT_ALT  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
                &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &none   &none     &none          &none     &none        &none
@@ -313,7 +312,7 @@
 
         num_layer {
             bindings = <
-&to FUN         &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6  &kp F7          &kp F8            &kp F9        &kp F10       &to MOUSE
+&to FUN         &none            &none            &none            &none            &none            &none   &none           &none             &none         &none         &to MOUSE
 &to DEFAULT     &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS     &none   &none           &none             &none         &none         &to NAV
 &kp KP_NUMLOCK  &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &none   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &sk RIGHT_ALT
                 &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &none   &none           &none             &none         &none
@@ -341,6 +340,7 @@
             >;
         };
 
+        // TODO: Better bluetooth disconnect using hold and try to get rid of top row
         setting_layer {
             bindings = <
 &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4   &bootloader  &out OUT_TOG    &none             &none               &none  &none
