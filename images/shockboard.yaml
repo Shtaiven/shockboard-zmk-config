@@ -3,16 +3,16 @@ layers:
   - ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=']
   - ['`', Q, W, E, R, T, Y, U, I, O, P, \]
   - - ESCAPE
-    - {t: A, h: LEFT ALT}
-    - {t: S, h: LEFT GUI}
-    - {t: D, h: LEFT CONTROL}
-    - {t: F, h: LEFT SHIFT}
+    - {t: A, h: LEFT SHIFT}
+    - {t: S, h: LEFT ALT}
+    - {t: D, h: LEFT GUI}
+    - {t: F, h: LEFT CONTROL}
     - G
     - H
-    - {t: J, h: LEFT SHIFT}
-    - {t: K, h: LEFT CONTROL}
-    - {t: L, h: LEFT GUI}
-    - {t: ;, h: LEFT ALT}
+    - {t: J, h: LEFT CONTROL}
+    - {t: K, h: LEFT GUI}
+    - {t: L, h: LEFT ALT}
+    - {t: ;, h: LEFT SHIFT}
     - ''''
   - - Z
     - X
@@ -34,16 +34,16 @@ layers:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - [F12, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11]
   - - '-'
-    - {t: '1', h: LEFT ALT}
-    - {t: '2', h: LEFT GUI}
-    - {t: '3', h: LEFT CONTROL}
-    - {t: '4', h: LEFT SHIFT}
+    - {t: '1', h: LEFT SHIFT}
+    - {t: '2', h: LEFT ALT}
+    - {t: '3', h: LEFT GUI}
+    - {t: '4', h: LEFT CONTROL}
     - '5'
     - '6'
-    - {t: '7', h: LEFT SHIFT}
-    - {t: '8', h: LEFT CONTROL}
-    - {t: '9', h: LEFT GUI}
-    - {t: '0', h: LEFT ALT}
+    - {t: '7', h: LEFT CONTROL}
+    - {t: '8', h: LEFT GUI}
+    - {t: '9', h: LEFT ALT}
+    - {t: '0', h: LEFT SHIFT}
     - '='
   - - Ctl+ Z
     - Ctl+ X
@@ -87,10 +87,10 @@ layers:
     - PRINTSCREEN
     - {t: default, h: toggle}
   - - {t: RIGHT ALT, h: sticky}
+    - LEFT SHIFT
     - LEFT ALT
     - LEFT GUI
     - LEFT CONTROL
-    - LEFT SHIFT
     - ''
     - HOME
     - LEFT
@@ -146,10 +146,10 @@ layers:
     - KP 6
     - KP PLUS
     - ''
-    - LEFT SHIFT
     - LEFT CONTROL
     - LEFT GUI
     - LEFT ALT
+    - LEFT SHIFT
     - {t: RIGHT ALT, h: sticky}
   - - KP 0
     - KP 1
@@ -193,10 +193,10 @@ layers:
     - ''
     - {t: nav, h: toggle}
   - - {t: RIGHT ALT, h: sticky}
+    - LEFT SHIFT
     - LEFT ALT
     - LEFT GUI
     - LEFT CONTROL
-    - LEFT SHIFT
     - ''
     - '&msc SCRL_LEFT'
     - '&mmv MOVE_LEFT'
@@ -252,10 +252,10 @@ layers:
     - F8
     - ''
     - ''
-    - LEFT SHIFT
     - LEFT CONTROL
     - LEFT GUI
     - LEFT ALT
+    - LEFT SHIFT
     - {t: RIGHT ALT, h: sticky}
   - [F1, F2, F3, F4, '', '', '', '', '', '', '', '']
   - - ''
