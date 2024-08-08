@@ -203,22 +203,6 @@
             layers = <DEFAULT>;
         };
 
-        combo_f11 {
-            bindings = <&kp F11>;
-            key-positions = <3 4>;
-            timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <NAV NUM>;
-        };
-
-        combo_f12 {
-            bindings = <&kp F12>;
-            key-positions = <8 7>;
-            timeout-ms = <COMBO_TERM_FAST_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <NAV NUM>;
-        };
-
         // Split combos
         combo_caps_lock {
             bindings = <&kp CAPSLOCK>;
