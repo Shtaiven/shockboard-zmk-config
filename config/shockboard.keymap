@@ -16,7 +16,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 // Global defines
 
 #define PHT_TAPPING_TERM_MS     280  // Positional hold tap tapping term (ms)
@@ -33,7 +33,7 @@
 #define NONE 0  // Null keypress
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 // Layer definitions
 
 #define DEFAULT 0
@@ -46,7 +46,16 @@
 #define GAME    7
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+// Homerow mod (HRM) definitions
+
+#define HRM_INDEX  LEFT_CONTROL
+#define HRM_MIDDLE LEFT_GUI
+#define HRM_RING   LEFT_ALT
+#define HRM_PINKY  LEFT_SHIFT
+
+
+//--------------------------------------------------------------------------------------------------
 // Defaults reconfiguration
 
 &lt {
@@ -74,7 +83,7 @@
 };
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 
 / {
     combos {
@@ -221,7 +230,7 @@
     };
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 
     behaviors {
         pht_left: pht_left {  // Positional hold tap left
@@ -274,69 +283,71 @@
     };
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp MINUS   &kp N1                &kp N2                &kp N3                    &kp N4                  &kp N5         &kp N6             &kp N7                   &kp N8                     &kp N9                 &kp N0                    &kp EQUAL
-&kp GRAVE   &kp Q                 &kp W                 &kp E                     &kp R                   &kp T          &kp Y              &kp U                    &kp I                      &kp O                  &kp P                     &kp BACKSLASH
-&kp ESCAPE  &pht_left LEFT_ALT A  &pht_left LEFT_GUI S  &pht_left LEFT_CONTROL D  &pht_left LEFT_SHIFT F  &kp G          &kp H              &pht_right LEFT_SHIFT J  &pht_right LEFT_CONTROL K  &pht_right LEFT_GUI L  &pht_right LEFT_ALT SEMI  &kp SINGLE_QUOTE
-            &kp Z                 &kp X                 &kp C                     &kp V                   &kp B          &kp N              &kp M                    &kp COMMA                  &kp DOT                &kp SLASH
-                                                        &lt MOUSE TAB             &lt_space LOWER SPACE   &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft              &lt FUN DELETE
+&kp MINUS   &kp N1                 &kp N2                &kp N3                  &kp N4                 &kp N5         &kp N6             &kp N7                  &kp N8                   &kp N9                 &kp N0                     &kp EQUAL
+&kp GRAVE   &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &kp BACKSLASH
+&kp ESCAPE  &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
+            &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
+                                                         &lt MOUSE TAB           &lt_space LOWER SPACE  &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
             >;
         };
 
+        // TODO: Remove this layer in favor of combos between the top and home row, and keep the fun layer for function keys
         lower_layer {
             bindings = <
-&none      &none                  &none                  &none                      &none                    &none   &none   &none                     &none                       &none                   &none                   &none
-&kp F12    &kp F1                 &kp F2                 &kp F3                     &kp F4                   &kp F5  &kp F6  &kp F7                    &kp F8                      &kp F9                  &kp F10                 &kp F11
-&kp MINUS  &pht_left LEFT_ALT N1  &pht_left LEFT_GUI N2  &pht_left LEFT_CONTROL N3  &pht_left LEFT_SHIFT N4  &kp N5  &kp N6  &pht_right LEFT_SHIFT N7  &pht_right LEFT_CONTROL N8  &pht_right LEFT_GUI N9  &pht_right LEFT_ALT N0  &kp EQUAL
-           &kp LC(Z)              &kp LC(X)              &kp LC(C)                  &kp LC(V)                &none   &none   &kp GRAVE                 &kp LEFT_BRACKET            &kp RIGHT_BRACKET       &kp BACKSLASH
-                                                         &trans                     &trans                   &trans  &trans  &trans                    &trans
+&none      &none                   &none                  &none                    &none                   &none   &none   &none                    &none                     &none                   &none                    &none
+&kp F12    &kp F1                  &kp F2                 &kp F3                   &kp F4                  &kp F5  &kp F6  &kp F7                   &kp F8                    &kp F9                  &kp F10                  &kp F11
+&kp MINUS  &pht_left HRM_PINKY N1  &pht_left HRM_RING N2  &pht_left HRM_MIDDLE N3  &pht_left HRM_INDEX N4  &kp N5  &kp N6  &pht_right HRM_INDEX N7  &pht_right HRM_MIDDLE N8  &pht_right HRM_RING N9  &pht_right HRM_PINKY N0  &kp EQUAL
+           &kp LC(Z)               &kp LC(X)              &kp LC(C)                &kp LC(V)               &none   &none   &kp GRAVE                &kp LEFT_BRACKET          &kp RIGHT_BRACKET       &kp BACKSLASH
+                                                          &trans                   &trans                  &trans  &trans  &trans                   &trans
             >;
         };
 
         // TODO: make layer switching in the upper left and right corner better
         nav_layer {
             bindings = <
-&to FUN        &none         &none         &none             &none           &none   &none     &none          &none     &none        &none            &to MOUSE
-&to NUM        &none         &none         &none             &none           &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to DEFAULT
-&sk RIGHT_ALT  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
-               &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &none   &none     &none          &none     &none        &none
-                                           &trans            &trans          &trans  &trans    &trans         &trans
+&to FUN        &none          &none         &none           &none          &none   &none     &none          &none     &none        &none            &to MOUSE
+&to NUM        &none          &none         &none           &none          &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to DEFAULT
+&sk RIGHT_ALT  &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
+               &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none     &none          &none     &none        &none
+                                            &trans          &trans         &trans  &trans    &trans         &trans
             >;
         };
 
         num_layer {
             bindings = <
-&to FUN         &none            &none            &none            &none            &none            &none   &none           &none             &none         &none         &to MOUSE
-&to DEFAULT     &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS     &none   &none           &none             &none         &none         &to NAV
-&kp KP_NUMLOCK  &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &none   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &sk RIGHT_ALT
-                &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &none   &none           &none             &none         &none
-                                                  &trans           &trans           &trans           &trans  &trans          &trans
+&to FUN         &none            &none            &none            &none            &none         &none   &none          &none           &none         &none          &to MOUSE
+&to DEFAULT     &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none   &none          &none           &none         &none          &to NAV
+&kp KP_NUMLOCK  &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+                &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &none   &none          &none           &none         &none
+                                                  &trans           &trans           &trans        &trans  &trans         &trans
             >;
         };
 
+        // TODO: Replace with a symbol layer
         mouse_layer {
             bindings = <
-&to FUN        &none         &none         &none             &none           &none   &none           &none           &none           &none            &none            &to DEFAULT
-&to NUM        &none         &none         &none             &none           &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to NAV
-&sk RIGHT_ALT  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
-               &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &none   &none           &mkp MB4        &mkp MB5        &none            &none
-                                           &trans            &trans          &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
+&to FUN        &none          &none         &none           &none          &none   &none           &none           &none           &none            &none            &to DEFAULT
+&to NUM        &none          &none         &none           &none          &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to NAV
+&sk RIGHT_ALT  &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
+               &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none           &mkp MB4        &mkp MB5        &none            &none
+                                            &trans          &trans         &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
 
         fun_layer {
             bindings = <
-&to DEFAULT  &none   &none    &none    &none    &none  &none  &none           &none             &none         &none         &to MOUSE
-&to NUM      &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none           &none             &none         &none         &to NAV
-&none        &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &sk RIGHT_ALT
-             &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none           &none             &none         &none
-                              &none    &none    &none  &none  &none           &none
+&to DEFAULT  &none   &none    &none    &none    &none  &none  &none          &none           &none         &none          &to MOUSE
+&to NUM      &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none          &none           &none         &none          &to NAV
+&none        &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+             &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none          &none           &none         &none
+                              &none    &none    &none  &none  &none          &none
             >;
         };
 
@@ -363,7 +374,7 @@
     };
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
