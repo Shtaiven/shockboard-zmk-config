@@ -386,12 +386,6 @@ combos:
 - p: [43, 44]
   k: '|'
   l: [default]
-- p: [3, 4]
-  k: F11
-  l: [nav, num]
-- p: [8, 7]
-  k: F12
-  l: [nav, num]
 - p: [27, 32]
   k: CAPSLOCK
   l: [default]
