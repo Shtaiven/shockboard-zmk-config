@@ -24,14 +24,14 @@ layers:
     - ','
     - .
     - /
-    - {t: TAB, h: '  SYM->'}
+    - {t: TAB, h: sym}
     - SPACE
-  - - {t: ENTER, h: '  NAV->'}
-    - {t: BACKSPACE, h: <-NUM}
+  - - {t: ENTER, h: nav}
+    - {t: BACKSPACE, h: num}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
-    - {t: DELETE, h: <-FUN}
-  '  NAV->':
-  - - {t: <-FUN, h: toggle}
+    - {t: DELETE, h: fun}
+  nav:
+  - - {t: fun, h: toggle}
     - ''
     - ''
     - ''
@@ -42,8 +42,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: '  SYM->', h: toggle}
-  - - {t: <-NUM, h: toggle}
+    - {t: sym, h: toggle}
+  - - {t: num, h: toggle}
     - ''
     - ''
     - ''
@@ -83,8 +83,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  <-NUM:
-  - - {t: <-FUN, h: toggle}
+  num:
+  - - {t: fun, h: toggle}
     - ''
     - ''
     - ''
@@ -95,7 +95,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: '  SYM->', h: toggle}
+    - {t: sym, h: toggle}
   - - {t: default, h: toggle}
     - KP DIVIDE
     - KP 7
@@ -107,7 +107,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: '  NAV->', h: toggle}
+    - {t: nav, h: toggle}
   - - KP NUMLOCK
     - KP MULTIPLY
     - KP 4
@@ -136,8 +136,8 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  '  SYM->':
-  - - {t: <-FUN, h: toggle}
+  sym:
+  - - {t: fun, h: toggle}
     - ''
     - ''
     - ''
@@ -149,7 +149,7 @@ layers:
     - ''
     - ''
     - {t: default, h: toggle}
-  - - {t: <-NUM, h: toggle}
+  - - {t: num, h: toggle}
     - ''
     - ''
     - ''
@@ -160,7 +160,7 @@ layers:
     - '#'
     - '@'
     - '!'
-    - {t: '  NAV->', h: toggle}
+    - {t: nav, h: toggle}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -189,7 +189,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  <-FUN:
+  fun:
   - - {t: default, h: toggle}
     - ''
     - ''
@@ -201,8 +201,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: '  SYM->', h: toggle}
-  - - {t: <-NUM, h: toggle}
+    - {t: sym, h: toggle}
+  - - {t: num, h: toggle}
     - F9
     - F10
     - F11
@@ -213,7 +213,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: '  NAV->', h: toggle}
+    - {t: nav, h: toggle}
   - - ''
     - F5
     - F6
@@ -231,7 +231,7 @@ layers:
     - ''
     - ''
     - {type: held}
-  '  SET':
+  set:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - BT CLR
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
@@ -250,7 +250,7 @@ layers:
     - MUTE
     - VOLUME DOWN
     - VOLUME UP
-    - {t: '  GAME', h: toggle}
+    - {t: game, h: toggle}
     - ''
     - PREVIOUS
     - PLAY PAUSE
@@ -262,8 +262,8 @@ layers:
     - {type: held}
     - ''
     - ''
-  '  GAME':
-  - - {t: <-FUN, h: toggle}
+  game:
+  - - {t: fun, h: toggle}
     - '`'
     - '1'
     - '2'
@@ -274,8 +274,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: '  SYM->', h: toggle}
-  - - {t: <-NUM, h: toggle}
+    - {t: sym, h: toggle}
+  - - {t: num, h: toggle}
     - TAB
     - Q
     - W
@@ -286,7 +286,7 @@ layers:
     - UP ARROW
     - ''
     - ''
-    - {t: '  NAV->', h: toggle}
+    - {t: nav, h: toggle}
   - - ESCAPE
     - CAPSLOCK
     - A
@@ -334,16 +334,16 @@ combos:
   l: [default]
 - p: [26, 14]
   k: '1'
-  l: ['  GAME']
+  l: [game]
 - p: [27, 15]
   k: '2'
-  l: ['  GAME']
+  l: [game]
 - p: [28, 16]
   k: '3'
-  l: ['  GAME']
+  l: [game]
 - p: [29, 17]
   k: '4'
-  l: ['  GAME']
+  l: [game]
 - p: [21, 20]
   k: +
   l: [default]
