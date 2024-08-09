@@ -24,7 +24,7 @@ layers:
     - ','
     - .
     - /
-    - {t: TAB, h: mouse}
+    - {t: TAB, h: sym}
     - SPACE
   - - {t: ENTER, h: nav}
     - {t: BACKSPACE, h: num}
@@ -42,7 +42,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: mouse, h: toggle}
+    - {t: sym, h: toggle}
   - - {t: num, h: toggle}
     - ''
     - ''
@@ -95,7 +95,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: mouse, h: toggle}
+    - {t: sym, h: toggle}
   - - {t: default, h: toggle}
     - KP DIVIDE
     - KP 7
@@ -136,7 +136,7 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  mouse:
+  sym:
   - - {t: fun, h: toggle}
     - ''
     - ''
@@ -178,11 +178,11 @@ layers:
     - Ctl+ C
     - Ctl+ V
     - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - '-'
+    - '='
+    - '['
+    - ']'
+    - \
     - {type: held}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -201,7 +201,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: mouse, h: toggle}
+    - {t: sym, h: toggle}
   - - {t: num, h: toggle}
     - F9
     - F10
@@ -231,7 +231,7 @@ layers:
     - ''
     - ''
     - {type: held}
-  setting:
+  set:
   - - BT CLR
     - {t: BT, h: '0'}
     - {t: BT, h: '1'}
@@ -285,7 +285,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: mouse, h: toggle}
+    - {t: sym, h: toggle}
   - - {t: num, h: toggle}
     - TAB
     - Q
