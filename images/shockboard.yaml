@@ -233,7 +233,18 @@ layers:
     - {type: held}
   set:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - [BT CLR, '&bt_hold_0', '&bt_hold_1', '&bt_hold_2', '&bt_hold_3', '&bt_hold_4', '', REWIND, '', FAST FORWARD, '', '']
+  - - BT CLR
+    - {t: '&bt_sel_0', h: '&bt_disc_0'}
+    - {t: '&bt_sel_1', h: '&bt_disc_1'}
+    - {t: '&bt_sel_2', h: '&bt_disc_2'}
+    - {t: '&bt_sel_3', h: '&bt_disc_3'}
+    - {t: '&bt_sel_4', h: '&bt_disc_4'}
+    - ''
+    - REWIND
+    - ''
+    - FAST FORWARD
+    - ''
+    - ''
   - - OUT TOG
     - ''
     - MUTE
