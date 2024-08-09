@@ -279,6 +279,71 @@
 
 //--------------------------------------------------------------------------------------------------
 
+    macros {
+        bt_sel_0: bt_sel_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>;
+        };
+
+        bt_disc_0: bt_disc_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 0>;
+        };
+
+        bt_sel_1: bt_sel_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>;
+        };
+
+        bt_disc_1: bt_disc_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 1>;
+        };
+
+        bt_sel_2: bt_sel_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>;
+        };
+
+        bt_disc_2: bt_disc_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 2>;
+        };
+
+        bt_sel_3: bt_sel_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>;
+        };
+
+        bt_disc_3: bt_disc_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 3>;
+        };
+
+        bt_sel_4: bt_sel_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>;
+        };
+
+        bt_disc_4: bt_disc_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 4>;
+        };
+    };
+
+
+//--------------------------------------------------------------------------------------------------
+
     behaviors {
         pht_left: pht_left {  // Positional hold tap left
             compatible = "zmk,behavior-hold-tap";
@@ -316,6 +381,41 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
             mods = <(MOD_LSFT)>;
+        };
+
+        bt_hold_0: bt_hold_0 {  // Disconnect on hold, connect on tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_0>, <&bt_sel_0>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_1: bt_hold_1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_1>, <&bt_sel_1>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_2: bt_hold_2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_2>, <&bt_sel_2>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_3: bt_hold_3 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_3>, <&bt_sel_3>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_4: bt_hold_4 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_4>, <&bt_sel_4>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
         };
     };
 
@@ -376,14 +476,13 @@
             >;
         };
 
-        // TODO: Better bluetooth disconnect using hold and try to get rid of top row
         set_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4   &bootloader  &out OUT_TOG    &none             &none               &none  &none
-&none       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2         &bt BT_DISC 3         &bt BT_DISC 4  &none        &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
-&none       &none          &kp C_MUTE     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME       &none        &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &none
-            &none          &none          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none          &none        &none           &none             &none               &none
-                                          &none                 &none                 &none          &none        &none           &none
+&none         &none         &none         &none                 &none                 &none         &none  &none           &none             &none               &none  &none
+&bt BT_CLR    &bt_hold_0 0  &bt_hold_1 0  &bt_hold_2 0          &bt_hold_3 0          &bt_hold_4 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
+&out OUT_TOG  &none         &kp C_MUTE    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME      &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &bootloader
+              &none         &none         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none         &none  &none           &none             &none               &none
+                                          &none                 &none                 &none         &none  &none           &none
             >;
         };
 
