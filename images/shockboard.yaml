@@ -1,5 +1,5 @@
 layers:
-  base:
+  default:
   - ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=']
   - ['`', Q, W, E, R, T, Y, U, I, O, P, \]
   - - ESCAPE
@@ -24,14 +24,14 @@ layers:
     - ','
     - .
     - /
-    - {t: TAB, h: sym}
+    - {t: TAB, h: '  SYM->'}
     - SPACE
-  - - {t: ENTER, h: nav}
-    - {t: BACKSPACE, h: num}
+  - - {t: ENTER, h: '  NAV->'}
+    - {t: BACKSPACE, h: <-NUM}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
-    - {t: DELETE, h: fun}
-  nav:
-  - - {t: fun, h: toggle}
+    - {t: DELETE, h: <-FUN}
+  '  NAV->':
+  - - {t: <-FUN, h: toggle}
     - ''
     - ''
     - ''
@@ -42,8 +42,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: sym, h: toggle}
-  - - {t: num, h: toggle}
+    - {t: '  SYM->', h: toggle}
+  - - {t: <-NUM, h: toggle}
     - ''
     - ''
     - ''
@@ -54,7 +54,7 @@ layers:
     - UP
     - PAGE UP
     - PRINTSCREEN
-    - {t: base, h: toggle}
+    - {t: default, h: toggle}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -83,8 +83,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  num:
-  - - {t: fun, h: toggle}
+  <-NUM:
+  - - {t: <-FUN, h: toggle}
     - ''
     - ''
     - ''
@@ -95,8 +95,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: sym, h: toggle}
-  - - {t: base, h: toggle}
+    - {t: '  SYM->', h: toggle}
+  - - {t: default, h: toggle}
     - KP DIVIDE
     - KP 7
     - KP 8
@@ -107,7 +107,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: nav, h: toggle}
+    - {t: '  NAV->', h: toggle}
   - - KP NUMLOCK
     - KP MULTIPLY
     - KP 4
@@ -136,8 +136,8 @@ layers:
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  sym:
-  - - {t: fun, h: toggle}
+  '  SYM->':
+  - - {t: <-FUN, h: toggle}
     - ''
     - ''
     - ''
@@ -148,8 +148,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: base, h: toggle}
-  - - {t: num, h: toggle}
+    - {t: default, h: toggle}
+  - - {t: <-NUM, h: toggle}
     - ''
     - ''
     - ''
@@ -160,7 +160,7 @@ layers:
     - '#'
     - '@'
     - '!'
-    - {t: nav, h: toggle}
+    - {t: '  NAV->', h: toggle}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -189,8 +189,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  fun:
-  - - {t: base, h: toggle}
+  <-FUN:
+  - - {t: default, h: toggle}
     - ''
     - ''
     - ''
@@ -201,8 +201,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: sym, h: toggle}
-  - - {t: num, h: toggle}
+    - {t: '  SYM->', h: toggle}
+  - - {t: <-NUM, h: toggle}
     - F9
     - F10
     - F11
@@ -213,7 +213,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: nav, h: toggle}
+    - {t: '  NAV->', h: toggle}
   - - ''
     - F5
     - F6
@@ -231,7 +231,7 @@ layers:
     - ''
     - ''
     - {type: held}
-  set:
+  '  SET':
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - BT CLR
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
@@ -250,7 +250,7 @@ layers:
     - MUTE
     - VOLUME DOWN
     - VOLUME UP
-    - {t: game, h: toggle}
+    - {t: '  GAME', h: toggle}
     - ''
     - PREVIOUS
     - PLAY PAUSE
@@ -262,8 +262,8 @@ layers:
     - {type: held}
     - ''
     - ''
-  game:
-  - - {t: fun, h: toggle}
+  '  GAME':
+  - - {t: <-FUN, h: toggle}
     - '`'
     - '1'
     - '2'
@@ -274,8 +274,8 @@ layers:
     - ''
     - ''
     - ''
-    - {t: sym, h: toggle}
-  - - {t: num, h: toggle}
+    - {t: '  SYM->', h: toggle}
+  - - {t: <-NUM, h: toggle}
     - TAB
     - Q
     - W
@@ -286,7 +286,7 @@ layers:
     - UP ARROW
     - ''
     - ''
-    - {t: nav, h: toggle}
+    - {t: '  NAV->', h: toggle}
   - - ESCAPE
     - CAPSLOCK
     - A
@@ -298,76 +298,76 @@ layers:
     - DOWN ARROW
     - RIGHT ARROW
     - ''
-    - {t: base, h: toggle}
+    - {t: default, h: toggle}
   - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
   - [LEFT ALT, '', ENTER, '']
 combos:
 - p: [25, 13]
   k: '1'
-  l: [base]
+  l: [default]
 - p: [26, 14]
   k: '2'
-  l: [base]
+  l: [default]
 - p: [27, 15]
   k: '3'
-  l: [base]
+  l: [default]
 - p: [28, 16]
   k: '4'
-  l: [base]
+  l: [default]
 - p: [29, 17]
   k: '5'
-  l: [base]
+  l: [default]
 - p: [30, 18]
   k: '6'
-  l: [base]
+  l: [default]
 - p: [19, 31]
   k: '7'
-  l: [base]
+  l: [default]
 - p: [20, 32]
   k: '8'
-  l: [base]
+  l: [default]
 - p: [21, 33]
   k: '9'
-  l: [base]
+  l: [default]
 - p: [22, 34]
   k: '0'
-  l: [base]
+  l: [default]
 - p: [26, 14]
   k: '1'
-  l: [game]
+  l: ['  GAME']
 - p: [27, 15]
   k: '2'
-  l: [game]
+  l: ['  GAME']
 - p: [28, 16]
   k: '3'
-  l: [game]
+  l: ['  GAME']
 - p: [29, 17]
   k: '4'
-  l: [game]
+  l: ['  GAME']
 - p: [21, 20]
   k: +
-  l: [base]
+  l: [default]
 - p: [15, 16]
   k: '-'
-  l: [base]
+  l: [default]
 - p: [15, 14]
   k: _
-  l: [base]
+  l: [default]
 - p: [20, 19]
   k: '='
-  l: [base]
+  l: [default]
 - p: [38, 37]
   k: '~'
-  l: [base]
+  l: [default]
 - p: [38, 39]
   k: '`'
-  l: [base]
+  l: [default]
 - p: [42, 43]
   k: \
-  l: [base]
+  l: [default]
 - p: [43, 44]
   k: '|'
-  l: [base]
+  l: [default]
 - p: [27, 32]
   k: CAPSLOCK
-  l: [base]
+  l: [default]
