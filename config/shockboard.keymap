@@ -426,6 +426,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "base";
             bindings = <
 &kp MINUS   &kp N1                 &kp N2                &kp N3                  &kp N4                 &kp N5         &kp N6             &kp N7                  &kp N8                   &kp N9                 &kp N0                     &kp EQUAL
 &kp GRAVE   &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &kp BACKSLASH
@@ -437,6 +438,7 @@
 
         // TODO: make layer switching in the upper left and right corner better
         nav_layer {
+            display-name = "nav";
             bindings = <
 &to FUN        &none          &none         &none           &none          &none   &none     &none          &none     &none        &none            &to SYM
 &to NUM        &none          &none         &none           &none          &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to DEFAULT
@@ -447,6 +449,7 @@
         };
 
         num_layer {
+            display-name = "num";
             bindings = <
 &to FUN         &none            &none            &none            &none            &none         &none   &none          &none           &none         &none          &to SYM
 &to DEFAULT     &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none   &none          &none           &none         &none          &to NAV
@@ -457,6 +460,7 @@
         };
 
         sym_layer {
+            display-name = "sym";
             bindings = <
 &to FUN        &none          &none         &none           &none          &none   &none        &none          &none             &none                 &none                  &to DEFAULT
 &to NUM        &none          &none         &none           &none          &none   &kp PERCENT  &kp DOLLAR     &kp HASH          &kp AT_SIGN           &kp EXCLAMATION        &to NAV
@@ -467,6 +471,7 @@
         };
 
         fun_layer {
+            display-name = "fun";
             bindings = <
 &to DEFAULT  &none   &none    &none    &none    &none  &none  &none          &none           &none         &none          &to SYM
 &to NUM      &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none          &none           &none         &none          &to NAV
@@ -477,6 +482,7 @@
         };
 
         set_layer {
+            display-name = "set";
             bindings = <
 &none         &none           &none           &none                 &none                 &none           &none  &none           &none             &none               &none  &none
 &bt BT_CLR    &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
@@ -487,6 +493,7 @@
         };
 
         game_layer {
+            display-name = "game";
             bindings = <
 &to FUN     &kp GRAVE       &kp N1  &kp N2            &kp N3     &kp N4        &none  &none           &none           &none            &none  &to SYM
 &to NUM     &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none  &none           &kp UP_ARROW    &none            &none  &to NAV
