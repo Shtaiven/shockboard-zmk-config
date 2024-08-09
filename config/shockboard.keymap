@@ -37,13 +37,12 @@
 // Layer definitions
 
 #define DEFAULT 0
-#define LOWER   1
-#define NAV     2
-#define NUM     3
-#define MOUSE   4
-#define FUN     5
-#define SETTING 6
-#define GAME    7
+#define NAV     1
+#define NUM     2
+#define MOUSE   3
+#define FUN     4
+#define SETTING 5
+#define GAME    6
 
 
 //--------------------------------------------------------------------------------------------------
@@ -90,49 +89,81 @@
         compatible = "zmk,combos";
 
         // Vertical combos
-        combo_left_paren {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <28 16>;
+        combo_n1 {
+        bindings = <&kp N1>;
+            key-positions = <25 13>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <DEFAULT>;
         };
 
-        combo_left_bracket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <27 15>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
-        };
-
-        combo_left_brace {
-            bindings = <&kp LEFT_BRACE>;
+        combo_n2 {
+            bindings = <&kp N2>;
             key-positions = <26 14>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <DEFAULT>;
         };
 
-        combo_right_paren {
-            bindings = <&kp RIGHT_PARENTHESIS>;
+        combo_n3 {
+            bindings = <&kp N3>;
+            key-positions = <27 15>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_n4 {
+            bindings = <&kp N4>;
+            key-positions = <28 16>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_n5 {
+            bindings = <&kp N5>;
+            key-positions = <29 17>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_n6 {
+            bindings = <&kp N6>;
+            key-positions = <30 18>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_n7 {
+            bindings = <&kp N7>;
             key-positions = <19 31>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <DEFAULT>;
         };
 
-        combo_right_bracket {
-            bindings = <&kp RIGHT_BRACKET>;
+        combo_n8 {
+            bindings = <&kp N8>;
             key-positions = <20 32>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <DEFAULT>;
         };
 
-        combo_right_brace {
-            bindings = <&kp RIGHT_BRACE>;
+        combo_n9 {
+            bindings = <&kp N9>;
             key-positions = <21 33>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_n0 {
+            bindings = <&kp N0>;
+            key-positions = <22 34>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <DEFAULT>;
@@ -203,6 +234,54 @@
             layers = <DEFAULT>;
         };
 
+        combo_left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <16 17>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <18 19>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <28 29>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <30 31>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <39 40>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
+        combo_right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <41 42>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <DEFAULT>;
+        };
+
         // Split combos
         combo_caps_lock {
             bindings = <&kp CAPSLOCK>;
@@ -241,16 +320,6 @@
             hold-trigger-on-release;
         };
 
-        lt_space: lt_space {  // Layer tap for space
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&mo>, <&kp>;
-            flavor = "balanced";
-            tapping-term-ms = <PHT_TAPPING_TERM_MS>;
-            quick-tap-ms = <QUICK_TAP_MS>;
-            require-prior-idle-ms = <PHT_IDLE_MS>;
-        };
-
         to_hold: to_hold {  // Layer on hold
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -278,18 +347,7 @@
 &kp GRAVE   &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &kp BACKSLASH
 &kp ESCAPE  &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
             &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
-                                                         &lt MOUSE TAB           &lt_space LOWER SPACE  &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
-            >;
-        };
-
-        // TODO: Remove this layer in favor of combos between the top and home row, and keep the fun layer for function keys
-        lower_layer {
-            bindings = <
-&none      &none                   &none                  &none                    &none                   &none   &none   &none                    &none                     &none                   &none                    &none
-&kp F12    &kp F1                  &kp F2                 &kp F3                   &kp F4                  &kp F5  &kp F6  &kp F7                   &kp F8                    &kp F9                  &kp F10                  &kp F11
-&kp MINUS  &pht_left HRM_PINKY N1  &pht_left HRM_RING N2  &pht_left HRM_MIDDLE N3  &pht_left HRM_INDEX N4  &kp N5  &kp N6  &pht_right HRM_INDEX N7  &pht_right HRM_MIDDLE N8  &pht_right HRM_RING N9  &pht_right HRM_PINKY N0  &kp EQUAL
-           &kp LC(Z)               &kp LC(X)              &kp LC(C)                &kp LC(V)               &none   &none   &kp GRAVE                &kp LEFT_BRACKET          &kp RIGHT_BRACKET       &kp BACKSLASH
-                                                          &trans                   &trans                  &trans  &trans  &trans                   &trans
+                                                         &lt MOUSE TAB           &kp SPACE              &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
             >;
         };
 
@@ -314,14 +372,14 @@
             >;
         };
 
-        // TODO: Replace with a symbol layer
+        // TODO: Replace with a symbol layer?
         mouse_layer {
             bindings = <
-&to FUN        &none          &none         &none           &none          &none   &none           &none           &none           &none            &none            &to DEFAULT
-&to NUM        &none          &none         &none           &none          &none   &none           &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &none            &to NAV
-&sk RIGHT_ALT  &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &none
-               &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none           &mkp MB4        &mkp MB5        &none            &none
-                                            &trans          &trans         &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
+&to FUN        &none          &none         &none           &none          &none   &none        &none          &none         &none                 &none                  &to DEFAULT
+&to NUM        &none          &none         &none           &none          &none   &kp PERCENT  &kp DOLLAR     &kp HASH      &kp AT_SIGN           &kp EXCLAMATION        &to NAV
+&sk RIGHT_ALT  &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp CARET    &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE
+               &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none        &none          &none         &none                 &none
+                                            &trans          &trans         &trans  &trans       &trans         &trans
             >;
         };
 
