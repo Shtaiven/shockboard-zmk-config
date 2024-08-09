@@ -169,6 +169,38 @@
             layers = <DEFAULT>;
         };
 
+        combo_n1_game {
+            bindings = <&kp N1>;
+            key-positions = <26 14>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        combo_n2_game {
+            bindings = <&kp N2>;
+            key-positions = <27 15>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        combo_n3_game {
+            bindings = <&kp N3>;
+            key-positions = <28 16>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        combo_n4_game {
+            bindings = <&kp N4>;
+            key-positions = <29 17>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
         // Horizontal combos
         combo_plus {
             bindings = <&kp PLUS>;
