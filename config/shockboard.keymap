@@ -39,9 +39,9 @@
 #define DEFAULT 0
 #define NAV     1
 #define NUM     2
-#define MOUSE   3
+#define SYM     3
 #define FUN     4
-#define SETTING 5
+#define SET     5
 #define GAME    6
 
 
@@ -347,14 +347,14 @@
 &kp GRAVE   &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &kp BACKSLASH
 &kp ESCAPE  &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
             &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
-                                                         &lt MOUSE TAB           &kp SPACE              &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
+                                                         &lt SYM TAB             &kp SPACE              &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
             >;
         };
 
         // TODO: make layer switching in the upper left and right corner better
         nav_layer {
             bindings = <
-&to FUN        &none          &none         &none           &none          &none   &none     &none          &none     &none        &none            &to MOUSE
+&to FUN        &none          &none         &none           &none          &none   &none     &none          &none     &none        &none            &to SYM
 &to NUM        &none          &none         &none           &none          &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to DEFAULT
 &sk RIGHT_ALT  &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
                &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none     &none          &none     &none        &none
@@ -364,7 +364,7 @@
 
         num_layer {
             bindings = <
-&to FUN         &none            &none            &none            &none            &none         &none   &none          &none           &none         &none          &to MOUSE
+&to FUN         &none            &none            &none            &none            &none         &none   &none          &none           &none         &none          &to SYM
 &to DEFAULT     &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none   &none          &none           &none         &none          &to NAV
 &kp KP_NUMLOCK  &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
                 &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &none   &none          &none           &none         &none
@@ -372,20 +372,19 @@
             >;
         };
 
-        // TODO: Replace with a symbol layer?
-        mouse_layer {
+        sym_layer {
             bindings = <
-&to FUN        &none          &none         &none           &none          &none   &none        &none          &none         &none                 &none                  &to DEFAULT
-&to NUM        &none          &none         &none           &none          &none   &kp PERCENT  &kp DOLLAR     &kp HASH      &kp AT_SIGN           &kp EXCLAMATION        &to NAV
-&sk RIGHT_ALT  &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp CARET    &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE
-               &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none        &none          &none         &none                 &none
+&to FUN        &none          &none         &none           &none          &none   &none        &none          &none             &none                 &none                  &to DEFAULT
+&to NUM        &none          &none         &none           &none          &none   &kp PERCENT  &kp DOLLAR     &kp HASH          &kp AT_SIGN           &kp EXCLAMATION        &to NAV
+&sk RIGHT_ALT  &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp CARET    &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE
+               &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &kp MINUS    &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
                                             &trans          &trans         &trans  &trans       &trans         &trans
             >;
         };
 
         fun_layer {
             bindings = <
-&to DEFAULT  &none   &none    &none    &none    &none  &none  &none          &none           &none         &none          &to MOUSE
+&to DEFAULT  &none   &none    &none    &none    &none  &none  &none          &none           &none         &none          &to SYM
 &to NUM      &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none          &none           &none         &none          &to NAV
 &none        &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
              &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none          &none           &none         &none
@@ -394,19 +393,19 @@
         };
 
         // TODO: Better bluetooth disconnect using hold and try to get rid of top row
-        setting_layer {
+        set_layer {
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4   &bootloader  &out OUT_TOG    &none             &none               &none  &none
-&none         &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2         &bt BT_DISC 3         &bt BT_DISC 4  &none        &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
-&none         &none          &kp C_MUTE     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME       &none        &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &none
-              &none          &none          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none          &none        &none           &none             &none               &none
-                                            &none                 &none                 &none          &none        &none           &none
+&bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4   &bootloader  &out OUT_TOG    &none             &none               &none  &none
+&none       &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2         &bt BT_DISC 3         &bt BT_DISC 4  &none        &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
+&none       &none          &kp C_MUTE     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME       &none        &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &none
+            &none          &none          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none          &none        &none           &none             &none               &none
+                                          &none                 &none                 &none          &none        &none           &none
             >;
         };
 
         game_layer {
             bindings = <
-&to FUN     &kp GRAVE       &kp N1  &kp N2            &kp N3     &kp N4        &none  &none           &none           &none            &none  &to MOUSE
+&to FUN     &kp GRAVE       &kp N1  &kp N2            &kp N3     &kp N4        &none  &none           &none           &none            &none  &to SYM
 &to NUM     &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none  &none           &kp UP_ARROW    &none            &none  &to NAV
 &kp ESCAPE  &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &to DEFAULT
             &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none  &none           &none           &none            &none
@@ -423,7 +422,7 @@
 
         condition_setting_layer {
             if-layers = <NAV NUM>;
-            then-layer = <SETTING>;
+            then-layer = <SET>;
         };
     };
 };
