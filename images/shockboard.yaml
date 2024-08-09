@@ -232,31 +232,9 @@ layers:
     - ''
     - {type: held}
   set:
-  - - BT CLR
-    - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
-    - {t: BT, h: '4'}
-    - '&bootloader'
-    - OUT TOG
-    - ''
-    - ''
-    - ''
-    - ''
-  - - ''
-    - {t: BT DISC, h: '0'}
-    - {t: BT DISC, h: '1'}
-    - {t: BT DISC, h: '2'}
-    - {t: BT DISC, h: '3'}
-    - {t: BT DISC, h: '4'}
-    - ''
-    - REWIND
-    - ''
-    - FAST FORWARD
-    - ''
-    - ''
-  - - ''
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - [BT CLR, '&bt_hold_0', '&bt_hold_1', '&bt_hold_2', '&bt_hold_3', '&bt_hold_4', '', REWIND, '', FAST FORWARD, '', '']
+  - - OUT TOG
     - ''
     - MUTE
     - VOLUME DOWN
@@ -267,7 +245,7 @@ layers:
     - PLAY PAUSE
     - NEXT
     - ''
-    - ''
+    - '&bootloader'
   - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', '', '', '', '', '', '']
   - - {type: held}
     - {type: held}
