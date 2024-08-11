@@ -1509,8 +1509,9 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(468, 310) rotate(-28.0)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">0</text>
 <a href="#set">
-<text x="0" y="0" class="key tap layer-activator">set</text>
+<text x="0" y="24" class="key hold layer-activator">set</text>
 </a></g>
 <g transform="translate(551, 282) rotate(-8.0)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

@@ -214,7 +214,10 @@ layers:
     - {t: nav, h: base}
   - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
   - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
-  - [LEFT ALT, set, ENTER, '']
+  - - LEFT ALT
+    - {t: '0', h: set}
+    - ENTER
+    - ''
   set:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - BT CLR
