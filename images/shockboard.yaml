@@ -282,7 +282,7 @@ combos:
   l: [base]
 - p: [25, 13]
   k: '`'
-  l: [base]
+  l: [game]
 - p: [26, 14]
   k: '1'
   l: [game]
