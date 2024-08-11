@@ -36,13 +36,13 @@
 //--------------------------------------------------------------------------------------------------
 // Layer definitions
 
-#define DEFAULT 0
-#define NAV     1
-#define NUM     2
-#define SYM     3
-#define FUN     4
-#define SET     5
-#define GAME    6
+#define BASE 0
+#define NAV  1
+#define NUM  2
+#define SYM  3
+#define FUN  4
+#define GAME 5
+#define SET  6
 
 
 //--------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@
             key-positions = <25 13>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n2 {
@@ -102,7 +102,7 @@
             key-positions = <26 14>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n3 {
@@ -110,7 +110,7 @@
             key-positions = <27 15>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n4 {
@@ -118,7 +118,7 @@
             key-positions = <28 16>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n5 {
@@ -126,7 +126,7 @@
             key-positions = <29 17>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n6 {
@@ -134,7 +134,7 @@
             key-positions = <30 18>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n7 {
@@ -142,7 +142,7 @@
             key-positions = <19 31>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n8 {
@@ -150,7 +150,7 @@
             key-positions = <20 32>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n9 {
@@ -158,7 +158,7 @@
             key-positions = <21 33>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_n0 {
@@ -166,7 +166,15 @@
             key-positions = <22 34>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
+        };
+
+        combo_grave_game {
+        bindings = <&kp GRAVE>;
+            key-positions = <25 13>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
         };
 
         combo_n1_game {
@@ -207,7 +215,7 @@
             key-positions = <21 20>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_minus {
@@ -215,7 +223,7 @@
             key-positions = <15 16>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_underscore {
@@ -223,7 +231,7 @@
             key-positions = <15 14>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_equal {
@@ -231,7 +239,7 @@
             key-positions = <20 19>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_tilde {
@@ -239,7 +247,7 @@
             key-positions = <38 37>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_grave {
@@ -247,7 +255,7 @@
             key-positions = <38 39>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_backslash {
@@ -255,7 +263,7 @@
             key-positions = <42 43>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         combo_pipe {
@@ -263,7 +271,7 @@
             key-positions = <43 44>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
 
         // Split combos
@@ -272,7 +280,7 @@
             key-positions = <27 32>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <DEFAULT>;
+            layers = <BASE>;
         };
     };
 
@@ -425,58 +433,69 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base_layer {
             display-name = "";
             bindings = <
-&kp MINUS             &kp N1                 &kp N2                &kp N3                  &kp N4                 &kp N5         &kp N6             &kp N7                  &kp N8                   &kp N9                 &kp N0                     &kp EQUAL
-&to_hold DEFAULT NUM  &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &to_hold DEFAULT NAV
-&kp ESCAPE            &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
-                      &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
-                                                                   &lt SYM TAB             &kp SPACE              &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
+&kp MINUS          &kp N1                 &kp N2                &kp N3                  &kp N4                 &kp N5         &kp N6             &kp N7                  &kp N8                   &kp N9                 &kp N0                     &kp EQUAL
+&to_hold BASE NUM  &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &to_hold BASE NAV
+&kp ESCAPE         &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
+                   &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
+                                                                &lt SYM TAB             &kp SPACE              &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
             >;
         };
 
         nav_layer {
             display-name = "nav";
             bindings = <
-&none                 &none          &none         &none           &none          &none   &none     &none          &none     &none        &none            &none
-&to_hold DEFAULT NUM  &none          &none         &none           &none          &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to_hold DEFAULT SYM
-&sk RIGHT_ALT         &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
-                      &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none     &none          &none     &none        &none
-                                                   &trans          &trans         &trans  &trans    &trans         &trans
+&none              &none          &none         &none           &none          &none   &none     &none          &none     &none        &none            &none
+&to_hold BASE NUM  &none          &none         &none           &none          &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to_hold BASE SYM
+&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
+                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none     &none          &none     &none        &none
+                                                &trans          &trans         &trans  &trans    &trans         &trans
             >;
         };
 
         num_layer {
             display-name = "num";
             bindings = <
-&none                 &none            &none            &none            &none            &none         &none   &none          &none           &none         &none          &none
-&to_hold DEFAULT FUN  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none   &none          &none           &none         &none          &to_hold DEFAULT NAV
-&kp KP_NUMLOCK        &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
-                      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &none   &none          &none           &none         &none
-                                                        &trans           &trans           &trans        &trans  &trans         &trans
+&none              &none            &none            &none            &none            &none         &none   &none          &none           &none         &none          &none
+&to_hold BASE FUN  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &none   &none          &none           &none         &none          &to_hold BASE NAV
+&kp KP_NUMLOCK     &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+                   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &none   &none          &none           &none         &none
+                                                     &trans           &trans           &trans        &trans  &trans         &trans
             >;
         };
 
         sym_layer {
             display-name = "sym";
             bindings = <
-&none                 &none          &none         &none           &none          &none   &none        &none          &none             &none                 &none                  &none
-&to_hold DEFAULT NUM  &none          &none         &none           &none          &none   &kp PERCENT  &kp DOLLAR     &kp HASH          &kp AT_SIGN           &kp EXCLAMATION        &to_hold DEFAULT SYM
-&sk RIGHT_ALT         &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp CARET    &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE
-                      &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &kp MINUS    &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
-                                                   &trans          &trans         &trans  &trans       &trans         &trans
+&none              &none          &none         &none           &none          &none   &none        &none          &none             &none                 &none                  &none
+&to_hold BASE NUM  &none          &none         &none           &none          &none   &kp PERCENT  &kp DOLLAR     &kp HASH          &kp AT_SIGN           &kp EXCLAMATION        &to_hold BASE SYM
+&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp CARET    &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE
+                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &kp MINUS    &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
+                                                &trans          &trans         &trans  &trans       &trans         &trans
             >;
         };
 
         fun_layer {
             display-name = "fun";
             bindings = <
-&none                 &none   &none    &none    &none    &none  &none  &none          &none           &none         &none          &none
-&to_hold DEFAULT FUN  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none          &none           &none         &none          &to_hold DEFAULT NAV
-&none                 &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
-                      &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none          &none           &none         &none
-                                       &none    &none    &none  &none  &none          &none
+&none              &none   &none    &none    &none    &none  &none  &none          &none           &none         &none          &none
+&to_hold BASE FUN  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none          &none           &none         &none          &to_hold BASE NAV
+&none              &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+                   &kp F1  &kp F2   &kp F3   &kp F4   &none  &none  &none          &none           &none         &none
+                                    &none    &none    &none  &none  &none          &none
+            >;
+        };
+
+        game_layer {
+            display-name = "game";
+            bindings = <
+&none              &kp GRAVE       &kp N1  &kp N2            &kp N3     &kp N4        &none    &none      &none     &none      &none  &none
+&to_hold BASE NUM  &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &to_hold BASE NAV
+&kp ESCAPE         &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+                   &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none      &none     &none      &none
+                                           &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo SET  &kp ENTER  &none
             >;
         };
 
@@ -488,17 +507,6 @@
 &none       &none           &kp C_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME        &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &out OUT_TOG
             &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none           &none  &none           &none             &none               &none
                                             &none                 &none                 &none           &none  &none           &none
-            >;
-        };
-
-        game_layer {
-            display-name = "game";
-            bindings = <
-&none                  &kp GRAVE       &kp N1  &kp N2            &kp N3     &kp N4        &none    &none           &none           &none            &none  &none
-&to_hold DEFAULT GAME  &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none           &kp UP_ARROW    &none            &none  &to DEFAULT
-&kp ESCAPE             &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none
-                       &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none           &none           &none            &none
-                                               &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo SET  &kp ENTER       &none
             >;
         };
     };
