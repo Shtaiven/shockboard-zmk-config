@@ -1,7 +1,7 @@
 layers:
-  default:
+  base:
   - ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=']
-  - - {t: num, h: default}
+  - - {t: num, h: base}
     - Q
     - W
     - E
@@ -12,7 +12,7 @@ layers:
     - I
     - O
     - P
-    - {t: nav, h: default}
+    - {t: nav, h: base}
   - - ESCAPE
     - {t: A, h: LEFT SHIFT}
     - {t: S, h: LEFT ALT}
@@ -43,7 +43,7 @@ layers:
     - {t: DELETE, h: fun}
   nav:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: num, h: default}
+  - - {t: num, h: base}
     - ''
     - ''
     - ''
@@ -54,7 +54,7 @@ layers:
     - UP
     - PAGE UP
     - PRINTSCREEN
-    - {t: sym, h: default}
+    - {t: sym, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -85,7 +85,7 @@ layers:
     - {t: ▽, type: trans}
   num:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: fun, h: default}
+  - - {t: fun, h: base}
     - KP DIVIDE
     - KP 7
     - KP 8
@@ -96,7 +96,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: nav, h: default}
+    - {t: nav, h: base}
   - - KP NUMLOCK
     - KP MULTIPLY
     - KP 4
@@ -127,7 +127,7 @@ layers:
     - {t: ▽, type: trans}
   sym:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: num, h: default}
+  - - {t: num, h: base}
     - ''
     - ''
     - ''
@@ -138,7 +138,7 @@ layers:
     - '#'
     - '@'
     - '!'
-    - {t: sym, h: default}
+    - {t: sym, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -169,7 +169,7 @@ layers:
     - {t: ▽, type: trans}
   fun:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: fun, h: default}
+  - - {t: fun, h: base}
     - F9
     - F10
     - F11
@@ -180,7 +180,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: nav, h: default}
+    - {t: nav, h: base}
   - - ''
     - F5
     - F6
@@ -198,6 +198,23 @@ layers:
     - ''
     - ''
     - {type: held}
+  game:
+  - ['', '`', '1', '2', '3', '4', '', '', '', '', '', '']
+  - - {t: num, h: base}
+    - TAB
+    - Q
+    - W
+    - E
+    - R
+    - ''
+    - ''
+    - UP
+    - ''
+    - ''
+    - {t: nav, h: base}
+  - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
+  - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
+  - [LEFT ALT, set, ENTER, '']
   set:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - BT CLR
@@ -225,58 +242,44 @@ layers:
     - ''
     - OUT TOG
   - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', '', '', '', '', '', '']
-  - - {type: held}
+  - - ''
     - {type: held}
     - ''
     - ''
-  game:
-  - ['', '`', '1', '2', '3', '4', '', '', '', '', '', '']
-  - - {t: game, h: default}
-    - TAB
-    - Q
-    - W
-    - E
-    - R
-    - ''
-    - ''
-    - UP ARROW
-    - ''
-    - ''
-    - {t: default, h: toggle}
-  - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT ARROW, DOWN ARROW, RIGHT ARROW, '', '']
-  - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
-  - [LEFT ALT, set, ENTER, '']
 combos:
 - p: [25, 13]
   k: '1'
-  l: [default]
+  l: [base]
 - p: [26, 14]
   k: '2'
-  l: [default]
+  l: [base]
 - p: [27, 15]
   k: '3'
-  l: [default]
+  l: [base]
 - p: [28, 16]
   k: '4'
-  l: [default]
+  l: [base]
 - p: [29, 17]
   k: '5'
-  l: [default]
+  l: [base]
 - p: [30, 18]
   k: '6'
-  l: [default]
+  l: [base]
 - p: [19, 31]
   k: '7'
-  l: [default]
+  l: [base]
 - p: [20, 32]
   k: '8'
-  l: [default]
+  l: [base]
 - p: [21, 33]
   k: '9'
-  l: [default]
+  l: [base]
 - p: [22, 34]
   k: '0'
-  l: [default]
+  l: [base]
+- p: [25, 13]
+  k: '`'
+  l: [base]
 - p: [26, 14]
   k: '1'
   l: [game]
@@ -291,28 +294,28 @@ combos:
   l: [game]
 - p: [21, 20]
   k: +
-  l: [default]
+  l: [base]
 - p: [15, 16]
   k: '-'
-  l: [default]
+  l: [base]
 - p: [15, 14]
   k: _
-  l: [default]
+  l: [base]
 - p: [20, 19]
   k: '='
-  l: [default]
+  l: [base]
 - p: [38, 37]
   k: '~'
-  l: [default]
+  l: [base]
 - p: [38, 39]
   k: '`'
-  l: [default]
+  l: [base]
 - p: [42, 43]
   k: \
-  l: [default]
+  l: [base]
 - p: [43, 44]
   k: '|'
-  l: [default]
+  l: [base]
 - p: [27, 32]
   k: CAPSLOCK
-  l: [default]
+  l: [base]
