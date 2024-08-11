@@ -174,7 +174,7 @@
             key-positions = <25 13>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <BASE>;
+            layers = <GAME>;
         };
 
         combo_n1_game {
