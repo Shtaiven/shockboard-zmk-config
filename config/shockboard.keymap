@@ -25,8 +25,8 @@
 #define MOD_TOG_TAPPING_TERM_MS 200  // Mod tap tapping term (ms)
 #define QUICK_TAP_MS            225  // Quick tap timing (ms)
 #define SK_RELEASE_AFTER_MS     900  // Release sticky key after (ms)
-#define COMBO_TERM_FAST_MS       18  // Fast combo term for horizontal combos (ms)
-#define COMBO_TERM_SLOW_MS       30  // Slow combo term for vertical combos (ms)
+#define COMBO_TERM_FAST_MS       25  // Fast combo term for horizontal combos (ms)
+#define COMBO_TERM_SLOW_MS      100  // Slow combo term for vertical combos (ms)
 #define COMBO_IDLE_FAST_MS      150  // Fast require prior idle time for horizontal combos (ms)
 #define COMBO_IDLE_SLOW_MS       50  // Slow require prior idle time for vertical combos (ms)
 
@@ -285,6 +285,22 @@
         combo_right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <19 20 21>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <27 28 29>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <32 33 34>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <BASE>;
