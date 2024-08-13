@@ -284,7 +284,7 @@
 
         combo_right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <19 20 21>;
+            key-positions = <18 19 20>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <BASE>;
@@ -292,7 +292,7 @@
 
         combo_left_parenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <27 28 29>;
+            key-positions = <26 27 28>;
             timeout-ms = <COMBO_TERM_FAST_MS>;
             require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
             layers = <BASE>;
