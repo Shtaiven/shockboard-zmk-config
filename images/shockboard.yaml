@@ -133,11 +133,11 @@ layers:
     - ''
     - ''
     - ''
-    - '%'
-    - $
-    - '#'
-    - '@'
-    - '!'
+    - '-'
+    - '='
+    - '['
+    - ']'
+    - \
     - {t: sym, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
@@ -156,11 +156,11 @@ layers:
     - Ctl+ C
     - Ctl+ V
     - ''
-    - '-'
-    - '='
-    - '['
-    - ']'
-    - \
+    - '%'
+    - $
+    - '#'
+    - '@'
+    - '!'
     - {type: held}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -326,6 +326,18 @@ combos:
   l: [base]
 - p: [43, 44]
   k: '|'
+  l: [base]
+- p: [14, 15, 16]
+  k: '['
+  l: [base]
+- p: [19, 20, 21]
+  k: ']'
+  l: [base]
+- p: [37, 38, 39]
+  k: '{'
+  l: [base]
+- p: [42, 43, 44]
+  k: '}'
   l: [base]
 - p: [27, 32]
   k: CAPSLOCK
