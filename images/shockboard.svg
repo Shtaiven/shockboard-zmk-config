@@ -441,10 +441,10 @@ path.combo { stroke: #7f7f7f; }
 <text x="207" y="91" class="combo tap">[</text>
 </g>
 <g class="combo combopos-19">
-<path d="M665,92 l-39,-6" class="combo"/>
-<path d="M665,92 l41,11" class="combo"/>
-<rect rx="6" ry="6" x="651" y="79" width="28" height="26" class="combo"/>
-<text x="665" y="92" class="combo tap">]</text>
+<path d="M609,91 l-36,10" class="combo"/>
+<path d="M609,91 l37,-5" class="combo"/>
+<rect rx="6" ry="6" x="595" y="78" width="28" height="26" class="combo"/>
+<text x="609" y="91" class="combo tap">]</text>
 </g>
 <g class="combo combopos-20">
 <path d="M199,147 l-37,-5" class="combo"/>
