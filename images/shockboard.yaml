@@ -83,48 +83,6 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  num:
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: fun, h: base}
-    - KP DIVIDE
-    - KP 7
-    - KP 8
-    - KP 9
-    - KP MINUS
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: nav, h: base}
-  - - KP NUMLOCK
-    - KP MULTIPLY
-    - KP 4
-    - KP 5
-    - KP 6
-    - KP PLUS
-    - ''
-    - LEFT CONTROL
-    - LEFT GUI
-    - LEFT ALT
-    - LEFT SHIFT
-    - {t: RIGHT ALT, h: sticky}
-  - - KP 0
-    - KP 1
-    - KP 2
-    - KP 3
-    - KP DOT
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
   sym:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - {t: num, h: base}
@@ -209,6 +167,37 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
+  num:
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - - {t: fun, h: base}
+    - KP PLUS
+    - KP 7
+    - KP 8
+    - KP 9
+    - KP DIVIDE
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: nav, h: base}
+  - - KP NUMLOCK
+    - KP PLUS
+    - KP 4
+    - KP 5
+    - KP 6
+    - KP MULTIPLY
+    - ''
+    - LEFT CONTROL
+    - LEFT GUI
+    - LEFT ALT
+    - LEFT SHIFT
+    - {t: RIGHT ALT, h: sticky}
+  - [KP ENTER, KP 1, KP 2, KP 3, KP MINUS, '', '', '', '', '', KP DOT, KP 0]
+  - - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   game:
   - ['', '`', '1', '2', '3', '4', '', '', '', '', '', '']
   - - {t: num, h: base}
