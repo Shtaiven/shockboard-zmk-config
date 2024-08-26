@@ -27,8 +27,8 @@
 #define SK_RELEASE_AFTER_MS     900  // Release sticky key after (ms)
 #define COMBO_TERM_FAST_MS       25  // Fast combo term for horizontal combos (ms)
 #define COMBO_TERM_SLOW_MS      100  // Slow combo term for vertical combos (ms)
-#define COMBO_IDLE_FAST_MS      150  // Fast require prior idle time for horizontal combos (ms)
-#define COMBO_IDLE_SLOW_MS       50  // Slow require prior idle time for vertical combos (ms)
+#define COMBO_IDLE_FAST_MS       50  // Fast require prior idle time for horizontal combos (ms)
+#define COMBO_IDLE_SLOW_MS        0  // Slow require prior idle time for vertical combos (ms)
 
 #define NONE 0  // Null keypress
 
