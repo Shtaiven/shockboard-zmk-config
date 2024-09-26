@@ -1,7 +1,7 @@
 layers:
   base:
   - ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '=']
-  - - {t: num, h: base}
+  - - {t: sym, h: base}
     - Q
     - W
     - E
@@ -16,12 +16,12 @@ layers:
   - - ESCAPE
     - {t: A, h: LEFT SHIFT}
     - {t: S, h: LEFT ALT}
-    - {t: D, h: LEFT GUI}
-    - {t: F, h: LEFT CONTROL}
+    - {t: D, h: LEFT CONTROL}
+    - {t: F, h: LEFT GUI}
     - G
     - H
-    - {t: J, h: LEFT CONTROL}
-    - {t: K, h: LEFT GUI}
+    - {t: J, h: LEFT GUI}
+    - {t: K, h: LEFT CONTROL}
     - {t: L, h: LEFT ALT}
     - {t: ;, h: LEFT SHIFT}
     - ''''
@@ -35,15 +35,15 @@ layers:
     - ','
     - .
     - /
-    - {t: TAB, h: sym}
+    - {t: TAB, h: num}
     - SPACE
   - - {t: ENTER, h: nav}
-    - {t: BACKSPACE, h: num}
+    - {t: BACKSPACE, h: sym}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
     - {t: DELETE, h: fun}
   nav:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: num, h: base}
+  - - {t: sym, h: base}
     - ''
     - ''
     - ''
@@ -54,12 +54,12 @@ layers:
     - UP
     - PAGE UP
     - PRINTSCREEN
-    - {t: sym, h: base}
+    - {t: num, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
-    - LEFT GUI
     - LEFT CONTROL
+    - LEFT GUI
     - ''
     - HOME
     - LEFT
@@ -85,44 +85,44 @@ layers:
     - {t: ▽, type: trans}
   sym:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: num, h: base}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - '%'
-    - $
-    - '#'
-    - '@'
-    - '!'
-    - {t: sym, h: base}
-  - - {t: RIGHT ALT, h: sticky}
-    - LEFT SHIFT
-    - LEFT ALT
-    - LEFT GUI
-    - LEFT CONTROL
-    - ''
-    - ^
-    - '&'
-    - '*'
+  - - {t: fun, h: base}
     - (
     - )
-    - '`'
-  - - Ctl+ Z
-    - Ctl+ X
-    - Ctl+ C
-    - Ctl+ V
+    - '*'
+    - '&'
+    - ^
     - ''
-    - '-'
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: nav, h: base}
+  - - ''
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ''
+    - LEFT GUI
+    - LEFT CONTROL
+    - LEFT ALT
+    - LEFT SHIFT
+    - {t: RIGHT ALT, h: sticky}
+  - - '-'
     - '='
     - '['
     - ']'
     - \
-    - {type: held}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   fun:
@@ -146,8 +146,8 @@ layers:
     - F8
     - ''
     - ''
-    - LEFT CONTROL
     - LEFT GUI
+    - LEFT CONTROL
     - LEFT ALT
     - LEFT SHIFT
     - {t: RIGHT ALT, h: sticky}
@@ -169,38 +169,49 @@ layers:
     - {type: held}
   num:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: fun, h: base}
-    - KP PLUS
+  - - {t: sym, h: base}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - KP DIVIDE
     - KP 7
     - KP 8
     - KP 9
-    - KP DIVIDE
+    - KP MINUS
+    - {t: num, h: base}
+  - - {t: RIGHT ALT, h: sticky}
+    - LEFT SHIFT
+    - LEFT ALT
+    - LEFT CONTROL
+    - LEFT GUI
     - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: nav, h: base}
-  - - KP NUMLOCK
-    - KP PLUS
+    - KP MULTIPLY
     - KP 4
     - KP 5
     - KP 6
-    - KP MULTIPLY
+    - KP PLUS
+    - KP NUMLOCK
+  - - Ctl+ Z
+    - Ctl+ X
+    - Ctl+ C
+    - Ctl+ V
     - ''
-    - LEFT CONTROL
-    - LEFT GUI
-    - LEFT ALT
-    - LEFT SHIFT
-    - {t: RIGHT ALT, h: sticky}
-  - [KP ENTER, KP 1, KP 2, KP 3, KP MINUS, '', '', '', '', '', KP DOT, KP 0]
-  - - {t: ▽, type: trans}
+    - ''
+    - KP 1
+    - KP 2
+    - KP 3
+    - KP ENTER
     - {type: held}
     - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - KP 0
+    - KP DOT
   game:
   - ['', '`', '1', '2', '3', '4', '', '', '', '', '', '']
-  - - {t: num, h: base}
+  - - {t: sym, h: base}
     - TAB
     - Q
     - W
@@ -241,11 +252,19 @@ layers:
     - NEXT
     - ''
     - OUT TOG
-  - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', '', '', '', '', '', '']
   - - ''
+    - ''
+    - BRIGHTNESS DEC
+    - BRIGHTNESS INC
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
     - {type: held}
     - ''
-    - ''
+  - ['', '', '', '']
 combos:
 - p: [25, 13]
   k: '1'
