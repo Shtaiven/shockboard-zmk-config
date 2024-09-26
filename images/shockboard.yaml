@@ -12,7 +12,7 @@ layers:
     - I
     - O
     - P
-    - {t: num, h: base}
+    - {t: nav, h: base}
   - - ESCAPE
     - {t: A, h: LEFT SHIFT}
     - {t: S, h: LEFT ALT}
@@ -35,9 +35,9 @@ layers:
     - ','
     - .
     - /
-    - {t: TAB, h: num}
+    - {t: TAB, h: nav}
     - SPACE
-  - - {t: ENTER, h: nav}
+  - - {t: ENTER, h: num}
     - {t: BACKSPACE, h: sym}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
     - {t: DELETE, h: fun}
@@ -54,7 +54,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: num, h: base}
+    - {t: nav, h: base}
   - - ^
     - '!'
     - '@'
@@ -96,7 +96,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: num, h: base}
+    - {t: nav, h: base}
   - - ''
     - F5
     - F6
@@ -138,7 +138,7 @@ layers:
     - KP 8
     - KP 9
     - KP MINUS
-    - {t: nav, h: base}
+    - {t: num, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -161,9 +161,9 @@ layers:
     - KP 2
     - KP 3
     - KP ENTER
-    - {type: held}
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {type: held}
     - {t: ▽, type: trans}
     - KP 0
     - KP DOT
@@ -180,7 +180,7 @@ layers:
     - UP
     - PAGE UP
     - PRINTSCREEN
-    - {t: nav, h: base}
+    - {t: num, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -203,9 +203,9 @@ layers:
     - ''
     - ''
     - ''
+    - {type: held}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {type: held}
+  - - {t: ▽, type: trans}
     - '&mkp MCLK'
     - '&mkp LCLK'
     - '&mkp RCLK'
@@ -222,10 +222,10 @@ layers:
     - UP
     - ''
     - ''
-    - {t: num, h: base}
+    - {t: nav, h: base}
   - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
   - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
-  - [LEFT ALT, nav, ENTER, '']
+  - [LEFT ALT, num, ENTER, '']
   set:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - BT CLR
