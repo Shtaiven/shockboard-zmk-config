@@ -12,7 +12,7 @@ layers:
     - I
     - O
     - P
-    - {t: nav, h: base}
+    - {t: num, h: base}
   - - ESCAPE
     - {t: A, h: LEFT SHIFT}
     - {t: S, h: LEFT ALT}
@@ -41,63 +41,21 @@ layers:
     - {t: BACKSPACE, h: sym}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
     - {t: DELETE, h: fun}
-  nav:
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: sym, h: base}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - PAGE DOWN
-    - UP
-    - PAGE UP
-    - PRINTSCREEN
-    - {t: num, h: base}
-  - - {t: RIGHT ALT, h: sticky}
-    - LEFT SHIFT
-    - LEFT ALT
-    - LEFT CONTROL
-    - LEFT GUI
-    - ''
-    - HOME
-    - LEFT
-    - DOWN
-    - RIGHT
-    - END
-    - INSERT
-  - - Ctl+ Z
-    - Ctl+ X
-    - Ctl+ C
-    - Ctl+ V
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
   sym:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - {t: fun, h: base}
+    - '&'
+    - '*'
     - (
     - )
-    - '*'
-    - '&'
-    - ^
     - ''
     - ''
     - ''
     - ''
     - ''
-    - {t: nav, h: base}
-  - - ''
+    - ''
+    - {t: num, h: base}
+  - - ^
     - '!'
     - '@'
     - '#'
@@ -109,11 +67,11 @@ layers:
     - LEFT ALT
     - LEFT SHIFT
     - {t: RIGHT ALT, h: sticky}
-  - - '-'
-    - '='
+  - - '{'
+    - '}'
     - '['
     - ']'
-    - \
+    - ''
     - ''
     - ''
     - ''
@@ -138,7 +96,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: nav, h: base}
+    - {t: num, h: base}
   - - ''
     - F5
     - F6
@@ -180,7 +138,7 @@ layers:
     - KP 8
     - KP 9
     - KP MINUS
-    - {t: num, h: base}
+    - {t: nav, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
     - LEFT ALT
@@ -209,6 +167,48 @@ layers:
     - {t: ▽, type: trans}
     - KP 0
     - KP DOT
+  nav:
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - - {t: sym, h: base}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - PAGE DOWN
+    - UP
+    - PAGE UP
+    - PRINTSCREEN
+    - {t: nav, h: base}
+  - - {t: RIGHT ALT, h: sticky}
+    - LEFT SHIFT
+    - LEFT ALT
+    - LEFT CONTROL
+    - LEFT GUI
+    - ''
+    - HOME
+    - LEFT
+    - DOWN
+    - RIGHT
+    - END
+    - INSERT
+  - - Ctl+ Z
+    - Ctl+ X
+    - Ctl+ C
+    - Ctl+ V
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {type: held}
+    - '&mkp MCLK'
+    - '&mkp LCLK'
+    - '&mkp RCLK'
   game:
   - ['', '`', '1', '2', '3', '4', '', '', '', '', '', '']
   - - {t: sym, h: base}
@@ -222,10 +222,10 @@ layers:
     - UP
     - ''
     - ''
-    - {t: nav, h: base}
+    - {t: num, h: base}
   - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
   - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
-  - [LEFT ALT, num, ENTER, '']
+  - [LEFT ALT, nav, ENTER, '']
   set:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - BT CLR
@@ -252,19 +252,11 @@ layers:
     - NEXT
     - ''
     - OUT TOG
-  - - ''
-    - ''
-    - BRIGHTNESS DEC
-    - BRIGHTNESS INC
+  - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', '', '', '', '', '', '']
+  - - {type: held}
     - ''
     - ''
     - ''
-    - ''
-    - ''
-    - ''
-    - {type: held}
-    - ''
-  - ['', '', '', '']
 combos:
 - p: [25, 13]
   k: '1'
@@ -334,24 +326,6 @@ combos:
   l: [base]
 - p: [43, 44]
   k: '|'
-  l: [base]
-- p: [26, 37]
-  k: '{'
-  l: [base]
-- p: [27, 38]
-  k: '['
-  l: [base]
-- p: [28, 39]
-  k: (
-  l: [base]
-- p: [33, 44]
-  k: '}'
-  l: [base]
-- p: [32, 43]
-  k: ']'
-  l: [base]
-- p: [31, 42]
-  k: )
   l: [base]
 - p: [27, 32]
   k: CAPSLOCK
