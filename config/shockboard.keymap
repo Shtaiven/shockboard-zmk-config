@@ -1,3 +1,7 @@
+// TODO: Swap NUM and SYM
+// TODO: Reorganize SYM
+// TODO: Regular numbers on num row?
+// TODO: Replace CAPS_WORD with CAPS_LOCK and remove CAPS_LOCK combo? (less stateful)
 /*
  * Copyright (c) 2024 Steven Eisinger
  *
@@ -48,8 +52,8 @@
 //--------------------------------------------------------------------------------------------------
 // Homerow mod (HRM) definitions
 
-#define HRM_INDEX  LEFT_CONTROL
-#define HRM_MIDDLE LEFT_GUI
+#define HRM_INDEX  LEFT_GUI
+#define HRM_MIDDLE LEFT_CONTROL
 #define HRM_RING   LEFT_ALT
 #define HRM_PINKY  LEFT_SHIFT
 
@@ -485,10 +489,10 @@
             display-name = "";
             bindings = <
 &kp MINUS          &kp N1                 &kp N2                &kp N3                  &kp N4                 &kp N5         &kp N6             &kp N7                  &kp N8                   &kp N9                 &kp N0                     &kp EQUAL
-&to_hold BASE NUM  &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &to_hold BASE NAV
+&to_hold BASE SYM  &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &to_hold BASE NAV
 &kp ESCAPE         &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
                    &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
-                                                                &lt SYM TAB             &kp SPACE              &lt NAV ENTER  &lt NUM BACKSPACE  &smart_shft             &lt FUN DELETE
+                                                                &lt NUM TAB             &kp SPACE              &lt NAV ENTER  &lt SYM BACKSPACE  &smart_shft             &lt FUN DELETE
             >;
         };
 
@@ -496,7 +500,7 @@
             display-name = "nav";
             bindings = <
 &none              &none          &none         &none           &none          &none   &none     &none          &none     &none        &none            &none
-&to_hold BASE NUM  &none          &none         &none           &none          &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to_hold BASE SYM
+&to_hold BASE SYM  &none          &none         &none           &none          &none   &none     &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &kp PRINTSCREEN  &to_hold BASE NUM
 &sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN  &kp RIGHT    &kp END          &kp INSERT
                    &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none     &none          &none     &none        &none
                                                 &trans          &trans         &trans  &trans    &trans         &trans
@@ -506,11 +510,11 @@
         sym_layer {
             display-name = "sym";
             bindings = <
-&none              &none          &none         &none           &none          &none   &none        &none          &none             &none                 &none                  &none
-&to_hold BASE NUM  &none          &none         &none           &none          &none   &kp PERCENT  &kp DOLLAR     &kp HASH          &kp AT_SIGN           &kp EXCLAMATION        &to_hold BASE SYM
-&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp CARET    &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE
-                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &kp MINUS    &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp BACKSLASH
-                                                &trans          &trans         &trans  &trans       &trans         &trans
+&none              &none                 &none                  &none             &none              &none          &none   &none          &none           &none         &none          &none
+&to_hold BASE FUN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK      &kp AMPERSAND      &kp CARET      &none   &none          &none           &none         &none          &to_hold BASE NAV
+&none              &kp EXCLAMATION       &kp AT_SIGN            &kp HASH          &kp DOLLAR         &kp PERCENT    &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+                   &kp MINUS             &kp EQUAL              &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &none   &none          &none           &none         &none
+                                                                &trans            &trans             &trans         &trans  &trans         &trans
             >;
         };
 
@@ -528,11 +532,11 @@
         num_layer {
             display-name = "num";
             bindings = <
-&none              &none         &none            &none            &none            &none            &none   &none          &none           &none         &none          &none
-&to_hold BASE FUN  &kp KP_PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE    &none   &none          &none           &none         &none          &to_hold BASE NAV
-&kp KP_NUMLOCK     &kp KP_PLUS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
-                   &kp KP_ENTER  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS     &none   &none          &none           &none         &none
-                                                  &kp KP_DOT       &kp KP_NUMBER_0  &trans           &trans  &trans         &trans
+&none              &none          &none         &none           &none          &none   &none            &none            &none            &none            &none         &none
+&to_hold BASE SYM  &none          &none         &none           &none          &none   &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp KP_NUMLOCK
+                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER
+                                                &trans          &trans         &trans  &trans           &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
@@ -540,7 +544,7 @@
             display-name = "game";
             bindings = <
 &none              &kp GRAVE       &kp N1  &kp N2            &kp N3     &kp N4        &none    &none      &none     &none      &none  &none
-&to_hold BASE NUM  &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &to_hold BASE NAV
+&to_hold BASE SYM  &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &to_hold BASE NAV
 &kp ESCAPE         &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
                    &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none      &none     &none      &none
                                            &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo NUM  &kp ENTER  &none
