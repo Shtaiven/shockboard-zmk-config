@@ -43,8 +43,8 @@
 #define BASE 0
 #define SYM  1
 #define FUN  2
-#define NAV  3
-#define NUM  4
+#define NUM  3
+#define NAV  4
 #define GAME 5
 #define SET  6
 
