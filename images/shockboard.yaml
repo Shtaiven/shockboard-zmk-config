@@ -35,9 +35,9 @@ layers:
     - ','
     - .
     - /
-    - {t: TAB, h: nav}
+    - {t: TAB, h: num}
     - SPACE
-  - - {t: ENTER, h: num}
+  - - {t: ENTER, h: nav}
     - {t: BACKSPACE, h: sym}
     - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
     - {t: DELETE, h: fun}
@@ -48,14 +48,14 @@ layers:
     - '*'
     - (
     - )
-    - ''
+    - ^
     - ''
     - ''
     - ''
     - ''
     - ''
     - {t: nav, h: base}
-  - - ^
+  - - ''
     - '!'
     - '@'
     - '#'
@@ -125,55 +125,13 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
-  num:
-  - ['', '', '', '', '', '', '', '', '', '', '', '']
-  - - {t: sym, h: base}
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - KP DIVIDE
-    - KP 7
-    - KP 8
-    - KP 9
-    - KP MINUS
-    - {t: num, h: base}
-  - - {t: RIGHT ALT, h: sticky}
-    - LEFT SHIFT
-    - LEFT ALT
-    - LEFT CONTROL
-    - LEFT GUI
-    - ''
-    - KP MULTIPLY
-    - KP 4
-    - KP 5
-    - KP 6
-    - KP PLUS
-    - KP NUMLOCK
-  - - Ctl+ Z
-    - Ctl+ X
-    - Ctl+ C
-    - Ctl+ V
-    - ''
-    - ''
-    - KP 1
-    - KP 2
-    - KP 3
-    - KP ENTER
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {type: held}
-    - {t: ▽, type: trans}
-    - KP 0
-    - KP DOT
   nav:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - {t: sym, h: base}
     - ''
-    - ''
-    - ''
-    - ''
+    - '&mkp MCLK'
+    - '&mkp RCLK'
+    - '&mkp LCLK'
     - ''
     - ''
     - PAGE DOWN
@@ -203,12 +161,54 @@ layers:
     - ''
     - ''
     - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  num:
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - - {t: sym, h: base}
+    - ''
+    - '&mkp MCLK'
+    - '&mkp RCLK'
+    - '&mkp LCLK'
+    - ''
+    - KP DIVIDE
+    - KP 7
+    - KP 8
+    - KP 9
+    - KP MINUS
+    - {t: num, h: base}
+  - - {t: RIGHT ALT, h: sticky}
+    - LEFT SHIFT
+    - LEFT ALT
+    - LEFT CONTROL
+    - LEFT GUI
+    - ''
+    - KP MULTIPLY
+    - KP 4
+    - KP 5
+    - KP 6
+    - KP PLUS
+    - KP NUMLOCK
+  - - Ctl+ Z
+    - Ctl+ X
+    - Ctl+ C
+    - Ctl+ V
+    - ''
+    - ''
+    - KP 1
+    - KP 2
+    - KP 3
+    - KP DOT
     - {type: held}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - '&mkp MCLK'
-    - '&mkp LCLK'
-    - '&mkp RCLK'
+    - {t: ▽, type: trans}
+    - KP 0
+    - KP ENTER
   game:
   - ['', '`', '1', '2', '3', '4', '', '', '', '', '', '']
   - - {t: sym, h: base}
@@ -239,7 +239,7 @@ layers:
     - ''
     - FAST FORWARD
     - ''
-    - '&bootloader'
+    - ''
   - - ''
     - ''
     - MUTE
@@ -252,7 +252,7 @@ layers:
     - NEXT
     - ''
     - OUT TOG
-  - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', '', '', '', '', '', '']
+  - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '&bootloader', '', '', '', '', '', '', '']
   - - ''
     - {type: held}
     - ''
