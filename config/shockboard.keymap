@@ -499,7 +499,7 @@
 &to_hold BASE SYM  &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &to_hold BASE NAV
 &kp ESCAPE         &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
                    &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none      &none     &none      &none
-                                           &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo NUM  &kp ENTER  &none
+                                           &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo SYM  &kp ENTER  &none
             >;
         };
 
