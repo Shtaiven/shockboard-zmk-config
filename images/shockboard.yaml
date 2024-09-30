@@ -253,8 +253,8 @@ layers:
     - ''
     - OUT TOG
   - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '', '', '', '', '', '', '', '']
-  - - {type: held}
-    - ''
+  - - ''
+    - {type: held}
     - ''
     - ''
 combos:
