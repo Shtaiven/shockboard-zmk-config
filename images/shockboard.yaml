@@ -39,7 +39,7 @@ layers:
     - SPACE
   - - {t: ENTER, h: nav}
     - {t: BACKSPACE, h: sym}
-    - {t: LEFT SHIFT, h: sticky, s: '&caps_word'}
+    - {t: LEFT SHIFT, h: sticky, s: CAPSLOCK}
     - {t: DELETE, h: fun}
   sym:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
@@ -128,8 +128,8 @@ layers:
   nav:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - {t: sym, h: base}
-    - ''
-    - '&mkp MCLK'
+    - LEFT CONTROL
+    - LEFT GUI
     - '&mkp RCLK'
     - '&mkp LCLK'
     - ''
@@ -170,16 +170,16 @@ layers:
   num:
   - ['', '', '', '', '', '', '', '', '', '', '', '']
   - - {t: sym, h: base}
-    - ''
-    - '&mkp MCLK'
+    - LEFT CONTROL
+    - LEFT GUI
     - '&mkp RCLK'
     - '&mkp LCLK'
     - ''
-    - KP DIVIDE
-    - KP 7
-    - KP 8
-    - KP 9
-    - KP MINUS
+    - /
+    - '7'
+    - '8'
+    - '9'
+    - '-'
     - {t: num, h: base}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT SHIFT
@@ -187,28 +187,28 @@ layers:
     - LEFT CONTROL
     - LEFT GUI
     - ''
-    - KP MULTIPLY
-    - KP 4
-    - KP 5
-    - KP 6
-    - KP PLUS
-    - KP NUMLOCK
+    - '*'
+    - '4'
+    - '5'
+    - '6'
+    - +
+    - ','
   - - Ctl+ Z
     - Ctl+ X
     - Ctl+ C
     - Ctl+ V
     - ''
     - ''
-    - KP 1
-    - KP 2
-    - KP 3
-    - KP DOT
+    - '1'
+    - '2'
+    - '3'
+    - .
     - {type: held}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - KP 0
-    - KP ENTER
+    - '0'
+    - ENTER
   game:
   - ['', '`', '1', '2', '3', '4', '', '', '', '', '', '']
   - - {t: sym, h: base}
@@ -327,6 +327,6 @@ combos:
 - p: [43, 44]
   k: '|'
   l: [base]
-- p: [27, 32]
-  k: CAPSLOCK
-  l: [base]
+- p: [15, 16]
+  k: '&mkp MCLK'
+  l: [nav, num]
