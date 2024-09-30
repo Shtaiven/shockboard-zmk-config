@@ -522,12 +522,12 @@
         compatible = "zmk,conditional-layers";
 
         condition_set {
-            if-layers = <NAV NUM>;
+            if-layers = <NUM SYM>;
             then-layer = <SET>;
         };
 
         condition_set_game {
-            if-layers = <GAME NUM>;
+            if-layers = <GAME SYM>;
             then-layer = <SET>;
         };
     };
