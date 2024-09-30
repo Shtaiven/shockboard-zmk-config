@@ -1,7 +1,3 @@
-// TODO: Swap NUM and SYM
-// TODO: Reorganize SYM
-// TODO: Regular numbers on num row?
-// TODO: Replace CAPS_WORD with CAPS_LOCK and remove CAPS_LOCK combo? (less stateful)
 /*
  * Copyright (c) 2024 Steven Eisinger
  *
@@ -278,13 +274,12 @@
             layers = <BASE>;
         };
 
-        // Split combos
-        combo_caps_lock {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <27 32>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <BASE>;
+        combo_middle_click {
+            bindings = <&mkp MCLK>;
+            key-positions = <15 16>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <NAV NUM>;
         };
     };
 
@@ -388,10 +383,10 @@
             tapping-term-ms = <LT_TAPPING_TERM_MS>;
         };
 
-        smart_shft: smart_shift {  // Sticky shift on tap, caps word on double tap, shift on hold
+        smart_shft: smart_shift {  // Sticky shift on tap, caps lock on double tap, shift on hold
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+            bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
             mods = <(MOD_LSFT)>;
         };
 
@@ -473,22 +468,22 @@
         nav_layer {
             display-name = "nav";
             bindings = <
-&none              &none          &none         &none           &none          &none   &none     &none          &none      &none        &none            &none
-&to_hold BASE SYM  &none          &mkp MCLK     &mkp RCLK       &mkp LCLK      &none   &none     &kp PAGE_DOWN  &kp UP     &kp PAGE_UP  &kp PRINTSCREEN  &to_hold BASE NUM
-&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN   &kp RIGHT    &kp END          &kp INSERT
-                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none     &none          &none      &none        &none
-                                                &trans          &trans         &trans  &trans    &trans         &trans
+&none              &none           &none          &none           &none          &none   &none     &none          &none      &none        &none            &none
+&to_hold BASE SYM  &kp HRM_MIDDLE  &kp HRM_INDEX  &mkp RCLK       &mkp LCLK      &none   &none     &kp PAGE_DOWN  &kp UP     &kp PAGE_UP  &kp PRINTSCREEN  &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY   &kp HRM_RING   &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN   &kp RIGHT    &kp END          &kp INSERT
+                   &kp LC(Z)       &kp LC(X)      &kp LC(C)       &kp LC(V)      &none   &none     &none          &none      &none        &none
+                                                  &trans          &trans         &trans  &trans    &trans         &trans
             >;
         };
 
         num_layer {
             display-name = "num";
             bindings = <
-&none              &none          &none         &none           &none          &none   &none            &none            &none            &none            &none         &none
-&to_hold BASE SYM  &none          &mkp MCLK     &mkp RCLK       &mkp LCLK      &none   &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &to_hold BASE NUM
-&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp KP_NUMLOCK
-                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
-                                                &trans          &trans         &trans  &trans           &kp KP_NUMBER_0  &kp KP_ENTER
+&none              &none           &none          &none           &none          &none   &none         &none   &none   &none   &none       &none
+&to_hold BASE SYM  &kp HRM_MIDDLE  &kp HRM_INDEX  &mkp RCLK       &mkp LCLK      &none   &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY   &kp HRM_RING   &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp COMMA
+                   &kp LC(Z)       &kp LC(X)      &kp LC(C)       &kp LC(V)      &none   &none         &kp N1  &kp N2  &kp N3  &kp PERIOD
+                                                  &trans          &trans         &trans  &trans        &kp N0  &kp ENTER
             >;
         };
 
