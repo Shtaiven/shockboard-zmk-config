@@ -43,8 +43,8 @@
 #define BASE 0
 #define SYM  1
 #define FUN  2
-#define NUM  3
-#define NAV  4
+#define NAV  3
+#define NUM  4
 #define GAME 5
 #define SET  6
 
@@ -444,7 +444,7 @@
 &to_hold BASE SYM  &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &to_hold BASE NAV
 &kp ESCAPE         &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
                    &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
-                                                                &lt NAV TAB             &kp SPACE              &lt NUM ENTER  &lt SYM BACKSPACE  &smart_shft             &lt FUN DELETE
+                                                                &lt NUM TAB             &kp SPACE              &lt NAV ENTER  &lt SYM BACKSPACE  &smart_shft             &lt FUN DELETE
             >;
         };
 
@@ -452,8 +452,8 @@
             display-name = "sym";
             bindings = <
 &none              &none            &none            &none                 &none                  &none        &none   &none          &none           &none         &none          &none
-&to_hold BASE FUN  &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none        &none   &none          &none           &none         &none          &to_hold BASE NAV
-&kp CARET          &kp EXCLAMATION  &kp AT_SIGN      &kp HASH              &kp DOLLAR             &kp PERCENT  &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+&to_hold BASE FUN  &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET    &none   &none          &none           &none         &none          &to_hold BASE NAV
+&none              &kp EXCLAMATION  &kp AT_SIGN      &kp HASH              &kp DOLLAR             &kp PERCENT  &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
                    &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none        &none   &none          &none           &none         &none
                                                      &trans                &trans                 &trans       &trans  &trans         &trans
             >;
@@ -470,25 +470,25 @@
             >;
         };
 
+        nav_layer {
+            display-name = "nav";
+            bindings = <
+&none              &none          &none         &none           &none          &none   &none     &none          &none      &none        &none            &none
+&to_hold BASE SYM  &none          &mkp MCLK     &mkp RCLK       &mkp LCLK      &none   &none     &kp PAGE_DOWN  &kp UP     &kp PAGE_UP  &kp PRINTSCREEN  &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT       &kp DOWN   &kp RIGHT    &kp END          &kp INSERT
+                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none     &none          &none      &none        &none
+                                                &trans          &trans         &trans  &trans    &trans         &trans
+            >;
+        };
+
         num_layer {
             display-name = "num";
             bindings = <
 &none              &none          &none         &none           &none          &none   &none            &none            &none            &none            &none         &none
-&to_hold BASE SYM  &none          &none         &none           &none          &none   &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &to_hold BASE NUM
+&to_hold BASE SYM  &none          &mkp MCLK     &mkp RCLK       &mkp LCLK      &none   &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &to_hold BASE NUM
 &sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp KP_NUMLOCK
-                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER
-                                                &trans          &trans         &trans  &trans           &kp KP_NUMBER_0  &kp KP_DOT
-            >;
-        };
-
-        nav_layer {
-            display-name = "nav";
-            bindings = <
-&none              &none          &none         &none           &none          &none   &none      &none          &none      &none        &none            &none
-&to_hold BASE SYM  &none          &none         &none           &none          &none   &none      &kp PAGE_DOWN  &kp UP     &kp PAGE_UP  &kp PRINTSCREEN  &to_hold BASE NUM
-&sk RIGHT_ALT      &kp HRM_PINKY  &kp HRM_RING  &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME   &kp LEFT       &kp DOWN   &kp RIGHT    &kp END          &kp INSERT
-                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none      &none          &none      &none        &none
-                                                &trans          &trans         &trans  &mkp MCLK  &mkp LCLK      &mkp RCLK
+                   &kp LC(Z)      &kp LC(X)     &kp LC(C)       &kp LC(V)      &none   &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
+                                                &trans          &trans         &trans  &trans           &kp KP_NUMBER_0  &kp KP_ENTER
             >;
         };
 
@@ -507,9 +507,9 @@
             display-name = "set";
             bindings = <
 &none       &none           &none           &none                 &none                 &none           &none  &none           &none             &none               &none  &none
-&bt BT_CLR  &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &bootloader
+&bt BT_CLR  &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
 &none       &none           &kp C_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME        &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &out OUT_TOG
-            &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none           &none  &none           &none             &none               &none
+            &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bootloader     &none  &none           &none             &none               &none
                                             &none                 &none                 &none           &none  &none           &none
             >;
         };
@@ -522,7 +522,7 @@
         compatible = "zmk,conditional-layers";
 
         condition_set {
-            if-layers = <NUM SYM>;
+            if-layers = <NAV SYM>;
             then-layer = <SET>;
         };
 
