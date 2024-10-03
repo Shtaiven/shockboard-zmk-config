@@ -134,9 +134,9 @@ layers:
     - '&mkp LCLK'
     - ''
     - ''
-    - PAGE DOWN
-    - UP
     - PAGE UP
+    - UP
+    - PAGE DOWN
     - PRINTSCREEN
     - {t: num, h: base}
   - - {t: RIGHT ALT, h: sticky}
