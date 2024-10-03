@@ -90,7 +90,7 @@ layers:
     - F10
     - F11
     - F12
-    - ''
+    - SYSREQ
     - ''
     - ''
     - ''
@@ -102,7 +102,7 @@ layers:
     - F6
     - F7
     - F8
-    - ''
+    - SCROLLLOCK
     - ''
     - LEFT GUI
     - LEFT CONTROL
@@ -113,7 +113,7 @@ layers:
     - F2
     - F3
     - F4
-    - ''
+    - PAUSE BREAK
     - ''
     - ''
     - ''
@@ -192,13 +192,13 @@ layers:
     - '5'
     - '6'
     - +
-    - ','
+    - '='
   - - Ctl+ Z
     - Ctl+ X
     - Ctl+ C
     - Ctl+ V
     - ''
-    - ''
+    - ','
     - '1'
     - '2'
     - '3'
