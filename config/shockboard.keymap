@@ -457,11 +457,11 @@
         fun_layer {
             display-name = "fun";
             bindings = <
-&none              &none   &none    &none    &none    &none   &none   &none          &none           &none         &none          &none
-&to_hold BASE FUN  &kp F9  &kp F10  &kp F11  &kp F12  &none   &none   &none          &none           &none         &none          &to_hold BASE NAV
-&none              &kp F5  &kp F6   &kp F7   &kp F8   &none   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
-                   &kp F1  &kp F2   &kp F3   &kp F4   &none   &none   &none          &none           &none         &none
-                                    &trans   &trans   &trans  &trans  &trans         &trans
+&none              &none   &none    &none    &none    &none            &none   &none          &none           &none         &none          &none
+&to_hold BASE FUN  &kp F9  &kp F10  &kp F11  &kp F12  &kp SYSREQ       &none   &none          &none           &none         &none          &to_hold BASE NAV
+&none              &kp F5  &kp F6   &kp F7   &kp F8   &kp SCROLLLOCK   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+                   &kp F1  &kp F2   &kp F3   &kp F4   &kp PAUSE_BREAK  &none   &none          &none           &none         &none
+                                    &trans   &trans   &trans           &trans  &trans         &trans
             >;
         };
 
@@ -481,8 +481,8 @@
             bindings = <
 &none              &none           &none          &none           &none          &none   &none         &none   &none   &none   &none       &none
 &to_hold BASE SYM  &kp HRM_MIDDLE  &kp HRM_INDEX  &mkp RCLK       &mkp LCLK      &none   &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &to_hold BASE NUM
-&sk RIGHT_ALT      &kp HRM_PINKY   &kp HRM_RING   &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp COMMA
-                   &kp LC(Z)       &kp LC(X)      &kp LC(C)       &kp LC(V)      &none   &none         &kp N1  &kp N2  &kp N3  &kp PERIOD
+&sk RIGHT_ALT      &kp HRM_PINKY   &kp HRM_RING   &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp EQUAL
+                   &kp LC(Z)       &kp LC(X)      &kp LC(C)       &kp LC(V)      &none   &kp COMMA     &kp N1  &kp N2  &kp N3  &kp PERIOD
                                                   &trans          &trans         &trans  &trans        &kp N0  &kp ENTER
             >;
         };
