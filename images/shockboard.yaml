@@ -14,16 +14,16 @@ layers:
     - P
     - {t: nav, h: base}
   - - ESCAPE
-    - {t: A, h: LEFT SHIFT}
-    - {t: S, h: LEFT ALT}
+    - {t: A, h: LEFT ALT}
+    - {t: S, h: LEFT SHIFT}
     - {t: D, h: LEFT CONTROL}
     - {t: F, h: LEFT GUI}
     - G
     - H
     - {t: J, h: LEFT GUI}
     - {t: K, h: LEFT CONTROL}
-    - {t: L, h: LEFT ALT}
-    - {t: ;, h: LEFT SHIFT}
+    - {t: L, h: LEFT SHIFT}
+    - {t: ;, h: LEFT ALT}
     - ''''
   - - Z
     - X
@@ -64,8 +64,8 @@ layers:
     - ''
     - LEFT GUI
     - LEFT CONTROL
-    - LEFT ALT
     - LEFT SHIFT
+    - LEFT ALT
     - {t: RIGHT ALT, h: sticky}
   - - '{'
     - '}'
@@ -106,8 +106,8 @@ layers:
     - ''
     - LEFT GUI
     - LEFT CONTROL
-    - LEFT ALT
     - LEFT SHIFT
+    - LEFT ALT
     - {t: RIGHT ALT, h: sticky}
   - - F1
     - F2
@@ -140,8 +140,8 @@ layers:
     - PRINTSCREEN
     - {t: num, h: base}
   - - {t: RIGHT ALT, h: sticky}
-    - LEFT SHIFT
     - LEFT ALT
+    - LEFT SHIFT
     - LEFT CONTROL
     - LEFT GUI
     - ''
@@ -182,8 +182,8 @@ layers:
     - '-'
     - {t: num, h: base}
   - - {t: RIGHT ALT, h: sticky}
-    - LEFT SHIFT
     - LEFT ALT
+    - LEFT SHIFT
     - LEFT CONTROL
     - LEFT GUI
     - ''
