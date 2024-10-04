@@ -50,9 +50,19 @@
 
 #define HRM_INDEX  LEFT_GUI
 #define HRM_MIDDLE LEFT_CONTROL
-#define HRM_RING   LEFT_ALT
-#define HRM_PINKY  LEFT_SHIFT
+#define HRM_RING   LEFT_SHIFT
+#define HRM_PINKY  LEFT_ALT
 
+//--------------------------------------------------------------------------------------------------
+// Modifiers for the bottom row of the left side for easy 1-handed copy/cut/paste/undo
+// If MAC_MODS is defined, then COMMAND will be used for these shortcuts instead of CONTROL
+
+// #define MAC_MODS
+#ifdef MAC_MODS
+#define SYSTEM_MOD LG
+#else
+#define SYSTEM_MOD LC
+#endif
 
 //--------------------------------------------------------------------------------------------------
 // Defaults reconfiguration
@@ -468,22 +478,22 @@
         nav_layer {
             display-name = "nav";
             bindings = <
-&none              &none           &none          &none           &none          &none   &none     &none        &none      &none          &none            &none
-&to_hold BASE SYM  &kp HRM_MIDDLE  &kp HRM_INDEX  &mkp RCLK       &mkp LCLK      &none   &none     &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &to_hold BASE NUM
-&sk RIGHT_ALT      &kp HRM_PINKY   &kp HRM_RING   &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp HOME  &kp LEFT     &kp DOWN   &kp RIGHT      &kp END          &kp INSERT
-                   &kp LC(Z)       &kp LC(X)      &kp LC(C)       &kp LC(V)      &none   &none     &none        &none      &none          &none
-                                                  &trans          &trans         &trans  &trans    &trans       &trans
+&none              &none              &none              &none              &none              &none   &none     &none        &none      &none          &none            &none
+&to_hold BASE SYM  &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &none     &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none   &kp HOME  &kp LEFT     &kp DOWN   &kp RIGHT      &kp END          &kp INSERT
+                   &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none   &none     &none        &none      &none          &none
+                                                         &trans             &trans             &trans  &trans    &trans       &trans
             >;
         };
 
         num_layer {
             display-name = "num";
             bindings = <
-&none              &none           &none          &none           &none          &none   &none         &none   &none   &none   &none       &none
-&to_hold BASE SYM  &kp HRM_MIDDLE  &kp HRM_INDEX  &mkp RCLK       &mkp LCLK      &none   &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &to_hold BASE NUM
-&sk RIGHT_ALT      &kp HRM_PINKY   &kp HRM_RING   &kp HRM_MIDDLE  &kp HRM_INDEX  &none   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp EQUAL
-                   &kp LC(Z)       &kp LC(X)      &kp LC(C)       &kp LC(V)      &none   &kp COMMA     &kp N1  &kp N2  &kp N3  &kp PERIOD
-                                                  &trans          &trans         &trans  &trans        &kp N0  &kp ENTER
+&none              &none              &none              &none              &none              &none   &none         &none   &none   &none   &none       &none
+&to_hold BASE SYM  &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp EQUAL
+                   &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none   &kp COMMA     &kp N1  &kp N2  &kp N3  &kp PERIOD
+                                                         &trans             &trans             &trans  &trans        &kp N0  &kp ENTER
             >;
         };
 
