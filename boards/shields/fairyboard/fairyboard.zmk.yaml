@@ -1,0 +1,10 @@
+file_format: "1"
+id: fairyboard
+name: fairyboard
+type: shield
+url: https://github.com/shtaiven/shockboard
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
