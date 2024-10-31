@@ -1,0 +1,532 @@
+/*
+ * Copyright (c) 2024 Steven Eisinger
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+// Required to be defined before mouse keys import
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
+
+#include <behaviors/mouse_keys.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
+
+
+//--------------------------------------------------------------------------------------------------
+// Global defines
+
+#define PHT_TAPPING_TERM_MS     280  // Positional hold tap tapping term (ms)
+#define PHT_IDLE_MS             200  // Positional hold tap require idle time (ms)
+#define LT_TAPPING_TERM_MS      200  // Layer tap tapping term (ms)
+#define MOD_TOG_TAPPING_TERM_MS 200  // Mod tap tapping term (ms)
+#define QUICK_TAP_MS            225  // Quick tap timing (ms)
+#define SK_RELEASE_AFTER_MS     900  // Release sticky key after (ms)
+#define COMBO_TERM_FAST_MS       25  // Fast combo term for horizontal combos (ms)
+#define COMBO_TERM_SLOW_MS      100  // Slow combo term for vertical combos (ms)
+#define COMBO_IDLE_FAST_MS       50  // Fast require prior idle time for horizontal combos (ms)
+#define COMBO_IDLE_SLOW_MS        0  // Slow require prior idle time for vertical combos (ms)
+
+#define NONE 0  // Null keypress
+
+
+//--------------------------------------------------------------------------------------------------
+// Layer definitions
+
+#define BASE 0
+#define SYM  1
+#define FUN  2
+#define NAV  3
+#define NUM  4
+#define GAME 5
+#define SET  6
+
+
+//--------------------------------------------------------------------------------------------------
+// Homerow mod (HRM) definitions
+
+#define HRM_INDEX  LEFT_GUI
+#define HRM_MIDDLE LEFT_CONTROL
+#define HRM_RING   LEFT_SHIFT
+#define HRM_PINKY  LEFT_ALT
+
+//--------------------------------------------------------------------------------------------------
+// Modifiers for the bottom row of the left side for easy 1-handed copy/cut/paste/undo
+// If MAC_MODS is defined, then COMMAND will be used for these shortcuts instead of CONTROL
+
+// #define MAC_MODS
+#ifdef MAC_MODS
+#define SYSTEM_MOD LG
+#else
+#define SYSTEM_MOD LC
+#endif
+
+//--------------------------------------------------------------------------------------------------
+// Defaults reconfiguration
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <LT_TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    hold-while-undecided;
+};
+
+&sk {
+    release-after-ms = <SK_RELEASE_AFTER_MS>;
+    quick-release;
+};
+
+&mmv {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <500>;
+    delay-ms = <0>;
+};
+
+&msc {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <40>;
+    delay-ms = <0>;
+};
+
+
+//--------------------------------------------------------------------------------------------------
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // Vertical combos
+        combo_n1 {
+        bindings = <&kp N1>;
+            key-positions = <1 13>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n2 {
+            bindings = <&kp N2>;
+            key-positions = <2 14>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n3 {
+            bindings = <&kp N3>;
+            key-positions = <3 15>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n4 {
+            bindings = <&kp N4>;
+            key-positions = <4 16>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n5 {
+            bindings = <&kp N5>;
+            key-positions = <5 17>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n6 {
+            bindings = <&kp N6>;
+            key-positions = <6 18>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n7 {
+            bindings = <&kp N7>;
+            key-positions = <7 19>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n8 {
+            bindings = <&kp N8>;
+            key-positions = <8 20>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n9 {
+            bindings = <&kp N9>;
+            key-positions = <9 21>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_n0 {
+            bindings = <&kp N0>;
+            key-positions = <10 22>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <BASE>;
+        };
+
+        combo_grave_game {
+        bindings = <&kp GRAVE>;
+            key-positions = <1 13>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        combo_n1_game {
+            bindings = <&kp N1>;
+            key-positions = <2 14>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        combo_n2_game {
+            bindings = <&kp N2>;
+            key-positions = <3 15>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        combo_n3_game {
+            bindings = <&kp N3>;
+            key-positions = <4 16>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        combo_n4_game {
+            bindings = <&kp N4>;
+            key-positions = <5 17>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+            layers = <GAME>;
+        };
+
+        // Horizontal combos
+        combo_plus {
+            bindings = <&kp PLUS>;
+            key-positions = <8 9>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <3 4>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <2 3>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <7 8>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <25 26>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <26 27>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <30 31>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <31 32>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <BASE>;
+        };
+
+        combo_middle_click {
+            bindings = <&mkp MCLK>;
+            key-positions = <3 4>;
+            timeout-ms = <COMBO_TERM_FAST_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST_MS>;
+            layers = <NAV NUM>;
+        };
+    };
+
+
+//--------------------------------------------------------------------------------------------------
+
+    macros {
+        bt_sel_0: bt_sel_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>;
+        };
+
+        bt_disc_0: bt_disc_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 0>;
+        };
+
+        bt_sel_1: bt_sel_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>;
+        };
+
+        bt_disc_1: bt_disc_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 1>;
+        };
+
+        bt_sel_2: bt_sel_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>;
+        };
+
+        bt_disc_2: bt_disc_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 2>;
+        };
+
+        bt_sel_3: bt_sel_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>;
+        };
+
+        bt_disc_3: bt_disc_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 3>;
+        };
+
+        bt_sel_4: bt_sel_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>;
+        };
+
+        bt_disc_4: bt_disc_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_DISC 4>;
+        };
+    };
+
+
+//--------------------------------------------------------------------------------------------------
+
+    behaviors {
+        pht_left: pht_left {  // Positional hold tap left
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <PHT_TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <PHT_IDLE_MS>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 29 30 31 32 33 34 35 36 37 38 39>;
+            hold-trigger-on-release;
+        };
+
+        pht_right: pht_right {  // Positional hold tap right
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <PHT_TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <PHT_IDLE_MS>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 34 35 36 37 38 39>;
+            hold-trigger-on-release;
+        };
+
+        to_hold: to_hold {  // Layer on hold
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&to>, <&to>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        smart_shft: smart_shift {  // Sticky shift on tap, caps lock on double tap, shift on hold
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT>, <&kp CAPSLOCK>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_hold_0: bt_hold_0 {  // Disconnect on hold, connect on tap
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_0>, <&bt_sel_0>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_1: bt_hold_1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_1>, <&bt_sel_1>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_2: bt_hold_2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_2>, <&bt_sel_2>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_3: bt_hold_3 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_3>, <&bt_sel_3>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+
+        bt_hold_4: bt_hold_4 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&bt_disc_4>, <&bt_sel_4>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+        };
+    };
+
+
+//--------------------------------------------------------------------------------------------------
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            display-name = "";
+            bindings = <
+&to_hold BASE SYM  &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &to_hold BASE NAV
+&kp ESCAPE         &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
+                   &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
+                                                                &lt NUM TAB             &kp SPACE              &lt NAV ENTER  &lt SYM BACKSPACE  &smart_shft             &lt FUN DELETE
+            >;
+        };
+
+        sym_layer {
+            display-name = "sym";
+            bindings = <
+&to_hold BASE FUN  &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none        &none   &none          &none           &none         &none          &to_hold BASE NAV
+&kp CARET          &kp EXCLAMATION  &kp AT_SIGN      &kp HASH              &kp DOLLAR             &kp PERCENT  &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+                   &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none        &none   &none          &none           &none         &none
+                                                     &trans                &trans                 &trans       &trans  &trans         &trans
+            >;
+        };
+
+        fun_layer {
+            display-name = "fun";
+            bindings = <
+&to_hold BASE FUN  &kp F9  &kp F10  &kp F11  &kp F12  &kp SYSREQ       &none   &none          &none           &none         &none          &to_hold BASE NAV
+&none              &kp F5  &kp F6   &kp F7   &kp F8   &kp SCROLLLOCK   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+                   &kp F1  &kp F2   &kp F3   &kp F4   &kp PAUSE_BREAK  &none   &none          &none           &none         &none
+                                    &trans   &trans   &trans           &trans  &trans         &trans
+            >;
+        };
+
+        nav_layer {
+            display-name = "nav";
+            bindings = <
+&to_hold BASE SYM  &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &none     &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none   &kp HOME  &kp LEFT     &kp DOWN   &kp RIGHT      &kp END          &kp INSERT
+                   &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none   &none     &none        &none      &none          &none
+                                                         &trans             &trans             &trans  &trans    &trans       &trans
+            >;
+        };
+
+        num_layer {
+            display-name = "num";
+            bindings = <
+&to_hold BASE SYM  &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &to_hold BASE NUM
+&sk RIGHT_ALT      &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp EQUAL
+                   &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none   &kp COMMA     &kp N1  &kp N2  &kp N3  &kp PERIOD
+                                                         &trans             &trans             &trans  &trans        &kp N0  &kp ENTER
+            >;
+        };
+
+        game_layer {
+            display-name = "game";
+            bindings = <
+&to_hold BASE SYM  &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &to_hold BASE NAV
+&kp ESCAPE         &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+                   &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none      &none     &none      &none
+                                           &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo SYM  &kp ENTER  &none
+            >;
+        };
+
+        set_layer {
+            display-name = "set";
+            bindings = <
+&bt BT_CLR  &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
+&none       &none           &kp C_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME        &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &out OUT_TOG
+            &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bootloader     &none  &none           &none             &none               &none
+                                            &none                 &none                 &none           &none  &none           &none
+            >;
+        };
+    };
+
+
+//--------------------------------------------------------------------------------------------------
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        condition_set {
+            if-layers = <NAV SYM>;
+            then-layer = <SET>;
+        };
+
+        condition_set_game {
+            if-layers = <GAME SYM>;
+            then-layer = <SET>;
+        };
+    };
+};
