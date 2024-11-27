@@ -296,43 +296,50 @@
             layers = <NAV NUM>;
         };
 
-        combo_base_layer {
-            bindings = <&to BASE>;
-            key-positions = <1 2 3 4 7 8 9 10>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-        };
-
         combo_nav_layer {
             bindings = <&to NAV>;
-            key-positions = <7 8 9 10>;
+            key-positions = <7 8 9>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <BASE SYM FUN>;
+            layers = <BASE SYM FUN NUM SET>;
         };
 
         combo_num_layer {
             bindings = <&to NUM>;
-            key-positions = <7 8 9 10>;
+            key-positions = <7 8 9>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <NAV SYM FUN>;
+            layers = <NAV>;
         };
 
         combo_sym_layer {
             bindings = <&to SYM>;
-            key-positions = <1 2 3 4>;
+            key-positions = <2 3 4>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <BASE NAV NUM>;
+            layers = <BASE NAV NUM FUN SET>;
         };
 
         combo_fun_layer {
             bindings = <&to FUN>;
-            key-positions = <1 2 3 4>;
+            key-positions = <2 3 4>;
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <SYM NAV NUM>;
+            layers = <SYM>;
+        };
+
+        combo_set_layer_1 {
+            bindings = <&to SET>;
+            key-positions = <25 26 27>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
+        };
+
+        combo_set_layer_2 {
+            bindings = <&to SET>;
+            key-positions = <30 31 32>;
+            timeout-ms = <COMBO_TERM_SLOW_MS>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
         };
     };
 
@@ -498,7 +505,7 @@
         sym_layer {
             display-name = "sym";
             bindings = <
-&soft_off  &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none        &none   &none          &none           &none         &none          &soft_off
+&to BASE   &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none        &none   &none          &none           &none         &none          &to BASE
 &kp CARET  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH              &kp DOLLAR             &kp PERCENT  &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
            &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none        &none   &none          &none           &none         &none
                                              &trans                &trans                 &trans       &trans  &trans         &trans
@@ -508,17 +515,17 @@
         fun_layer {
             display-name = "fun";
             bindings = <
-&soft_off  &kp F9  &kp F10  &kp F11  &kp F12  &kp SYSREQ       &none   &none          &none           &none         &none          &soft_off
-&none      &kp F5  &kp F6   &kp F7   &kp F8   &kp SCROLLLOCK   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
-           &kp F1  &kp F2   &kp F3   &kp F4   &kp PAUSE_BREAK  &none   &none          &none           &none         &none
-                            &trans   &trans   &trans           &trans  &trans         &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp SYSREQ       &none   &none          &none           &none         &none          &trans
+&none   &kp F5  &kp F6   &kp F7   &kp F8   &kp SCROLLLOCK   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
+        &kp F1  &kp F2   &kp F3   &kp F4   &kp PAUSE_BREAK  &none   &none          &none           &none         &none
+                         &trans   &trans   &trans           &trans  &trans         &trans
             >;
         };
 
         nav_layer {
             display-name = "nav";
             bindings = <
-&soft_off      &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &none     &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &soft_off
+&trans         &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &none     &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &trans
 &sk RIGHT_ALT  &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none   &kp HOME  &kp LEFT     &kp DOWN   &kp RIGHT      &kp END          &kp INSERT
                &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none   &none     &none        &none      &none          &none
                                                      &trans             &trans             &trans  &trans    &trans       &trans
@@ -528,7 +535,7 @@
         num_layer {
             display-name = "num";
             bindings = <
-&soft_off      &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &soft_off
+&trans         &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &none   &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &trans
 &sk RIGHT_ALT  &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp EQUAL
                &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none   &kp COMMA     &kp N1  &kp N2  &kp N3  &kp PERIOD
                                                      &trans             &trans             &trans  &trans        &kp N0  &kp ENTER
@@ -538,7 +545,7 @@
         game_layer {
             display-name = "game";
             bindings = <
-&soft_off   &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &soft_off
+&soft_off   &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &to BASE
 &kp ESCAPE  &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
             &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none      &none     &none      &none
                                     &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo SYM  &kp ENTER  &none
@@ -548,8 +555,8 @@
         set_layer {
             display-name = "set";
             bindings = <
-&bt BT_CLR  &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &none
-&none       &none           &kp C_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME        &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &out OUT_TOG
+&to BASE    &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &to BASE
+&bt BT_CLR  &none           &kp C_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME        &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &out OUT_TOG
             &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bootloader     &none  &none           &none             &none               &none
                                             &none                 &none                 &none           &none  &none           &none
             >;
