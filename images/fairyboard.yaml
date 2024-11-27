@@ -326,5 +326,7 @@ combos:
   l: [sym]
 - p: [25, 26, 27]
   k: {t: set, h: toggle}
+  l: [base, sym, fun, nav, num]
 - p: [30, 31, 32]
   k: {t: set, h: toggle}
+  l: [base, sym, fun, nav, num]
