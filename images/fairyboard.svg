@@ -1438,22 +1438,6 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="303" y="104" width="28" height="26" class="combo"/>
 <text x="317" y="117" class="combo tap">4</text>
 </g>
-<g class="combo combopos-5">
-<path d="M193,155 l-36,-8" class="combo"/>
-<path d="M193,155 l35,14" class="combo"/>
-<rect rx="6" ry="6" x="179" y="142" width="28" height="26" class="combo"/>
-<a href="#set">
-<text x="193" y="155" class="combo tap layer-activator">set</text>
-</a><text x="193" y="166" class="combo hold">toggle</text>
-</g>
-<g class="combo combopos-6">
-<path d="M702,155 l-35,14" class="combo"/>
-<path d="M702,155 l36,-8" class="combo"/>
-<rect rx="6" ry="6" x="688" y="142" width="28" height="26" class="combo"/>
-<a href="#set">
-<text x="702" y="155" class="combo tap layer-activator">set</text>
-</a><text x="702" y="166" class="combo hold">toggle</text>
-</g>
 </g>
 </g>
 <g transform="translate(30, 2395)" class="layer-set">
@@ -1642,22 +1626,6 @@ path.combo { stroke: #7f7f7f; }
 <a href="#sym">
 <text x="220" y="47" class="combo tap layer-activator">sym</text>
 </a><text x="220" y="58" class="combo hold">toggle</text>
-</g>
-<g class="combo combopos-2">
-<path d="M193,155 l-36,-8" class="combo"/>
-<path d="M193,155 l35,14" class="combo"/>
-<rect rx="6" ry="6" x="179" y="142" width="28" height="26" class="combo"/>
-<a href="#set">
-<text x="193" y="155" class="combo tap layer-activator">set</text>
-</a><text x="193" y="166" class="combo hold">toggle</text>
-</g>
-<g class="combo combopos-3">
-<path d="M702,155 l-35,14" class="combo"/>
-<path d="M702,155 l36,-8" class="combo"/>
-<rect rx="6" ry="6" x="688" y="142" width="28" height="26" class="combo"/>
-<a href="#set">
-<text x="702" y="155" class="combo tap layer-activator">set</text>
-</a><text x="702" y="166" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
