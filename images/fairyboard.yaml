@@ -1,5 +1,5 @@
 layers:
-  base:
+  ' ':
   - ['&soft_off', Q, W, E, R, T, Y, U, I, O, P, '&soft_off']
   - - ESCAPE
     - {t: A, h: LEFT ALT}
@@ -30,7 +30,7 @@ layers:
     - {t: LEFT SHIFT, h: sticky, s: CAPSLOCK}
     - {t: DELETE, h: fun}
   sym:
-  - - {t: base, h: toggle}
+  - - {t: ' ', h: toggle}
     - '&'
     - '*'
     - (
@@ -41,7 +41,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: base, h: toggle}
+    - {t: ' ', h: toggle}
   - - ^
     - '!'
     - '@'
@@ -71,7 +71,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   fun:
-  - - {t: ▽, type: trans}
+  - - {t: ' ', h: toggle}
     - F9
     - F10
     - F11
@@ -82,7 +82,7 @@ layers:
     - ''
     - ''
     - ''
-    - {t: ▽, type: trans}
+    - {t: ' ', h: toggle}
   - - ''
     - F5
     - F6
@@ -112,7 +112,7 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
   nav:
-  - - {t: ▽, type: trans}
+  - - {t: ' ', h: toggle}
     - LEFT CONTROL
     - LEFT GUI
     - '&mkp RCLK'
@@ -123,7 +123,7 @@ layers:
     - UP
     - PAGE DOWN
     - PRINTSCREEN
-    - {t: ▽, type: trans}
+    - {t: ' ', h: toggle}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT ALT
     - LEFT SHIFT
@@ -153,7 +153,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   num:
-  - - {t: ▽, type: trans}
+  - - {t: ' ', h: toggle}
     - LEFT CONTROL
     - LEFT GUI
     - '&mkp RCLK'
@@ -164,7 +164,7 @@ layers:
     - '8'
     - '9'
     - '-'
-    - {t: ▽, type: trans}
+    - {t: ' ', h: toggle}
   - - {t: RIGHT ALT, h: sticky}
     - LEFT ALT
     - LEFT SHIFT
@@ -205,12 +205,12 @@ layers:
     - UP
     - ''
     - ''
-    - {t: base, h: toggle}
+    - {t: ' ', h: toggle}
   - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
   - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
   - [LEFT ALT, sym, ENTER, '']
   set:
-  - - {t: base, h: toggle}
+  - - {t: ' ', h: toggle}
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
     - {t: '&bt_sel_1', h: '&bt_disc_1'}
     - {t: '&bt_sel_2', h: '&bt_disc_2'}
@@ -221,7 +221,7 @@ layers:
     - ''
     - FAST FORWARD
     - ''
-    - {t: base, h: toggle}
+    - {t: ' ', h: toggle}
   - - BT CLR
     - ''
     - MUTE
@@ -242,34 +242,34 @@ layers:
 combos:
 - p: [1, 13]
   k: '1'
-  l: [base]
+  l: [' ']
 - p: [2, 14]
   k: '2'
-  l: [base]
+  l: [' ']
 - p: [3, 15]
   k: '3'
-  l: [base]
+  l: [' ']
 - p: [4, 16]
   k: '4'
-  l: [base]
+  l: [' ']
 - p: [5, 17]
   k: '5'
-  l: [base]
+  l: [' ']
 - p: [6, 18]
   k: '6'
-  l: [base]
+  l: [' ']
 - p: [7, 19]
   k: '7'
-  l: [base]
+  l: [' ']
 - p: [8, 20]
   k: '8'
-  l: [base]
+  l: [' ']
 - p: [9, 21]
   k: '9'
-  l: [base]
+  l: [' ']
 - p: [10, 22]
   k: '0'
-  l: [base]
+  l: [' ']
 - p: [1, 13]
   k: '`'
   l: [game]
@@ -287,46 +287,46 @@ combos:
   l: [game]
 - p: [8, 9]
   k: +
-  l: [base]
+  l: [' ']
 - p: [3, 4]
   k: '-'
-  l: [base]
+  l: [' ']
 - p: [2, 3]
   k: _
-  l: [base]
+  l: [' ']
 - p: [7, 8]
   k: '='
-  l: [base]
+  l: [' ']
 - p: [25, 26]
   k: '~'
-  l: [base]
+  l: [' ']
 - p: [26, 27]
   k: '`'
-  l: [base]
+  l: [' ']
 - p: [30, 31]
   k: \
-  l: [base]
+  l: [' ']
 - p: [31, 32]
   k: '|'
-  l: [base]
+  l: [' ']
 - p: [3, 4]
   k: '&mkp MCLK'
   l: [nav, num]
 - p: [7, 8, 9]
   k: {t: nav, h: toggle}
-  l: [base, sym, fun, num, set]
+  l: [' ', sym, fun, num, set]
 - p: [7, 8, 9]
   k: {t: num, h: toggle}
   l: [nav]
 - p: [2, 3, 4]
   k: {t: sym, h: toggle}
-  l: [base, nav, num, fun, set]
+  l: [' ', nav, num, fun, set]
 - p: [2, 3, 4]
   k: {t: fun, h: toggle}
   l: [sym]
 - p: [25, 26, 27]
   k: {t: set, h: toggle}
-  l: [base, sym, fun, nav, num]
+  l: [' ', sym, fun, nav, num]
 - p: [30, 31, 32]
   k: {t: set, h: toggle}
-  l: [base, sym, fun, nav, num]
+  l: [' ', sym, fun, nav, num]
