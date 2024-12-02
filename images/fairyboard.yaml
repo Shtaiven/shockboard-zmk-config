@@ -23,12 +23,28 @@ layers:
     - ','
     - .
     - /
-    - TAB
-    - {t: SPACE, h: num}
-  - - {t: ENTER, h: nav}
+    - {t: TAB, h: set}
+    - {t: SPACE, h: nav}
+  - - {t: ENTER, h: num}
     - {t: BACKSPACE, h: sym}
     - {t: LEFT SHIFT, h: sticky, s: CAPSLOCK}
     - {t: DELETE, h: fun}
+  game:
+  - - ''
+    - TAB
+    - Q
+    - W
+    - E
+    - R
+    - ''
+    - ''
+    - UP
+    - ''
+    - ''
+    - {t: ' ', h: toggle}
+  - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
+  - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
+  - [LEFT ALT, set, ENTER, fun]
   sym:
   - - {t: ' ', h: toggle}
     - '&'
@@ -64,12 +80,12 @@ layers:
     - ''
     - ''
     - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: TAB, h: set}
+    - {t: SPACE, h: nav}
+  - - {t: ENTER, h: num}
+    - {t: BACKSPACE, h: sym, type: held}
+    - {t: LEFT SHIFT, h: sticky, s: CAPSLOCK}
+    - {t: DELETE, h: fun}
   fun:
   - - {t: ' ', h: toggle}
     - F9
@@ -117,7 +133,7 @@ layers:
     - LEFT GUI
     - '&mkp RCLK'
     - '&mkp LCLK'
-    - ''
+    - '&mkp MCLK'
     - ''
     - PAGE UP
     - UP
@@ -147,8 +163,8 @@ layers:
     - ''
     - ''
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {type: held}
+    - {type: held}
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -158,7 +174,7 @@ layers:
     - LEFT GUI
     - '&mkp RCLK'
     - '&mkp LCLK'
-    - ''
+    - '&mkp MCLK'
     - /
     - '7'
     - '8'
@@ -188,27 +204,11 @@ layers:
     - '3'
     - .
     - {t: ▽, type: trans}
-    - {type: held}
-  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {type: held}
     - {t: ▽, type: trans}
     - '0'
     - ENTER
-  game:
-  - - '&soft_off'
-    - TAB
-    - Q
-    - W
-    - E
-    - R
-    - ''
-    - ''
-    - UP
-    - ''
-    - ''
-    - {t: ' ', h: toggle}
-  - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
-  - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
-  - [LEFT ALT, sym, ENTER, '']
   set:
   - - {t: ' ', h: toggle}
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
@@ -234,11 +234,19 @@ layers:
     - NEXT
     - ''
     - OUT TOG
-  - ['', '', BRIGHTNESS DEC, BRIGHTNESS INC, '&bootloader', '', '', '', '', '', '', '']
   - - ''
+    - ''
+    - BRIGHTNESS DEC
+    - BRIGHTNESS INC
+    - '&bootloader'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
     - {type: held}
     - ''
-    - ''
+  - ['', '', '', '']
 combos:
 - p: [1, 13]
   k: '1'
@@ -309,24 +317,3 @@ combos:
 - p: [31, 32]
   k: '|'
   l: [' ']
-- p: [3, 4]
-  k: '&mkp MCLK'
-  l: [nav, num]
-- p: [7, 8, 9]
-  k: {t: nav, h: toggle}
-  l: [' ', sym, fun, num, set]
-- p: [7, 8, 9]
-  k: {t: num, h: toggle}
-  l: [nav]
-- p: [2, 3, 4]
-  k: {t: sym, h: toggle}
-  l: [' ', nav, num, fun, set]
-- p: [2, 3, 4]
-  k: {t: fun, h: toggle}
-  l: [sym]
-- p: [25, 26, 27]
-  k: {t: set, h: toggle}
-  l: [' ', sym, fun, nav, num]
-- p: [30, 31, 32]
-  k: {t: set, h: toggle}
-  l: [' ', sym, fun, nav, num]
