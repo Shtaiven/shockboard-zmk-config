@@ -22,7 +22,7 @@
 //--------------------------------------------------------------------------------------------------
 // Global defines
 
-#define PHT_TAPPING_TERM_MS     280  // Positional hold tap tapping term (ms)
+#define PHT_TAPPING_TERM_MS     600  // Positional hold tap tapping term (ms)
 #define PHT_IDLE_MS             200  // Positional hold tap require idle time (ms)
 #define LT_TAPPING_TERM_MS      200  // Layer tap tapping term (ms)
 #define MOD_TOG_TAPPING_TERM_MS 200  // Mod tap tapping term (ms)
