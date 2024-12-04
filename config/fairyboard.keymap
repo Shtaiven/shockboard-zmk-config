@@ -56,6 +56,7 @@
 #define HRM_RING   LEFT_SHIFT
 #define HRM_PINKY  LEFT_ALT
 
+
 //--------------------------------------------------------------------------------------------------
 // Modifiers for the bottom row of the left side for easy 1-handed copy/cut/paste/undo
 // If MAC_MODS is defined, then COMMAND will be used for these shortcuts instead of CONTROL
@@ -66,6 +67,7 @@
 #else
 #define SYSTEM_MOD LC
 #endif
+
 
 //--------------------------------------------------------------------------------------------------
 // Defaults reconfiguration
@@ -92,10 +94,6 @@
     acceleration-exponent = <1>;
     time-to-max-speed-ms = <40>;
     delay-ms = <0>;
-};
-
-&soft_off {
-    hold-time-ms = <1000>; // Only turn off it the key is held for 1 seconds or longer.
 };
 
 
