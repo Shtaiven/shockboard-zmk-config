@@ -95,7 +95,7 @@
 };
 
 &soft_off {
-    hold-time-ms = <1500>; // Only turn off it the key is held for 1.5 seconds or longer.
+    hold-time-ms = <1000>; // Only turn off it the key is held for 1 seconds or longer.
 };
 
 
@@ -399,6 +399,20 @@
             mods = <(MOD_LSFT)>;
         };
 
+        td_right: tap_dance_right_side {  // Tap dance to allow for using right side layers with one hand
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+            bindings = <&to BASE>, <&to NAV>, <&to NUM>;
+        };
+
+        td_left: tap_dance_left_side {  // Tap dance to allow for using right side layers with one hand
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <LT_TAPPING_TERM_MS>;
+            bindings = <&to BASE>, <&to SYM>, <&to FUN>;
+        };
+
         bt_hold_0: bt_hold_0 {  // Disconnect on hold, connect on tap
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -444,7 +458,7 @@
         base_layer {
             display-name = " ";
             bindings = <
-&soft_off   &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &soft_off
+&td_left    &kp Q                  &kp W                 &kp E                   &kp R                  &kp T          &kp Y              &kp U                   &kp I                    &kp O                  &kp P                      &td_right
 &kp ESCAPE  &pht_left HRM_PINKY A  &pht_left HRM_RING S  &pht_left HRM_MIDDLE D  &pht_left HRM_INDEX F  &kp G          &kp H              &pht_right HRM_INDEX J  &pht_right HRM_MIDDLE K  &pht_right HRM_RING L  &pht_right HRM_PINKY SEMI  &kp SINGLE_QUOTE
             &kp Z                  &kp X                 &kp C                   &kp V                  &kp B          &kp N              &kp M                   &kp COMMA                &kp DOT                &kp SLASH
                                                          &lt SET TAB             &lt NAV SPACE          &lt NUM ENTER  &lt SYM BACKSPACE  &smart_shft             &lt FUN DELETE
@@ -454,7 +468,7 @@
         game_layer {
             display-name = "game";
             bindings = <
-&none       &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &to BASE
+&none       &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &td_right
 &kp ESCAPE  &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
             &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none      &none     &none      &none
                                     &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo SET  &kp ENTER  &mo FUN
@@ -464,7 +478,7 @@
         sym_layer {
             display-name = "sym";
             bindings = <
-&to BASE   &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &none              &none          &none           &none         &none          &to BASE
+&td_left   &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &none              &none          &none           &none         &none          &td_right
 &kp CARET  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH              &kp DOLLAR             &kp PERCENT    &none              &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
            &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none          &none              &none          &none           &none         &none
                                              &lt SET TAB           &lt NAV SPACE          &lt NUM ENTER  &lt SYM BACKSPACE  &smart_shft    &lt FUN DELETE
@@ -474,7 +488,7 @@
         fun_layer {
             display-name = "fun";
             bindings = <
-&to BASE  &kp F9  &kp F10  &kp F11  &kp F12  &kp SYSREQ       &none   &none          &none           &none         &none          &to BASE
+&td_left  &kp F9  &kp F10  &kp F11  &kp F12  &kp SYSREQ       &none   &none          &none           &none         &none          &td_right
 &none     &kp F5  &kp F6   &kp F7   &kp F8   &kp SCROLLLOCK   &none   &kp HRM_INDEX  &kp HRM_MIDDLE  &kp HRM_RING  &kp HRM_PINKY  &sk RIGHT_ALT
           &kp F1  &kp F2   &kp F3   &kp F4   &kp PAUSE_BREAK  &none   &none          &none           &none         &none
                            &trans   &trans   &trans           &trans  &trans         &trans
@@ -484,7 +498,7 @@
         nav_layer {
             display-name = "nav";
             bindings = <
-&to BASE       &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &mkp MCLK  &none     &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &to BASE
+&td_left       &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &mkp MCLK  &none     &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp PRINTSCREEN  &td_right
 &sk RIGHT_ALT  &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none      &kp HOME  &kp LEFT     &kp DOWN   &kp RIGHT      &kp END          &kp INSERT
                &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none      &none     &none        &none      &none          &none
                                                      &trans             &trans             &trans     &trans    &trans       &trans
@@ -494,7 +508,7 @@
         num_layer {
             display-name = "num";
             bindings = <
-&to BASE         &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &mkp MCLK  &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &to BASE
+&td_left         &kp HRM_MIDDLE     &kp HRM_INDEX      &mkp RCLK          &mkp LCLK          &mkp MCLK  &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS   &td_right
 &sk RIGHT_ALT    &kp HRM_PINKY      &kp HRM_RING       &kp HRM_MIDDLE     &kp HRM_INDEX      &none      &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS    &kp EQUAL
                  &kp SYSTEM_MOD(Z)  &kp SYSTEM_MOD(X)  &kp SYSTEM_MOD(C)  &kp SYSTEM_MOD(V)  &none      &kp COMMA     &kp N1  &kp N2  &kp N3  &kp PERIOD
                                                        &trans             &trans             &trans     &trans        &kp N0  &kp ENTER
@@ -504,7 +518,7 @@
         set_layer {
             display-name = "set";
             bindings = <
-&to BASE    &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &to BASE
+&td_left    &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &td_right
 &bt BT_CLR  &none           &kp C_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME        &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &out OUT_TOG
             &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bootloader     &none  &none           &none             &none               &none
                                             &none                 &none                 &none           &none  &none           &none
