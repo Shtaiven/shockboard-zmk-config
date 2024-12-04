@@ -29,10 +29,26 @@ layers:
     - {t: BACKSPACE, h: sym}
     - {t: LEFT SHIFT, h: sticky, s: CAPSLOCK}
     - {t: DELETE, h: fun}
-  game:
-  - ['', TAB, Q, W, E, R, '', '', UP, '', '', '&td_right']
-  - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
-  - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
+  game 1:
+  - [ESCAPE, TAB, Q, W, E, R, '', '', UP, '', '', '&td_right']
+  - [LEFT CONTROL, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
+  - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', game 2, SPACE]
+  - [LEFT ALT, set, ENTER, fun]
+  game 2:
+  - [ESCAPE, '`', '1', '2', '3', '4', '', '', UP, '', '', '&td_right']
+  - [LEFT CONTROL, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
+  - - {t: ' ', h: toggle}
+    - Z
+    - X
+    - C
+    - V
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {type: held}
+    - SPACE
   - [LEFT ALT, set, ENTER, fun]
   sym:
   - ['&td_left', '&', '*', (, ), '', '', '', '', '', '', '&td_right']
@@ -155,40 +171,29 @@ layers:
     - '0'
     - ENTER
   set:
-  - - '&td_left'
+  - ['&soft_off', '', '', '', '', '', '', BRIGHTNESS DEC, BRIGHTNESS INC, OUT TOG, PRINTSCREEN, '']
+  - - BT CLR
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
     - {t: '&bt_sel_1', h: '&bt_disc_1'}
     - {t: '&bt_sel_2', h: '&bt_disc_2'}
     - {t: '&bt_sel_3', h: '&bt_disc_3'}
     - {t: '&bt_sel_4', h: '&bt_disc_4'}
     - ''
-    - REWIND
-    - ''
-    - FAST FORWARD
-    - ''
-    - '&td_right'
-  - - BT CLR
-    - ''
-    - MUTE
     - VOLUME DOWN
     - VOLUME UP
-    - {t: game, h: toggle}
+    - MUTE
     - ''
+    - INSERT
+  - - {t: game 1, h: toggle}
+    - ''
+    - ''
+    - ''
+    - '&bootloader'
+    - REWIND
     - PREVIOUS
     - PLAY PAUSE
     - NEXT
-    - ''
-    - OUT TOG
-  - - ''
-    - ''
-    - BRIGHTNESS DEC
-    - BRIGHTNESS INC
-    - '&bootloader'
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
+    - FAST FORWARD
     - {type: held}
     - ''
   - ['', '', '', '']
@@ -223,21 +228,6 @@ combos:
 - p: [10, 22]
   k: '0'
   l: [' ']
-- p: [1, 13]
-  k: '`'
-  l: [game]
-- p: [2, 14]
-  k: '1'
-  l: [game]
-- p: [3, 15]
-  k: '2'
-  l: [game]
-- p: [4, 16]
-  k: '3'
-  l: [game]
-- p: [5, 17]
-  k: '4'
-  l: [game]
 - p: [8, 9]
   k: +
   l: [' ']
