@@ -1,6 +1,5 @@
-// TODO: special tap-dance key with soft_off on hold, base, layer 1, layer 2 for taps
-// TODO: move bluetooth to right side bottom for set
-// TODO: move brightness so it's easier to hit with the set layer activated with left thumb
+// TODO: clean up left side of set layer
+// TODO: print screen, insert scroll lock and pause break move?
 /*
  * Copyright (c) 2024 Steven Eisinger
  *
@@ -39,13 +38,14 @@
 //--------------------------------------------------------------------------------------------------
 // Layer definitions
 
-#define BASE 0
-#define GAME 1
-#define SYM  2
-#define FUN  3
-#define NAV  4
-#define NUM  5
-#define SET  6
+#define BASE  0
+#define GAME  1
+#define GAME2 2
+#define SYM   3
+#define FUN   4
+#define NAV   5
+#define NUM   6
+#define SET   7
 
 
 //--------------------------------------------------------------------------------------------------
@@ -184,46 +184,6 @@
             timeout-ms = <COMBO_TERM_SLOW_MS>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
             layers = <BASE>;
-        };
-
-        combo_grave_game {
-        bindings = <&kp GRAVE>;
-            key-positions = <1 13>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <GAME>;
-        };
-
-        combo_n1_game {
-            bindings = <&kp N1>;
-            key-positions = <2 14>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <GAME>;
-        };
-
-        combo_n2_game {
-            bindings = <&kp N2>;
-            key-positions = <3 15>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <GAME>;
-        };
-
-        combo_n3_game {
-            bindings = <&kp N3>;
-            key-positions = <4 16>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <GAME>;
-        };
-
-        combo_n4_game {
-            bindings = <&kp N4>;
-            key-positions = <5 17>;
-            timeout-ms = <COMBO_TERM_SLOW_MS>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW_MS>;
-            layers = <GAME>;
         };
 
         // Horizontal combos
@@ -466,12 +426,22 @@
         };
 
         game_layer {
-            display-name = "game";
+            display-name = "game 1";
             bindings = <
-&none       &kp TAB         &kp Q   &kp W             &kp E      &kp R         &none    &none      &kp UP    &none      &none  &td_right
-&kp ESCAPE  &kp CAPSLOCK    &kp A   &kp S             &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
-            &kp LEFT_SHIFT  &kp Z   &kp X             &kp C      &kp V         &none    &none      &none     &none      &none
-                                    &kp LEFT_CONTROL  &kp SPACE  &kp LEFT_ALT  &mo SET  &kp ENTER  &mo FUN
+&kp ESCAPE        &kp TAB         &kp Q   &kp W      &kp E      &kp R         &none    &none      &kp UP    &none      &none  &td_right
+&kp LEFT_CONTROL  &kp CAPSLOCK    &kp A   &kp S      &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+                  &kp LEFT_SHIFT  &kp Z   &kp X      &kp C      &kp V         &none    &none      &none     &none      &none
+                                          &mo GAME2  &kp SPACE  &kp LEFT_ALT  &mo SET  &kp ENTER  &mo FUN
+            >;
+        };
+
+        game2_layer {
+            display-name = "game 2";
+            bindings = <
+&kp ESCAPE        &kp GRAVE       &kp N1  &kp N2  &kp N3     &kp N4        &none    &none      &kp UP    &none      &none  &td_right
+&kp LEFT_CONTROL  &kp CAPSLOCK    &kp A   &kp S   &kp D      &kp F         &none    &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+                  &to BASE        &kp Z   &kp X   &kp C      &kp V         &none    &none      &none     &none      &none
+                                          &none   &kp SPACE  &kp LEFT_ALT  &mo SET  &kp ENTER  &mo FUN
             >;
         };
 
@@ -518,28 +488,11 @@
         set_layer {
             display-name = "set";
             bindings = <
-&td_left    &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0        &bt_hold_3 0 0        &bt_hold_4 0 0  &none  &kp C_REWIND    &none             &kp C_FAST_FORWARD  &none  &td_right
-&bt BT_CLR  &none           &kp C_MUTE      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &to GAME        &none  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT          &none  &out OUT_TOG
-            &none           &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bootloader     &none  &none           &none             &none               &none
-                                            &none                 &none                 &none           &none  &none           &none
+&soft_off   &none           &none           &none           &none           &none           &none         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &out OUT_TOG  &kp PRINTSCREEN     &none
+&bt BT_CLR  &bt_hold_0 0 0  &bt_hold_1 0 0  &bt_hold_2 0 0  &bt_hold_3 0 0  &bt_hold_4 0 0  &none         &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE    &none               &kp INSERT
+            &to GAME        &none           &none           &none           &bootloader     &kp C_REWIND  &kp C_PREVIOUS        &kp C_PLAY_PAUSE      &kp C_NEXT    &kp C_FAST_FORWARD
+                                            &none           &none           &none           &none         &none                 &none
             >;
         };
-    };
-
-
-//--------------------------------------------------------------------------------------------------
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        // condition_set {
-        //     if-layers = <NAV SYM>;
-        //     then-layer = <SET>;
-        // };
-
-        // condition_set_game {
-        //     if-layers = <GAME SYM>;
-        //     then-layer = <SET>;
-        // };
     };
 };
