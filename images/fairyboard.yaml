@@ -1,6 +1,6 @@
 layers:
   ' ':
-  - ['&soft_off', Q, W, E, R, T, Y, U, I, O, P, '&soft_off']
+  - ['&td_left', Q, W, E, R, T, Y, U, I, O, P, '&td_right']
   - - ESCAPE
     - {t: A, h: LEFT ALT}
     - {t: S, h: LEFT SHIFT}
@@ -30,34 +30,12 @@ layers:
     - {t: LEFT SHIFT, h: sticky, s: CAPSLOCK}
     - {t: DELETE, h: fun}
   game:
-  - - ''
-    - TAB
-    - Q
-    - W
-    - E
-    - R
-    - ''
-    - ''
-    - UP
-    - ''
-    - ''
-    - {t: ' ', h: toggle}
+  - ['', TAB, Q, W, E, R, '', '', UP, '', '', '&td_right']
   - [ESCAPE, CAPSLOCK, A, S, D, F, '', LEFT, DOWN, RIGHT, '', '']
   - [LEFT SHIFT, Z, X, C, V, '', '', '', '', '', LEFT CONTROL, SPACE]
   - [LEFT ALT, set, ENTER, fun]
   sym:
-  - - {t: ' ', h: toggle}
-    - '&'
-    - '*'
-    - (
-    - )
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ' ', h: toggle}
+  - ['&td_left', '&', '*', (, ), '', '', '', '', '', '', '&td_right']
   - - ^
     - '!'
     - '@'
@@ -87,18 +65,7 @@ layers:
     - {t: LEFT SHIFT, h: sticky, s: CAPSLOCK}
     - {t: DELETE, h: fun}
   fun:
-  - - {t: ' ', h: toggle}
-    - F9
-    - F10
-    - F11
-    - F12
-    - SYSREQ
-    - ''
-    - ''
-    - ''
-    - ''
-    - ''
-    - {t: ' ', h: toggle}
+  - ['&td_left', F9, F10, F11, F12, SYSREQ, '', '', '', '', '', '&td_right']
   - - ''
     - F5
     - F6
@@ -128,18 +95,7 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
   nav:
-  - - {t: ' ', h: toggle}
-    - LEFT CONTROL
-    - LEFT GUI
-    - '&mkp RCLK'
-    - '&mkp LCLK'
-    - '&mkp MCLK'
-    - ''
-    - PAGE UP
-    - UP
-    - PAGE DOWN
-    - PRINTSCREEN
-    - {t: ' ', h: toggle}
+  - ['&td_left', LEFT CONTROL, LEFT GUI, '&mkp RCLK', '&mkp LCLK', '&mkp MCLK', '', PAGE UP, UP, PAGE DOWN, PRINTSCREEN, '&td_right']
   - - {t: RIGHT ALT, h: sticky}
     - LEFT ALT
     - LEFT SHIFT
@@ -169,18 +125,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   num:
-  - - {t: ' ', h: toggle}
-    - LEFT CONTROL
-    - LEFT GUI
-    - '&mkp RCLK'
-    - '&mkp LCLK'
-    - '&mkp MCLK'
-    - /
-    - '7'
-    - '8'
-    - '9'
-    - '-'
-    - {t: ' ', h: toggle}
+  - ['&td_left', LEFT CONTROL, LEFT GUI, '&mkp RCLK', '&mkp LCLK', '&mkp MCLK', /, '7', '8', '9', '-', '&td_right']
   - - {t: RIGHT ALT, h: sticky}
     - LEFT ALT
     - LEFT SHIFT
@@ -210,7 +155,7 @@ layers:
     - '0'
     - ENTER
   set:
-  - - {t: ' ', h: toggle}
+  - - '&td_left'
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
     - {t: '&bt_sel_1', h: '&bt_disc_1'}
     - {t: '&bt_sel_2', h: '&bt_disc_2'}
@@ -221,7 +166,7 @@ layers:
     - ''
     - FAST FORWARD
     - ''
-    - {t: ' ', h: toggle}
+    - '&td_right'
   - - BT CLR
     - ''
     - MUTE
