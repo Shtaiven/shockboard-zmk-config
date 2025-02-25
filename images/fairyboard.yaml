@@ -51,8 +51,8 @@ layers:
     - SPACE
   - [LEFT ALT, set, ENTER, fun]
   sym:
-  - ['&td_left', '&', '*', (, ), '', '', '', '', '', '', '&td_right']
-  - - ^
+  - ['&td_left', ^, '&', '*', (, ), '', '', '', '', '', '&td_right']
+  - - ''
     - '!'
     - '@'
     - '#'
