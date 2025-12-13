@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: nice-view-fairyboard
       remote: Shtaiven
-      revision: main
+      revision: zmk-v0.2
   self:
     path: config
