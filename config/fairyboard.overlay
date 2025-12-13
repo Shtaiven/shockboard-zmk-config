@@ -1,9 +1,3 @@
-/ {
-    chosen {
-        zmk,input-listener = &glidepoint;
-    };
-};
-
 &pinctrl {
     i2c0_default {
         group1 {

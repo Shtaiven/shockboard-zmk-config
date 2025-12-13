@@ -99,6 +99,11 @@
 //--------------------------------------------------------------------------------------------------
 
 / {
+    glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -491,10 +496,5 @@
                                            &none           &none           &none           &none         &none                 &none
             >;
         };
-    };
-
-    glidepoint_listener {
-        compatible = "zmk,input-listener";
-        device = <&glidepoint>;
     };
 };
