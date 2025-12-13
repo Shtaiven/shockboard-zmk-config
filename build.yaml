@@ -18,12 +18,12 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: shockboard
     artifact-name: shockboard
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: fairyboard
     artifact-name: fairyboard
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: fairyboard nice_view_adapter nice_view_fairyboard
     artifact-name: fairyboard_nice_view

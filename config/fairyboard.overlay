@@ -23,6 +23,6 @@
         reg = <0x2a>;
 
         sensitivity = "4x";
-        sleep;
+        sleep-mode-enable;
     };
 };
