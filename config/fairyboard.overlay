@@ -4,14 +4,14 @@
 #include <dt-bindings/input/input-event-codes.h>
 
 &pinctrl {
-    i2c1_default: i2c1_default {
+    i2c0_default: i2c0_default {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
                 <NRF_PSEL(TWIM_SCL, 0, 22)>;
             bias-pull-up;
         };
     };
-    i2c1_sleep: i2c1_sleep {
+    i2c0_sleep: i2c0_sleep {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
                 <NRF_PSEL(TWIM_SCL, 0, 22)>;
@@ -20,11 +20,8 @@
     };
 };
 
-&i2c1 {
+&i2c0 {
     status = "okay";
-
-    pinctrl-0 = < &i2c1_default >;
-	pinctrl-1 = < &i2c1_sleep >;
 
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
