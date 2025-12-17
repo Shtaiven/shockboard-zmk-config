@@ -1,5 +1,11 @@
 # nice!view Adapter
 
+## Modifications from restive engines
+
+This shield has been modified to not disable the i2c0 (pro_micro_i2c) node since this is needed by other peripherals (e.g. trackpad).
+
+## Original README
+
 This shield is used as an adapter between the nice!view and existing shields/boards that expose an I2C OLED header.
 
 To use this shield, you should add this shield to your list of shields _before_ `nice_view`.
@@ -9,3 +15,4 @@ The nice!view will use the SDA/SCL pins of the OLED, and then the adapter expect
 ```
 west build -b nice_nano_v2 -- -DSHIELD="lily58_left nice_view_adapter nice_view"
 ```
+
