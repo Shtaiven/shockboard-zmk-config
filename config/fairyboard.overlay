@@ -3,37 +3,6 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/input/input-event-codes.h>
 
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-                <NRF_PSEL(TWIM_SCL, 0, 22)>;
-            bias-pull-up;
-        };
-    };
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
-                <NRF_PSEL(TWIM_SCL, 0, 22)>;
-            low-power-enable;
-        };
-    };
-};
-
-&i2c0 {
-    status = "okay";
-
-    glidepoint: glidepoint@2a {
-        compatible = "cirque,pinnacle";
-        status = "okay";
-        reg = <0x2a>;
-        dr-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
-
-        sensitivity = "1x";
-        sleep;
-    };
-};
-
 /{
     glidepoint_input: glidepoint_input {
         compatible = "zmk,input-listener";
@@ -41,4 +10,4 @@
 
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &zip_xy_scaler 10 4>;
     };
-}; 
+};
