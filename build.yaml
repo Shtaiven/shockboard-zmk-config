@@ -22,7 +22,7 @@ include:
     shield: shockboard
     artifact-name: shockboard
   - board: nice_nano_v2
-    shield: fairyboard
+    shield: fairyboard glidepoint_fairyboard
     artifact-name: fairyboard
   - board: nice_nano_v2
     shield: fairyboard nice_view_adapter nice_view_fairyboard glidepoint_fairyboard
