@@ -17,8 +17,8 @@
 
 glidepoint_i2c: &i2c1 {
     status = "okay";
-    pinctrl-0 = < &i2c0_default >;
-    pinctrl-1 = < &i2c0_sleep >;
+    pinctrl-0 = < &i2c1_default >;
+    pinctrl-1 = < &i2c1_sleep >;
     pinctrl-names = "default", "sleep";
 
     glidepoint: glidepoint@2a {
