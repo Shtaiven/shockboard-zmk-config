@@ -4,7 +4,7 @@
 #include <dt-bindings/input/input-event-codes.h>
 
 /{
-    glidepoint_input: glidepoint_input {
+    glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         device = <&glidepoint>;
 
