@@ -25,9 +25,11 @@ glidepoint_i2c: &i2c1 {
         compatible = "cirque,pinnacle";
         status = "okay";
         reg = <0x2a>;
+        dr-gpios = <&gpio1 7 (GPIO_ACTIVE_HIGH)>;
 
-        sensitivity = "1x";
+        sensitivity = "4x";
         sleep;
+        no-taps;
     };
 };
 
