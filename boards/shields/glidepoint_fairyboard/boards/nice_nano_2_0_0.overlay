@@ -27,8 +27,7 @@ glidepoint_i2c: &i2c1 {
         reg = <0x2a>;
 
         sensitivity = "4x";
-        // sleep;
-        no-taps;
+        sleep-mode-enable;
     };
 };
 
