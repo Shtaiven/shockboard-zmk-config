@@ -177,14 +177,14 @@ layers:
     - ''
     - ''
     - ''
-    - {h: '&bt_clr'}
+    - {t: OUT USB, h: OUT BLE}
     - ''
     - BRIGHTNESS DEC
     - BRIGHTNESS INC
-    - {t: OUT USB, h: OUT BLE}
+    - ''
     - PRINTSCREEN
     - ''
-  - - ''
+  - - {h: '&bt_clr'}
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
     - {t: '&bt_sel_1', h: '&bt_disc_1'}
     - {t: '&bt_sel_2', h: '&bt_disc_2'}
