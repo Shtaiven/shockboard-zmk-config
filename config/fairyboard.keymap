@@ -21,7 +21,7 @@
 //--------------------------------------------------------------------------------------------------
 // Global defines
 
-#define PHT_TAPPING_TERM_MS     600  // Positional hold tap tapping term (ms)
+#define PHT_TAPPING_TERM_MS     280  // Positional hold tap tapping term (ms)
 #define PHT_IDLE_MS             200  // Positional hold tap require idle time (ms)
 #define LT_TAPPING_TERM_MS      200  // Layer tap tapping term (ms)
 #define MOD_TOG_TAPPING_TERM_MS 200  // Mod tap tapping term (ms)
@@ -30,7 +30,7 @@
 #define COMBO_TERM_FAST_MS       25  // Fast combo term for horizontal combos (ms)
 #define COMBO_TERM_SLOW_MS      100  // Slow combo term for vertical combos (ms)
 #define COMBO_IDLE_FAST_MS       50  // Fast require prior idle time for horizontal combos (ms)
-#define COMBO_IDLE_SLOW_MS        0  // Slow require prior idle time for vertical combos (ms)
+#define COMBO_IDLE_SLOW_MS      100  // Slow require prior idle time for vertical combos (ms)
 
 #define NONE 0  // Null keypress
 
