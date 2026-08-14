@@ -172,7 +172,18 @@ layers:
     - '0'
     - ENTER
   set:
-  - ['&soft_off', '', '', '', '', BT CLR, '', BRIGHTNESS DEC, BRIGHTNESS INC, OUT USB, PRINTSCREEN, '']
+  - - '&soft_off'
+    - ''
+    - ''
+    - ''
+    - ''
+    - {h: '&bt_clr'}
+    - ''
+    - BRIGHTNESS DEC
+    - BRIGHTNESS INC
+    - {t: OUT USB, h: OUT BLE}
+    - PRINTSCREEN
+    - ''
   - - ''
     - {t: '&bt_sel_0', h: '&bt_disc_0'}
     - {t: '&bt_sel_1', h: '&bt_disc_1'}
