@@ -7,13 +7,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: v0.3
       import: app/west.yml
-    # Tag name predates v0.3 but the code is unchanged against it: same Zephyr
-    # (v3.5.0+zmk-fixes, so no LVGL bump) and every zmk/*.h it includes is
-    # identical between v0.2.0 and v0.3.0.
     - name: nice-view-fairyboard
       remote: Shtaiven
-      revision: zmk-v0.2
+      revision: zmk-v0.2 # tag compatible with 0.3
   self:
     path: config
