@@ -1,0 +1,87 @@
+/*
+ * Cirque Pinnacle (Glidepoint) trackpad on I2C.
+ *
+ * The minimal-wiring option: two ordinary header pins plus one through-hole.
+ * Requires an I2C-configured pad, i.e. R1 UNPOPULATED (the MODE table is
+ * silkscreened on the back: SPI = 470K, I2C = DNP).
+ *
+ * Solder to the labelled round pads on the BACK of the trackpad, not the
+ * fine-pitch J1 FFC connector:
+ *
+ *   SDA -> D0 / P0.08
+ *   SCL -> D4 / P0.22
+ *   DR  -> P1.01        (inner through-hole row, near the bottom of the nano)
+ *   GND -> GND
+ *   VDD -> VCC          (switched by P0.13 via EXT_POWER; NOT RAW, which is Vbat)
+ *
+ * Leave B1/B2/B3 (external button inputs) and SCK/SI/SO/SS unconnected.
+ *
+ * i2c0 (pro_micro_i2c) is disabled by nice_view_adapter because it shares
+ * P0.17/P0.20 with the display SPI, so this uses i2c1 with its own pinctrl.
+ *
+ * Pin choice follows the nRF52840 Product Specification: P1.01/P1.02/P1.07 are
+ * "standard drive, low frequency I/O only" (<=10kHz), so the 100kHz bus has to
+ * live on unrestricted pins. DR is a ~100Hz interrupt, so it is fine on P1.01.
+ *
+ * bias-pull-up uses the nRF's internal pull-ups (~13k). At 100kHz that gives
+ * ~330ns rise time against a 1000ns limit - comfortable, no external resistors.
+ * Going to 400kHz would need external ~4.7k pull-ups (300ns limit).
+ */
+
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+&pinctrl {
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
+                <NRF_PSEL(TWIM_SCL, 0, 22)>;
+            bias-pull-up;
+        };
+    };
+
+    i2c1_sleep: i2c1_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 8)>,
+                <NRF_PSEL(TWIM_SCL, 0, 22)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c1 {
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+    clock-frequency = <100000>;
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+
+        dr-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
+
+        sensitivity = "4x";
+        sleep;
+
+        /* Uncomment to match how the pad is physically mounted:
+        rotate-90;
+        x-invert;
+        y-invert;
+        */
+    };
+};
+
+/ {
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+
+        /* Tune once you can see it move, e.g.:
+        input-processors = <&zip_xy_scaler 3 2>;
+        */
+    };
+};

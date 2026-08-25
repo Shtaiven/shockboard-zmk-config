@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: Shtaiven
       url-base: https://github.com/Shtaiven
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,5 +14,8 @@ manifest:
     - name: nice-view-fairyboard
       remote: Shtaiven
       revision: zmk-v0.2 # tag compatible with 0.3
+    - name: cirque-input-module
+      remote: petejohanson
+      revision: main
   self:
     path: config

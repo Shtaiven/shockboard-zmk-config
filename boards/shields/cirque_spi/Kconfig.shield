@@ -1,0 +1,2 @@
+config SHIELD_CIRQUE_SPI
+	def_bool $(shields_list_contains,cirque_spi)
