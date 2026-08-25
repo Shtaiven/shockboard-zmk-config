@@ -1,0 +1,7 @@
+file_format: "1"
+id: cirque_i2c
+name: Cirque Pinnacle (I2C)
+type: shield
+requires: [pro_micro]
+features:
+  - pointer

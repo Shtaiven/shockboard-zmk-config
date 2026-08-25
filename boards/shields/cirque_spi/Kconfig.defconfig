@@ -1,0 +1,9 @@
+if SHIELD_CIRQUE_SPI
+
+config SPI
+    default y
+
+config INPUT
+    default y
+
+endif # SHIELD_CIRQUE_SPI

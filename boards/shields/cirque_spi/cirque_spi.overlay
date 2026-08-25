@@ -1,0 +1,93 @@
+/*
+ * Cirque Pinnacle (Glidepoint) trackpad on SPI.
+ *
+ * Wiring assumes a nice!nano v2 with the nice!view already occupying
+ * D1/D2/D3 (spi0). This shield puts the trackpad on spi1 (pro_micro_spi)
+ * re-routed onto the three extra pads on the underside of the nice!nano:
+ *
+ * Solder to the labelled round pads on the BACK of the trackpad, not the
+ * fine-pitch J1 FFC connector. Cirque silkscreen name -> nice!nano pad:
+ *
+ *   SCK -> D4 / P0.22
+ *   SI  -> D0 / P0.08   (Serial In  = MOSI, host -> pad)
+ *   SO  -> P0.26        (Serial Out = MISO, pad -> host; SMD pad on the back)
+ *   SS  -> P1.01        (inner through-hole row)
+ *   DR  -> P1.02        (inner through-hole row)
+ *   GND -> GND
+ *   VDD -> VCC   (switched by P0.13 via EXT_POWER; NOT RAW, which is Vbat)
+ *
+ * Leave B1/B2/B3 (external button inputs) and SCL/SDA unconnected.
+ * R1 must be populated with 470k for SPI mode - the MODE table is silkscreened
+ * on the back next to it (SPI = 470K, I2C = DNP).
+ *
+ * spi1's default pinctrl points at D14/D15/D16, which the fairyboard matrix
+ * uses, so the pinctrl states are overridden below before spi1 is enabled.
+ *
+ * Pin choice is constrained by the nRF52840 Product Specification: P1.01,
+ * P1.02 and P1.07 are "standard drive, low frequency I/O only", where low
+ * frequency means <=10kHz. SCK/MOSI/MISO run at 500kHz so they must sit on
+ * unrestricted pins. SS toggles ~3x per 10ms sample and DR is a ~100Hz
+ * interrupt, so both are comfortably inside the limit on P1.01/P1.02.
+ */
+
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+&pinctrl {
+    spi1_default: spi1_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 8)>,
+                <NRF_PSEL(SPIM_MISO, 0, 26)>;
+        };
+    };
+
+    spi1_sleep: spi1_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 22)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 8)>,
+                <NRF_PSEL(SPIM_MISO, 0, 26)>;
+            low-power-enable;
+        };
+    };
+};
+
+&pro_micro_spi {
+    status = "okay";
+    cs-gpios = <&gpio1 1 GPIO_ACTIVE_LOW>;
+
+    glidepoint: glidepoint@0 {
+        compatible = "cirque,pinnacle";
+        reg = <0>;
+        /*
+         * Cirque app note GT-AN-090620 §Table 9 footnote: exiting Sleep and
+         * Shutdown mode needs extra vendor-supplied steps if SPI runs at
+         * 1 MHz or above. Staying under it costs ~75us per sample against a
+         * 10ms sample period, so it is free.
+         */
+        spi-max-frequency = <500000>;
+        status = "okay";
+
+        dr-gpios = <&gpio1 2 GPIO_ACTIVE_HIGH>;
+
+        sensitivity = "4x";
+        sleep;
+
+        /* Uncomment to match how the pad is physically mounted:
+        rotate-90;
+        x-invert;
+        y-invert;
+        */
+    };
+};
+
+/ {
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+
+        /* Tune once you can see it move, e.g.:
+        input-processors = <&zip_xy_scaler 3 2>;
+        */
+    };
+};

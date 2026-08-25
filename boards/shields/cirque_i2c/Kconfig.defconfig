@@ -1,0 +1,9 @@
+if SHIELD_CIRQUE_I2C
+
+config I2C
+    default y
+
+config INPUT
+    default y
+
+endif # SHIELD_CIRQUE_I2C
